@@ -1,103 +1,158 @@
-import Image from "next/image";
+"use client"
+import { useState, useEffect } from "react"
+import Header from "@/components/Header"
+import SectionTwo from "./dashboard/section-two/page"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [currentImage, setCurrentImage] = useState(0)
+  const [prevImage, setPrevImage] = useState(0)
+  const [transitioning, setTransitioning] = useState(false)
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  const images = ["/Herosection/gunung.svg", "/Herosection/Pantai_dashboard.svg"]
+
+  const goToNextImage = () => {
+    if (transitioning) return
+
+    const currentIdx = currentImage
+    setPrevImage(currentIdx)
+    setTransitioning(true)
+
+    const nextIndex = (currentImage + 1) % images.length
+    setCurrentImage(nextIndex)
+
+    setTimeout(() => {
+      setTransitioning(false)
+    }, 600)
+  }
+
+  const goToPrevImage = () => {
+    if (transitioning) return
+
+    const currentIdx = currentImage
+    setPrevImage(currentIdx)
+    setTransitioning(true)
+
+    const prevIndex = currentImage === 0 ? images.length - 1 : currentImage - 1
+    setCurrentImage(prevIndex)
+
+    setTimeout(() => {
+      setTransitioning(false)
+    }, 600)
+  }
+
+  // Auto transition every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNextImage()
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [currentImage, transitioning])
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Import Header */}
+      <Header />
+
+      {/* Main Content Container */}
+      <div className="container mx-auto px-4 py-4 pt-24 md:py-10 md:pt-36 lg:pt-48">
+
+        {/* Hero Section Card */}
+        <div className="relative w-full overflow-hidden rounded-xl md:rounded-3xl shadow-lg">
+          {/* Image Slider */}
+          <div className="relative aspect-[4/5] xs:aspect-[3/4] sm:aspect-[16/9] md:aspect-[21/9] w-full">
+            {/* Current Image */}
+            <img
+              src={images[currentImage] || "/placeholder.svg"}
+              alt={`Slide ${currentImage + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover scale-110 transition-transform duration-700 ease-in-out ${
+                transitioning ? "z-10" : "z-20"
+              }`}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+            {/* Previous Image (for dissolve effect) */}
+            {transitioning && (
+              <img
+                src={images[prevImage] || "/placeholder.svg"}
+                alt={`Previous slide`}
+                className="absolute inset-0 w-full h-full object-cover scale-110 z-0"
+              />
+            )}
+
+            {/* Content Overlay - Mobile First Design */}
+            <div className="absolute inset-0 z-30 p-4 sm:p-6 md:p-12 flex flex-col justify-end md:justify-center">
+              <div className="max-w-xl bg-black/30 md:bg-transparent p-4 md:p-0 rounded-lg md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 sm:mb-4 leading-tight">
+                  Selamat Datang di
+                  <br className="hidden xs:block" />
+                  <span className="text-orange-300 md:text-white"> Indojavatrip</span>
+                </h1>
+                <p className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg mb-3 sm:mb-6 max-w-md">
+                  Rasakan dunia seperti belum pernah sebelumnya dengan tur kami yang dirancang dengan cermat. Pilih
+                  paket perjalanan Anda di sini dan nikmati petualangan Anda!
+                </p>
+                <div className="flex flex-col xs:flex-row gap-2 xs:gap-4">
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white text-sm sm:text-base font-medium px-4 py-2 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-md transition-colors w-full md:w-auto md:max-w-[180px]">
+                    Get Started
+                  </button>
+                  <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white text-sm sm:text-base font-medium px-4 py-2 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-md transition-colors hidden xs:block">
+                    Explore Packages
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Buttons - Modified to be at top right on mobile */}
+            <div className="absolute top-4 right-4 sm:bottom-6 sm:right-6 sm:top-auto z-40 flex gap-2 md:gap-4">
+              <button
+                onClick={goToPrevImage}
+                className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 sm:p-2 md:p-3 transition-colors"
+                aria-label="Previous image"
+                disabled={transitioning}
+              >
+                <ArrowLeft size={16} className="sm:hidden" />
+                <ArrowLeft size={20} className="hidden sm:block" />
+              </button>
+              <button
+                onClick={goToNextImage}
+                className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 sm:p-2 md:p-3 transition-colors"
+                aria-label="Next image"
+                disabled={transitioning}
+              >
+                <ArrowRight size={16} className="sm:hidden" />
+                <ArrowRight size={20} className="hidden sm:block" />
+              </button>
+            </div>
+
+            {/* Image Indicators (dots) */}
+            <div className="absolute bottom-4 left-0 right-0 z-40 flex justify-center gap-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    if (!transitioning && index !== currentImage) {
+                      setPrevImage(currentImage)
+                      setCurrentImage(index)
+                      setTransitioning(true)
+                      setTimeout(() => setTransitioning(false), 600)
+                    }
+                  }}
+                  className={`h-1.5 rounded-full transition-all ${
+                    currentImage === index ? "w-6 bg-white" : "w-1.5 bg-white/50"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      {/* <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Hello World</h2>
+</section> */}
+<SectionTwo />
     </div>
-  );
+  )
 }
+
