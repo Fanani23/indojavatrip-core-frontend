@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import Header from "@/components/Header"
 import SectionTwo from "./dashboard/section-two/page"
+import HotPackagesSection from "./dashboard/section-three/page"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
 export default function Home() {
@@ -152,6 +153,7 @@ export default function Home() {
   <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Hello World</h2>
 </section> */}
 <SectionTwo />
+<HotPackagesSection />
     </div>
   )
 }
