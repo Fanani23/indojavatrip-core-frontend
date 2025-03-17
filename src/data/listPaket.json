@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "Bromo, Ijen Crater & Tumpaksewu",
+    "rating": 4.9,
+    "duration": "6 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 2,
+    "title": "Komodo Island & Pink Beach",
+    "rating": 4.8,
+    "duration": "4 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 3,
+    "title": "Raja Ampat Diving Adventure",
+    "rating": 5.0,
+    "duration": "7 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 4,
+    "title": "Bali Temple & Beach Tour",
+    "rating": 4.7,
+    "duration": "5 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 5,
+    "title": "Yogyakarta Heritage Tour",
+    "rating": 4.8,
+    "duration": "3 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 6,
+    "title": "Lombok Island Getaway",
+    "rating": 4.6,
+    "duration": "4 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 7,
+    "title": "Tana Toraja Cultural Tour",
+    "rating": 4.9,
+    "duration": "5 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 8,
+    "title": "Lake Toba Relaxation",
+    "rating": 4.7,
+    "duration": "4 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 9,
+    "title": "Borobudur Sunrise Tour",
+    "rating": 4.9,
+    "duration": "2 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 10,
+    "title": "Wae Rebo Village Trek",
+    "rating": 4.8,
+    "duration": "3 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 11,
+    "title": "Derawan Islands Escape",
+    "rating": 4.9,
+    "duration": "6 Days",
+    "image": "/Herosection/gunung2.png"
+  },
+  {
+    "id": 12,
+    "title": "Mount Rinjani Trekking",
+    "rating": 4.7,
+    "duration": "4 Days",
+    "image": "/Herosection/gunung2.png"
+  }
+]

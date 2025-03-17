@@ -72,7 +72,7 @@ export default function SectionTwo() {
             </div>
           </div>
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-md transition-colors w-full sm:w-auto">
-            Lean More
+            Learn More
           </button>
         </div>
       </div>
