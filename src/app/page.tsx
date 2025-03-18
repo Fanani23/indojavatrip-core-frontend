@@ -1,12 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import SectionTwo from "./dashboard/section-two/page";
 import HotPackagesSection from "./dashboard/section-three/page";
 import SectionFour from "./dashboard/section-four/page";
 import FiturUnggulan from "./dashboard/section-five/page";
 import SectionSix from "./dashboard/section-six/page";
 import TestimonialSection from "./dashboard/section-seven/page";
+import ContactPerson from "./dashboard/section-eight/page";
+// import ProductPage from "./product/page";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -166,6 +169,9 @@ export default function Home() {
       <FiturUnggulan />
       <SectionSix />
       <TestimonialSection />
+      <ContactPerson />
+      <Footer />
+      {/* <ProductPage /> */}
     </div>
   );
 }

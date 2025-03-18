@@ -17,35 +17,43 @@ function cn(...classes: (string | boolean | undefined)[]) {
   return classes.filter(Boolean).join(" ")
 }
 
-// Inline useMobile hook
-function useMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false)
+// Improved hook to handle both mobile and tablet views
+function useResponsiveView(mobileBreakpoint = 480, tabletBreakpoint = 1024) {
+  const [viewType, setViewType] = useState<'desktop' | 'tablet' | 'mobile'>('desktop')
 
   useEffect(() => {
     // Check if window is defined (browser environment)
     if (typeof window !== "undefined") {
-      const checkIfMobile = () => {
-        setIsMobile(window.innerWidth < breakpoint)
+      const checkViewType = () => {
+        const width = window.innerWidth
+        if (width < mobileBreakpoint) {
+          setViewType('mobile')
+        } else if (width < tabletBreakpoint) {
+          setViewType('tablet')
+        } else {
+          setViewType('desktop')
+        }
       }
 
       // Initial check
-      checkIfMobile()
+      checkViewType()
 
       // Add event listener for window resize
-      window.addEventListener("resize", checkIfMobile)
+      window.addEventListener("resize", checkViewType)
 
       // Clean up event listener
       return () => {
-        window.removeEventListener("resize", checkIfMobile)
+        window.removeEventListener("resize", checkViewType)
       }
     }
-  }, [breakpoint])
+  }, [mobileBreakpoint, tabletBreakpoint])
 
-  return isMobile
+  return viewType
 }
 
 const TestimonialSection = () => {
-  const isMobile = useMobile()
+  const viewType = useResponsiveView()
+  const isSliderView = viewType === 'mobile' || viewType === 'tablet'
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
@@ -93,16 +101,16 @@ const TestimonialSection = () => {
     },
   ]
 
-  // Auto slide functionality
+  // Auto slide functionality for mobile and tablet
   useEffect(() => {
-    if (isMobile) {
+    if (isSliderView) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % testimonials.length)
       }, 5000) // Change slide every 5 seconds
 
       return () => clearInterval(interval)
     }
-  }, [isMobile, testimonials.length])
+  }, [isSliderView, testimonials.length])
 
   // Handle touch events for manual sliding
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -157,16 +165,16 @@ const TestimonialSection = () => {
   return (
     <section className="py-16 bg-orange-400">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+        <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-10 md:mb-16">
           Testimoni dari Tamu Kami
           <br />
           yang Terhormat
         </h2>
 
-        {/* Desktop view */}
-        {!isMobile && (
+        {/* Desktop view - only for large screens */}
+        {viewType === 'desktop' && (
           <>
-            <div className="hidden md:grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-6">
               {/* First row with 3 testimonials */}
               {testimonials.slice(0, 3).map((testimonial, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-md">
@@ -192,7 +200,7 @@ const TestimonialSection = () => {
             </div>
 
             {/* Second row with 2 testimonials */}
-            <div className="hidden md:grid md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
               {testimonials.slice(3).map((testimonial, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-md">
                   <div className="flex items-center mb-4">
@@ -218,9 +226,9 @@ const TestimonialSection = () => {
           </>
         )}
 
-        {/* Mobile slider view */}
-        {isMobile && (
-          <div className="relative md:hidden">
+        {/* Mobile and Tablet slider view */}
+        {isSliderView && (
+          <div className="relative">
             <div
               ref={sliderRef}
               className="overflow-hidden"
@@ -280,4 +288,3 @@ const TestimonialSection = () => {
 }
 
 export default TestimonialSection
-

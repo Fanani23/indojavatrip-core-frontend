@@ -16,10 +16,6 @@ export default function SectionTwo() {
               className="rounded-xl w-full h-auto"
               priority
             />
-            {/* <div className="absolute top-4 left-4 bg-white p-2 rounded-lg shadow-md">
-              <p className="text-gray-800 font-semibold text-sm md:text-base">Travel Agencies</p>
-              <p className="text-orange-500 text-sm md:text-base">Watch Video</p>
-            </div> */}
           </div>
           
           {/* Second image (Jeep) - Bottom right with greater offset */}
@@ -31,11 +27,6 @@ export default function SectionTwo() {
               height={280}
               className="rounded-xl w-full h-auto"
             />
-            {/* <div className="absolute bottom-4 left-4 bg-white p-2 rounded-lg shadow-md">
-              <p className="text-gray-800 font-semibold text-sm md:text-base">Destinasi Wisata Terbaik</p>
-              <p className="text-gray-600 text-sm md:text-base">Bromo, Indonesia</p>
-              <p className="text-orange-500 text-sm md:text-base">View More</p>
-            </div> */}
           </div>
         </div>
 
@@ -48,26 +39,33 @@ export default function SectionTwo() {
             Nikmati pengalaman perjalanan terbaik dengan layanan wisata kami. Dari pemandangan matahari terbit di Gunung Bromo hingga menjelajahi pesona alam Gunung Rinjani, kami siap membawa Anda ke destinasi impian dengan layanan terbaik.
           </p>
           <div className="space-y-4">
-            <div className="flex items-start space-x-4">
-              <div className="bg-orange-100 p-2 rounded-full">
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="/Herosection/iconHotel.svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M21 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z"></path>
-                </svg>
-              </div>
+            {/* Hotel Section */}
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/Herosection/iconHotel.svg" 
+                alt="Hotel Icon" 
+                className="w-12 h-12 object-contain" 
+              />
               <div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-800">Hotel</h3>
-                <p className="text-gray-600 text-sm md:text-base">Nikmati kenyamanan menginap dengan pilihan hotel terbaik.</p>
+                <p className="text-gray-600 text-sm md:text-base">
+                  Nikmati kenyamanan menginap dengan pilihan hotel terbaik.
+                </p>
               </div>
             </div>
-            <div className="flex items-start space-x-4">
-              <div className="bg-orange-100 p-2 rounded-full">
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M21 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z"></path>
-                </svg>
-              </div>
+
+            {/* Akomodasi Section */}
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/Herosection/iconAkomodasi.svg" 
+                alt="Akomodasi Icon" 
+                className="w-12 h-12 object-contain" 
+              />
               <div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-800">Akomodasi</h3>
-                <p className="text-gray-600 text-sm md:text-base">Perjalanan yang aman dan nyaman dengan layanan transportasi profesional.</p>
+                <p className="text-gray-600 text-sm md:text-base">
+                  Perjalanan yang aman dan nyaman dengan layanan transportasi profesional.
+                </p>
               </div>
             </div>
           </div>

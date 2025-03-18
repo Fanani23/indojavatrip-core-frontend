@@ -1,0 +1,98 @@
+[
+    {
+      "title": "Bromo & Tumpaksewu",
+      "type": "Perjalanan Pribadi",
+      "price": "Rp. 2.050.000/PAX",
+      "customTrip": "Perjalanan Kustom",
+      "contact": "Hubungi Langsung",
+      "book": "Pesan",
+      "itinerary": [
+        {
+          "day": "Hari 1",
+          "details": [
+            "12.30 - 13.00 | Jemputan sesuai permintaan (Hotel, Stasiun, Bandara)",
+            "12.30 - 16.30 | Makan siang, berangkat ke area hotel Bromo",
+            "16.30 - 16.30 | Check-in hotel dan istirahat, makan malam di area Bromo"
+          ]
+        },
+        {
+          "day": "Hari 2",
+          "details": [
+            "03.00 - 07.00 | Sunrise di Penanjakan, explore Kawah Bromo",
+            "07.00 - 09.00 | Sarapan dan kembali ke hotel",
+            "09.00 - 12.00 | Perjalanan ke Tumpaksewu"
+          ]
+        }
+      ],
+      "includes": ["Transportasi", "Hotel", "Makan", "Tiket Masuk"],
+      "excludes": ["Pengeluaran Pribadi", "Asuransi Perjalanan"],
+      "notes": [
+        "Penerbangan pulang di malam hari atau menginap satu malam di Surabaya, kami dapat mengubah itinerary untuk menyesuaikan jadwal penerbangan Anda.",
+        "Air Terjun Madakaripura dapat diminta (tergantung jadwal penerbangan Anda)."
+      ]
+    },
+    {
+      "title": "Komodo Island & Pink Beach",
+      "type": "Perjalanan Grup",
+      "price": "Rp. 3.500.000/PAX",
+      "customTrip": "Perjalanan Kustom",
+      "contact": "Hubungi Langsung",
+      "book": "Pesan",
+      "itinerary": [
+        {
+          "day": "Hari 1",
+          "details": [
+            "08.00 - 10.00 | Penerbangan ke Labuan Bajo",
+            "10.00 - 12.00 | Check-in hotel dan makan siang",
+            "12.00 - 18.00 | Explore Pulau Komodo"
+          ]
+        },
+        {
+          "day": "Hari 2",
+          "details": [
+            "06.00 - 09.00 | Sunrise di Pink Beach",
+            "09.00 - 12.00 | Snorkeling dan makan siang",
+            "12.00 - 16.00 | Kembali ke Labuan Bajo"
+          ]
+        }
+      ],
+      "includes": ["Transportasi", "Hotel", "Makan", "Tiket Masuk"],
+      "excludes": ["Pengeluaran Pribadi", "Asuransi Perjalanan"],
+      "notes": [
+        "Pastikan membawa pakaian renang dan perlengkapan snorkeling.",
+        "Jadwal dapat berubah tergantung cuaca."
+      ]
+    },
+    {
+      "title": "Raja Ampat Diving Adventure",
+      "type": "Perjalanan Diving",
+      "price": "Rp. 7.000.000/PAX",
+      "customTrip": "Perjalanan Kustom",
+      "contact": "Hubungi Langsung",
+      "book": "Pesan",
+      "itinerary": [
+        {
+          "day": "Hari 1",
+          "details": [
+            "08.00 - 10.00 | Penerbangan ke Sorong",
+            "10.00 - 12.00 | Perjalanan ke Raja Ampat",
+            "12.00 - 18.00 | Check-in resort dan briefing diving"
+          ]
+        },
+        {
+          "day": "Hari 2",
+          "details": [
+            "06.00 - 12.00 | Diving di spot pertama",
+            "12.00 - 14.00 | Makan siang",
+            "14.00 - 18.00 | Diving di spot kedua"
+          ]
+        }
+      ],
+      "includes": ["Transportasi", "Hotel", "Makan", "Peralatan Diving"],
+      "excludes": ["Pengeluaran Pribadi", "Asuransi Perjalanan"],
+      "notes": [
+        "Pastikan memiliki sertifikasi diving.",
+        "Jadwal dapat berubah tergantung kondisi laut."
+      ]
+    }
+  ]
