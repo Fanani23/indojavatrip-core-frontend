@@ -81,8 +81,8 @@ const ImageGallery = () => {
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Title outside card - visible only on mobile */}
-        <h3 className="text-center text-xl font-bold mb-4 md:hidden text-orange-400">
+        {/* Title outside card - visible on mobile and tablet */}
+        <h3 className="text-center text-xl font-bold mb-4 lg:hidden text-orange-400">
           Jelajahi tempat terindah
           <br />
           bersama kami
@@ -112,8 +112,8 @@ const ImageGallery = () => {
                 </div>
               ))}
 
-              {/* Title and navigation inside card for desktop */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 bg-gradient-to-t from-black/70 to-transparent hidden md:block">
+              {/* Title and navigation inside card for desktop only */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 bg-gradient-to-t from-black/70 to-transparent hidden lg:block">
                 <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold">
                   Jelajahi tempat terindah
                   <br />
@@ -151,30 +151,30 @@ const ImageGallery = () => {
 
           {/* Right side - Grid of images */}
           <div className="lg:col-span-7 xl:col-span-7 mt-4 lg:mt-0">
-            {/* Mobile: Show only 2 images */}
-            <div className="grid grid-cols-2 gap-3 md:hidden">
-              <div className="rounded-xl overflow-hidden relative shadow-md h-48">
+            {/* Mobile and Tablet: Show only 2 images */}
+            <div className="grid grid-cols-2 gap-3 lg:hidden">
+              <div className="rounded-xl overflow-hidden relative shadow-md h-48 sm:h-56 md:h-64">
                 <Image
                   src={carouselSets[currentIndex].sideImages[0].url || "/placeholder.svg"}
                   alt={carouselSets[currentIndex].sideImages[0].alt}
                   fill
                   className="object-cover transition-transform hover:scale-105 duration-700"
-                  sizes="50vw"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 40vw, 329px"
                 />
               </div>
-              <div className="rounded-xl overflow-hidden relative shadow-md h-48">
+              <div className="rounded-xl overflow-hidden relative shadow-md h-48 sm:h-56 md:h-64">
                 <Image
                   src={carouselSets[currentIndex].sideImages[1].url || "/placeholder.svg"}
                   alt={carouselSets[currentIndex].sideImages[1].alt}
                   fill
                   className="object-cover transition-transform hover:scale-105 duration-700"
-                  sizes="50vw"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 40vw, 329px"
                 />
               </div>
             </div>
 
             {/* Desktop: Show all 4 images in grid */}
-            <div className="hidden md:grid md:grid-cols-2 gap-4 md:gap-5">
+            <div className="hidden lg:grid lg:grid-cols-2 gap-4 md:gap-5">
               {/* First row */}
               <div className="rounded-xl overflow-hidden relative shadow-md h-60 md:h-80 lg:h-[400px]">
                 <Image
@@ -218,14 +218,14 @@ const ImageGallery = () => {
           </div>
         </div>
 
-        {/* Navigation thumbnails - below cards on mobile only */}
-        <div className="mt-6 flex justify-center md:hidden">
-          <div className="flex space-x-2 overflow-x-auto pb-2">
+        {/* Navigation thumbnails - below cards on mobile and tablet */}
+        <div className="mt-6 flex justify-center lg:hidden">
+          <div className="flex space-x-2 sm:space-x-3 overflow-x-auto pb-2">
             {carouselSets.map((set, index) => (
               <button
                 key={set.id}
                 onClick={() => handleIndexClick(index)}
-                className={`flex-shrink-0 w-10 h-10 rounded-full overflow-hidden border-2 transition-all ${
+                className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 transition-all ${
                   index === currentIndex
                     ? "border-orange-500 scale-105"
                     : "border-gray-300"
@@ -238,7 +238,7 @@ const ImageGallery = () => {
                     alt={`Thumbnail ${index + 1}`}
                     fill
                     className="object-cover"
-                    sizes="40px"
+                    sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 56px"
                   />
                 </div>
               </button>

@@ -50,7 +50,7 @@ export default function SectionTwo() {
           <div className="space-y-4">
             <div className="flex items-start space-x-4">
               <div className="bg-orange-100 p-2 rounded-full">
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-5 h-5 md:w-6 md:h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="/Herosection/iconHotel.svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M21 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z"></path>
                 </svg>
               </div>
