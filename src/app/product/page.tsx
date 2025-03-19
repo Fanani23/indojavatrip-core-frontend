@@ -4,9 +4,9 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import productDetails from "@/data/productDetails.json";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer"; // Import Footer
 import CardList from "@/components/Cardlist";
 import packages from "@/data/listPaket.json";
-import Footer from "@/components/Footer";
 
 export default function ProductPage() {
   const searchParams = useSearchParams();
@@ -60,7 +60,7 @@ export default function ProductPage() {
         return (
           <div className="p-6 bg-white rounded-md">
             <div className="mb-6">
-              <h3 className="font-bold text-lg md:text-2xl mb-4">{day.day}</h3>
+              <h3 className="font-bold text-lg md:text-2xl mb-4 text-orange-500">{day.day}</h3>
               <ul className="list-disc ml-6 space-y-2">
                 {day.details.map((detail, idx) => (
                   <li key={idx} className="text-gray-700 text-sm md:text-base">
@@ -72,7 +72,7 @@ export default function ProductPage() {
 
             {product.notes && activeTab === "hari1" && (
               <div className="mt-8 border-t pt-6">
-                <h3 className="font-bold text-base md:text-xl mb-3">Catatan:</h3>
+                <h3 className="font-bold text-base md:text-xl mb-3 text-orange-500">Catatan:</h3>
                 <ul className="list-none space-y-2">
                   {product.notes.map((note, index) => (
                     <li key={index} className="text-gray-700 text-sm md:text-base">
@@ -205,9 +205,13 @@ export default function ProductPage() {
         </div>
 
         {/* Recommendations Section */}
-        <div className="mt-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Rekomendasi Lainnya</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-20 mb-12"> {/* Menambahkan jarak atas dan bawah */}
+          <div className="flex justify-start"> {/* Membuat teks rata tengah tetapi di sisi kiri */}
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tighter text-orange-500 mb-12">
+              Rekomendasi Lainnya
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularPackages.map((pkg) => (
               <div
                 key={pkg.id}
@@ -225,6 +229,7 @@ export default function ProductPage() {
           </div>
         </div>
       </main>
+      <Footer /> {/* Menambahkan Footer */}
     </div>
   );
 }
