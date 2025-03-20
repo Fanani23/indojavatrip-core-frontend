@@ -1,44 +1,44 @@
-"use client";
+"use client"
 
-import { useState, useEffect, useRef } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { useState, useEffect, useRef } from "react"
+import { Menu, X, ChevronDown } from "lucide-react"
 
 export default function Header() {
-  const [isPackageOpen, setIsPackageOpen] = useState(false);
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPackageOpen, setIsPackageOpen] = useState(false)
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const packageRef = useRef<HTMLDivElement>(null);
-  const languageRef = useRef<HTMLDivElement>(null);
+  const packageRef = useRef<HTMLDivElement>(null)
+  const languageRef = useRef<HTMLDivElement>(null)
 
   // Close dropdowns when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (packageRef.current && !packageRef.current.contains(event.target as Node)) {
-        setIsPackageOpen(false);
+        setIsPackageOpen(false)
       }
       if (languageRef.current && !languageRef.current.contains(event.target as Node)) {
-        setIsLanguageOpen(false);
+        setIsLanguageOpen(false)
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
 
   // Close mobile menu on larger screens
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setIsMobileMenuOpen(false);
+        setIsMobileMenuOpen(false)
       }
-    };
+    }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
@@ -63,7 +63,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="/" className="text-gray-700 hover:text-blue-500 transition-colors">
+            <a href="/" className="text-gray-700 hover:text-orange-500 transition-colors">
               Home
             </a>
 
@@ -71,10 +71,10 @@ export default function Header() {
             <div className="relative" ref={packageRef}>
               <button
                 onClick={() => {
-                  setIsPackageOpen(!isPackageOpen);
-                  setIsLanguageOpen(false);
+                  setIsPackageOpen(!isPackageOpen)
+                  setIsLanguageOpen(false)
                 }}
-                className="flex items-center text-gray-700 hover:text-blue-500 transition-colors"
+                className="flex items-center text-gray-700 hover:text-orange-500 transition-colors"
                 aria-expanded={isPackageOpen}
               >
                 Package
@@ -85,7 +85,7 @@ export default function Header() {
                   <li>
                     <a
                       href="/package1"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       Package 1
                     </a>
@@ -93,7 +93,7 @@ export default function Header() {
                   <li>
                     <a
                       href="/package2"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       Package 2
                     </a>
@@ -101,7 +101,7 @@ export default function Header() {
                   <li>
                     <a
                       href="/package3"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       Package 3
                     </a>
@@ -109,7 +109,7 @@ export default function Header() {
                   <li>
                     <a
                       href="/package4"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       Package 4
                     </a>
@@ -118,7 +118,7 @@ export default function Header() {
               )}
             </div>
 
-            <a href="/contact" className="text-gray-700 hover:text-blue-500 transition-colors">
+            <a href="/contact" className="text-gray-700 hover:text-orange-500 transition-colors">
               Contact
             </a>
 
@@ -126,10 +126,10 @@ export default function Header() {
             <div className="relative" ref={languageRef}>
               <button
                 onClick={() => {
-                  setIsLanguageOpen(!isLanguageOpen);
-                  setIsPackageOpen(false);
+                  setIsLanguageOpen(!isLanguageOpen)
+                  setIsPackageOpen(false)
                 }}
-                className="flex items-center text-gray-700 hover:text-blue-500 transition-colors"
+                className="flex items-center text-gray-700 hover:text-orange-500 transition-colors"
                 aria-expanded={isLanguageOpen}
               >
                 Language
@@ -140,10 +140,10 @@ export default function Header() {
                   <li>
                     <button
                       onClick={() => {
-                        alert("Switched to Indonesian");
-                        setIsLanguageOpen(false);
+                        alert("Switched to Indonesian")
+                        setIsLanguageOpen(false)
                       }}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       Indonesia
                     </button>
@@ -151,10 +151,10 @@ export default function Header() {
                   <li>
                     <button
                       onClick={() => {
-                        alert("Switched to English");
-                        setIsLanguageOpen(false);
+                        alert("Switched to English")
+                        setIsLanguageOpen(false)
                       }}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       English
                     </button>
@@ -162,10 +162,10 @@ export default function Header() {
                   <li>
                     <button
                       onClick={() => {
-                        alert("Switched to Malaysian");
-                        setIsLanguageOpen(false);
+                        alert("Switched to Malaysian")
+                        setIsLanguageOpen(false)
                       }}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       Malaysia
                     </button>
@@ -173,10 +173,10 @@ export default function Header() {
                   <li>
                     <button
                       onClick={() => {
-                        alert("Switched to Chinese");
-                        setIsLanguageOpen(false);
+                        alert("Switched to Chinese")
+                        setIsLanguageOpen(false)
                       }}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
                     >
                       Chinese
                     </button>
@@ -200,47 +200,39 @@ export default function Header() {
               <li>
                 <div className="py-1">
                   <button
-                    onClick={() => {
-                      setIsPackageOpen(!isPackageOpen);
-                      setIsLanguageOpen(false);
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setIsPackageOpen(!isPackageOpen)
+                      setIsLanguageOpen(false)
                     }}
                     className="flex items-center w-full py-1 text-gray-700 hover:text-blue-500 transition-colors"
                     aria-expanded={isPackageOpen}
                   >
                     Package
-                    <ChevronDown size={16} className={`ml-1 transition-transform ${isPackageOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown
+                      size={16}
+                      className={`ml-1 transition-transform ${isPackageOpen ? "rotate-180" : ""}`}
+                    />
                   </button>
                   {isPackageOpen && (
                     <ul className="pl-4 mt-1 space-y-1 border-l-2 border-gray-100">
                       <li>
-                        <a
-                          href="/package1"
-                          className="block py-1 text-gray-700 hover:text-blue-500 transition-colors"
-                        >
+                        <a href="/package1" className="block py-1 text-gray-700 hover:text-blue-500 transition-colors">
                           Package 1
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="/package2"
-                          className="block py-1 text-gray-700 hover:text-blue-500 transition-colors"
-                        >
+                        <a href="/package2" className="block py-1 text-gray-700 hover:text-blue-500 transition-colors">
                           Package 2
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="/package3"
-                          className="block py-1 text-gray-700 hover:text-blue-500 transition-colors"
-                        >
+                        <a href="/package3" className="block py-1 text-gray-700 hover:text-blue-500 transition-colors">
                           Package 3
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="/package4"
-                          className="block py-1 text-gray-700 hover:text-blue-500 transition-colors"
-                        >
+                        <a href="/package4" className="block py-1 text-gray-700 hover:text-blue-500 transition-colors">
                           Package 4
                         </a>
                       </li>
@@ -258,23 +250,27 @@ export default function Header() {
               <li>
                 <div className="py-1">
                   <button
-                    onClick={() => {
-                      setIsLanguageOpen(!isLanguageOpen);
-                      setIsPackageOpen(false);
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setIsLanguageOpen(!isLanguageOpen)
+                      setIsPackageOpen(false)
                     }}
                     className="flex items-center w-full py-1 text-gray-700 hover:text-blue-500 transition-colors"
                     aria-expanded={isLanguageOpen}
                   >
                     Language
-                    <ChevronDown size={16} className={`ml-1 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown
+                      size={16}
+                      className={`ml-1 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`}
+                    />
                   </button>
                   {isLanguageOpen && (
                     <ul className="pl-4 mt-1 space-y-1 border-l-2 border-gray-100">
                       <li>
                         <button
                           onClick={() => {
-                            alert("Switched to Indonesian");
-                            setIsLanguageOpen(false);
+                            alert("Switched to Indonesian")
+                            setIsLanguageOpen(false)
                           }}
                           className="block w-full text-left py-1 text-gray-700 hover:text-blue-500 transition-colors"
                         >
@@ -284,8 +280,8 @@ export default function Header() {
                       <li>
                         <button
                           onClick={() => {
-                            alert("Switched to English");
-                            setIsLanguageOpen(false);
+                            alert("Switched to English")
+                            setIsLanguageOpen(false)
                           }}
                           className="block w-full text-left py-1 text-gray-700 hover:text-blue-500 transition-colors"
                         >
@@ -295,8 +291,8 @@ export default function Header() {
                       <li>
                         <button
                           onClick={() => {
-                            alert("Switched to Malaysian");
-                            setIsLanguageOpen(false);
+                            alert("Switched to Malaysian")
+                            setIsLanguageOpen(false)
                           }}
                           className="block w-full text-left py-1 text-gray-700 hover:text-blue-500 transition-colors"
                         >
@@ -306,8 +302,8 @@ export default function Header() {
                       <li>
                         <button
                           onClick={() => {
-                            alert("Switched to Chinese");
-                            setIsLanguageOpen(false);
+                            alert("Switched to Chinese")
+                            setIsLanguageOpen(false)
                           }}
                           className="block w-full text-left py-1 text-gray-700 hover:text-blue-500 transition-colors"
                         >
@@ -323,5 +319,6 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
+  )
 }
+

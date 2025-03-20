@@ -28,7 +28,7 @@ export default function SectionFour() {
   };
 
   const handleLearnMoreClick = () => {
-    router.push("/all-packages"); // Redirect to a page showing all packages
+    router.push("/all-package"); // Redirect to the all-package page
   };
 
   return (
@@ -66,7 +66,7 @@ export default function SectionFour() {
         {/* Button Learn More */}
         <div className="text-center mt-8">
           <button
-            onClick={handleLearnMoreClick}
+            onClick={handleLearnMoreClick} // Redirect to /all-package
             className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-1"
           >
             Learn More
