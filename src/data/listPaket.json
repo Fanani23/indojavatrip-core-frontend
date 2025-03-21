@@ -4,14 +4,14 @@
     "title": "Bromo Tengah Malam",
     "rating": 5.0,
     "duration": "1 Day",
-    "image": "/Herosection/gunung2.png"
+    "image": "/Paket/BromoTengahMalam.jpg"
   },
   {
     "id": 2,
     "title": "Gunung Bromo",
     "rating": 5.0,
     "duration": "2 Days / 1 Night",
-    "image": "/Herosection/gunung2.png"
+    "image": "/Paket/Card2.jpg"
   },
   {
     "id": 3,
@@ -148,7 +148,7 @@
   },
   {
     "id": 22,
-    "title": "Semeru, Bromo, Kawah Ijen & Tumpaksewu",
+    "title": "Bromo, Kawah Ijen & Malang",
     "rating": 5.0,
     "duration": "7 Days / 6 Nights",
     "image": "/Herosection/gunung2.png"
