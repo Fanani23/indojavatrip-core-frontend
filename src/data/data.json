@@ -22,16 +22,44 @@
     },
     {
       "id": 4,
-      "destination": "Bali",
-      "days": 3,
-      "nights": 2,
+      "destination": "Jawa Timur",
+      "days": 5,
+      "nights": 4,
       "image": "/images/bali.jpg"
     },
     {
       "id": 5,
+      "destination": "Jawa Timur",
+      "days": 6,
+      "nights": 5,
+      "image": "/images/lombok.jpg"
+    },
+    {
+      "id": 6,
+      "destination": "Semeru",
+      "days": 0,
+      "nights": 0,
+      "image": "/images/lombok.jpg"
+    },
+    {
+      "id": 7,
+      "destination": "Jawa Tengah",
+      "days": 0,
+      "nights": 0,
+      "image": "/images/lombok.jpg"
+    },
+    {
+      "id": 8,
       "destination": "Lombok",
-      "days": 4,
-      "nights": 3,
+      "days": 0,
+      "nights": 0,
+      "image": "/images/lombok.jpg"
+    },
+    {
+      "id": 9,
+      "destination": "Jawa Timur",
+      "days": 0,
+      "nights": 0,
       "image": "/images/lombok.jpg"
     }
   ]

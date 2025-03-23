@@ -1,0 +1,195 @@
+[
+    {
+      "category": "Jawa Timur 2 Hari / 1 Malam",
+      "packages": [
+        {
+          "id": 1,
+          "title": "Bromo Tengah Malam",
+          "rating": 5.0,
+          "duration": "1 Day",
+          "image": "/Paket/Card1.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Gunung Bromo",
+          "rating": 5.0,
+          "duration": "2 Days / 1 Night",
+          "image": "/Paket/Card2.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Jawa Timur 3 Hari / 2 Malam",
+      "packages": [
+        {
+          "id": 3,
+          "title": "Bromo & Kawah Ijen",
+          "rating": 5.0,
+          "duration": "3 Days / 2 Nights",
+          "image": "/Paket/Card3.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Bromo & Tumpaksewu",
+          "rating": 5.0,
+          "duration": "3 Days / 2 Nights",
+          "image": "/Paket/Card4.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Bromo & Malang",
+          "rating": 5.0,
+          "duration": "3 Days / 2 Nights",
+          "image": "/Paket/Card5.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Bromo & Surabaya",
+          "rating": 5.0,
+          "duration": "3 Days / 2 Nights",
+          "image": "/Paket/Card6.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Jawa Timur 4 Hari / 3 Malam",
+      "packages": [
+        {
+          "id": 7,
+          "title": "Bromo, Kawah Ijen & Tumpaksewu",
+          "rating": 5.0,
+          "duration": "4 Days / 3 Nights",
+          "image": "/Paket/Card7.jpg"
+        },
+        {
+          "id": 8,
+          "title": "Bromo, Kawah Ijen & Surabaya",
+          "rating": 5.0,
+          "duration": "4 Days / 3 Nights",
+          "image": "/Paket/Card8.jpg"
+        },
+        {
+          "id": 9,
+          "title": "Bromo, Tumpaksewu & Surabaya",
+          "rating": 5.0,
+          "duration": "4 Days / 3 Nights",
+          "image": "/Paket/Card9.jpg"
+        },
+        {
+          "id": 10,
+          "title": "Bromo, Tumpaksewu & Malang",
+          "rating": 5.0,
+          "duration": "4 Days / 3 Nights",
+          "image": "/Paket/Card10.jpg"
+        },
+        {
+          "id": 11,
+          "title": "Bromo, Malang & Surabaya",
+          "rating": 5.0,
+          "duration": "4 Days / 3 Nights",
+          "image": "/Paket/Card11.jpg"
+        },
+        {
+          "id": 12,
+          "title": "Bromo, Kawah Ijen & Malang",
+          "rating": 5.0,
+          "duration": "7 Days / 6 Nights",
+          "image": "/Paket/Card12.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Jawa Timur 5 Hari / 4 Malam",
+      "packages": [
+        {
+          "id": 13,
+          "title": "Bromo, Kawah Ijen, Tumpaksewu & Surabaya",
+          "rating": 5.0,
+          "duration": "5 Days / 4 Nights",
+          "image": "/Paket/Card13.jpg"
+        },
+        {
+          "id": 14,
+          "title": "Bromo, Tumpaksewu, Malang & Surabaya",
+          "rating": 5.0,
+          "duration": "5 Days / 4 Nights",
+          "image": "/Paket/Card14.jpg"
+        },
+        {
+          "id": 15,
+          "title": "Bromo, Kawah Ijen, Tumpaksewu & Malang",
+          "rating": 5.0,
+          "duration": "5 Days / 4 Nights",
+          "image": "/Paket/Card15.jpg"
+        },
+        {
+          "id": 16,
+          "title": "Bromo, Kawah Ijen, Malang & Surabaya",
+          "rating": 5.0,
+          "duration": "5 Days / 4 Nights",
+          "image": "/Paket/Card16.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Jawa Timur 6 Hari / 5 Malam",
+      "packages": [
+        {
+          "id": 17,
+          "title": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+          "rating": 5.0,
+          "duration": "6 Days / 5 Nights",
+          "image": "/Paket/Card17.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Semeru",
+      "packages": [
+        {
+          "id": 20,
+          "title": "Semeru",
+          "rating": 5.0,
+          "duration": "4 Days / 3 Nights",
+          "image": "/Paket/Card0.jpg"
+        },
+        {
+          "id": 21,
+          "title": "Semeru & Bromo",
+          "rating": 5.0,
+          "duration": "5 Days / 4 Nights",
+          "image": "/Paket/Card0.jpg"
+        },
+        {
+          "id": 22,
+          "title": "Semeru, Bromo & Kawah Ijen",
+          "rating": 5.0,
+          "duration": "6 Days / 5 Nights",
+          "image": "/Paket/Card0.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Lombok",
+      "packages": [
+        {
+          "id": 18,
+          "title": "Rinjani",
+          "rating": 5.0,
+          "duration": "4 Days / 3 Nights",
+          "image": "/Paket/Card0.jpg"
+        },
+        {
+          "id": 19,
+          "title": "Rinjani",
+          "rating": 5.0,
+          "duration": "5 Days / 4 Nights",
+          "image": "/Paket/Card0.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Lainnya",
+      "packages": []
+    }
+  ]

@@ -1,61 +1,127 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import Header from "@/components/Header" // Import Header
-import Footer from "@/components/Footer" // Import Footer
-import CardList from "@/components/Cardlist" // Import CardList
-import packages from "@/data/listPaket.json" // Import data paket
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CardList from "@/components/Cardlist";
+import kategori from "@/data/kategori.json";
+
+// Definisi tipe untuk package
+interface Package {
+  id: string | number;
+  title: string;
+  rating: number;
+  duration: string;
+  image: string;
+  [key: string]: any; // Untuk properti lain yang mungkin ada
+}
+
+// Definisi tipe untuk kategori
+interface Category {
+  category: string;
+  packages: Package[];
+}
 
 export default function AllPackagesPage() {
-  const router = useRouter()
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false) // State untuk mengontrol dropdown
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
+  // Mengambil kategori dari URL parameter atau default ke "All Products"
+  const categoryParam = searchParams.get("category");
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    categoryParam || "All Products"
+  );
 
-  const categories = [
-    "Jawa Timur 2H/1M",
-    "Jawa Timur 3H/2M",
-    "Jawa Timur 4H/3M",
-    "Jawa Timur 5H/4M",
-    "Jawa Timur 6H/5M",
-    "Jawa Tengah",
-    "Lombok",
-    "Semeru",
-    "Jawa Timur & Tengah",
-  ]
+  // Ambil daftar kategori dari data kategori.json
+  const categories = (kategori as Category[]).map((cat) => cat.category);
 
-  const handleCardClick = (pkg: any) => {
+  // Effect untuk memperbarui selectedCategory ketika URL berubah
+  useEffect(() => {
+    if (categoryParam) {
+      // Pastikan kategori yang ada di URL valid
+      if (categories.includes(categoryParam) || categoryParam === "All Products") {
+        setSelectedCategory(categoryParam);
+      }
+    } else {
+      // Jika tidak ada categoryParam, pastikan selectedCategory adalah "All Products"
+      setSelectedCategory("All Products");
+    }
+  }, [categoryParam, categories]);
+
+  // Filter paket berdasarkan kategori yang dipilih
+  const filteredPackages: Package[] =
+    selectedCategory === "All Products"
+      ? (kategori as Category[]).flatMap((cat) => cat.packages) // Semua paket
+      : (kategori as Category[]).find((cat) => cat.category === selectedCategory)?.packages || []; // Paket berdasarkan kategori
+
+  const handleCardClick = (pkg: Package) => {
     router.push(
-      `/product?title=${encodeURIComponent(pkg.title)}&rating=${pkg.rating}&duration=${pkg.duration}&image=${pkg.image}`,
-    )
-  }
+      `/product?title=${encodeURIComponent(pkg.title)}&rating=${pkg.rating}&duration=${pkg.duration}&image=${pkg.image}`
+    );
+  };
+
+  // Fungsi untuk menangani perubahan kategori
+  const handleCategoryChange = (category: string) => {
+    // Jika kategori yang sama diklik, jangan lakukan apa-apa
+    if (category === selectedCategory) {
+      return;
+    }
+    
+    setSelectedCategory(category);
+    setIsDropdownOpen(false);
+    
+    // Update URL dengan kategori yang dipilih
+    if (category === "All Products") {
+      // Untuk All Products, hapus parameter dari URL
+      router.replace(window.location.pathname);
+    } else {
+      // Untuk kategori lain, tambahkan parameter
+      router.replace(`${window.location.pathname}?category=${encodeURIComponent(category)}`);
+    }
+  };
+
+  // Handler khusus untuk tombol All Products
+  const handleAllProductsClick = (e: React.MouseEvent) => {
+    e.preventDefault(); // Mencegah default behavior
+    
+    // Hanya lakukan navigasi jika kita belum berada di All Products
+    if (selectedCategory !== "All Products") {
+      setSelectedCategory("All Products");
+      router.replace(window.location.pathname);
+    }
+  };
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
-      {" "}
-      {/* Menambahkan flex untuk tata letak */}
-      <Header /> {/* Menambahkan Header */}
+      <Header />
       <main className="flex-grow pt-12 md:pt-16 lg:pt-20">
-        {" "}
-        {/* Mengurangi jarak atas */}
         <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 lg:py-20">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
-            {" "}
-            {/* Mengurangi jarak bawah */}
-            <h1 className="text-2xl md:text-4xl font-bold tracking-tighter text-orange-500 text-left">Products</h1>{" "}
-            {/* Teks Products di kiri */}
+            <h1 className="text-2xl md:text-4xl font-bold tracking-tighter text-orange-500 text-left">
+              {selectedCategory}
+            </h1>
           </div>
 
           <div className="flex justify-between items-center mb-6">
             {/* All Products Button */}
             <div className="flex items-center gap-4">
-              <button className="border-2 border-orange-500 text-orange-500 bg-white rounded-full px-4 py-2 text-sm md:text-base font-medium hover:bg-orange-500 hover:text-white transition-colors">
+              <button
+                onClick={handleAllProductsClick}
+                className={`border-2 ${
+                  selectedCategory === "All Products"
+                    ? "border-orange-500 text-orange-500 bg-white"
+                    : "border-gray-300 text-gray-500"
+                } rounded-full px-4 py-2 text-sm md:text-base font-medium hover:bg-orange-500 hover:text-white transition-colors`}
+              >
                 All Products
               </button>
 
               {/* Dropdown Button */}
               <div className="relative">
                 <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)} // Toggle dropdown
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className="bg-orange-500 text-white rounded-full px-4 py-2 text-sm md:text-base flex items-center gap-2 hover:bg-orange-600 transition-colors"
                 >
                   Kategori
@@ -80,11 +146,12 @@ export default function AllPackagesPage() {
                     {categories.map((category, index) => (
                       <li key={index}>
                         <button
-                          onClick={() => {
-                            alert(`Selected: ${category}`) // Ganti dengan logika yang diinginkan
-                            setIsDropdownOpen(false) // Tutup dropdown setelah memilih
-                          }}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
+                          onClick={() => handleCategoryChange(category)}
+                          className={`block w-full text-left px-4 py-2 text-sm ${
+                            selectedCategory === category
+                              ? "bg-orange-500 text-white"
+                              : "text-gray-700 hover:bg-gray-100 hover:text-orange-500"
+                          } transition-colors`}
                         >
                           {category}
                         </button>
@@ -96,22 +163,30 @@ export default function AllPackagesPage() {
             </div>
           </div>
 
-          {/* Product grid - Keeping 4 columns with larger cards but no white boxes */}
-          <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-4 max-w-full mx-auto">
-            {packages.map((pkg) => (
-              <div
-                key={pkg.id}
-                onClick={() => handleCardClick(pkg)} // Navigasi ke halaman product
-                className="cursor-pointer"
-              >
-                <CardList title={pkg.title} rating={pkg.rating} duration={pkg.duration} image={pkg.image} />
-              </div>
-            ))}
-          </div>
+          {/* Product Grid */}
+          {filteredPackages.length > 0 ? (
+            <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-4 max-w-full mx-auto">
+              {filteredPackages.map((pkg) => (
+                <div
+                  key={pkg.id}
+                  onClick={() => handleCardClick(pkg)}
+                  className="cursor-pointer"
+                >
+                  <CardList
+                    title={pkg.title}
+                    rating={pkg.rating}
+                    duration={pkg.duration}
+                    image={pkg.image}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-500 mt-12">Data tidak ditemukan</p>
+          )}
         </div>
       </main>
-      <Footer /> {/* Menambahkan Footer */}
+      <Footer />
     </div>
-  )
+  );
 }
-
