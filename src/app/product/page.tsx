@@ -1,26 +1,39 @@
-"use client"
+"use client";
 
-import { useSearchParams, useRouter } from "next/navigation"
-import { useState } from "react"
-import productDetails from "@/data/productDetails.json"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer" // Import Footer
-import CardList from "@/components/Cardlist"
-import packages from "@/data/listPaket.json"
+import { useSearchParams, useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import productDetails from "@/data/productDetails.json";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer"; // Import Footer
+import CardList from "@/components/Cardlist";
+import packages from "@/data/listPaket.json";
 
 export default function ProductPage() {
-  const searchParams = useSearchParams()
-  const router = useRouter()
-  const title = searchParams.get("title")
-  const [activeTab, setActiveTab] = useState("hari1")
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const title = searchParams.get("title");
+  const [activeTab, setActiveTab] = useState("hari1");
+  const [language, setLanguage] = useState<string>("id"); // Default language: Indonesian
+
+  // Load language from localStorage on mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "id";
+    setLanguage(savedLanguage);
+  }, []);
+
+  // Custom language setter that also saves to localStorage
+  const handleLanguageChange = (newLanguage: string) => {
+    setLanguage(newLanguage);
+    localStorage.setItem("selectedLanguage", newLanguage);
+  };
 
   // Find product details based on title
-  const product = productDetails.find((item) => item.title === title)
+  const product = productDetails.find((item) => item.title === title);
 
   if (!product) {
     return (
       <div className="min-h-screen bg-white font-sans">
-        <Header />
+        <Header language={language} setLanguage={handleLanguageChange} /> {/* Pass props */}
         <div className="container mx-auto px-4 pt-32 md:pt-40 lg:pt-48 pb-20">
           <div className="max-w-lg mx-auto bg-gradient-to-b from-orange-50 to-white rounded-xl shadow-sm p-8 text-center border border-orange-100">
             <div className="mb-6 flex justify-center">
@@ -68,34 +81,16 @@ export default function ProductPage() {
               </button>
             </div>
           </div>
-
-          {/* Recommendations Section */}
-          <div className="mt-20 mb-12">
-            <div className="flex justify-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-orange-500">Paket Wisata Tersedia</h2>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {packages.slice(0, 4).map((pkg) => (
-                <div
-                  key={pkg.id}
-                  className="cursor-pointer"
-                  onClick={() => router.push(`/product?title=${encodeURIComponent(pkg.title)}`)}
-                >
-                  <CardList title={pkg.title} rating={pkg.rating} duration={pkg.duration} image={pkg.image} />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
         <Footer />
       </div>
-    )
+    );
   }
 
   // Get top 4 popular packages excluding the current product
   const popularPackages = packages
     .filter((pkg) => pkg.title !== product.title) // Exclude the current product
-    .slice(0, 4) // Limit to 4 cards
+    .slice(0, 4); // Limit to 4 cards
 
   // Helper function to render content based on active tab
   const renderTabContent = () => {
@@ -110,7 +105,7 @@ export default function ProductPage() {
             ))}
           </ul>
         </div>
-      )
+      );
     } else if (activeTab === "tidakTermasuk" && product.excludes) {
       return (
         <div className="p-6 bg-white rounded-md">
@@ -122,12 +117,12 @@ export default function ProductPage() {
             ))}
           </ul>
         </div>
-      )
+      );
     } else if (activeTab.startsWith("hari") && product.itinerary) {
-      const dayIndex = Number.parseInt(activeTab.replace("hari", "")) - 1
+      const dayIndex = Number.parseInt(activeTab.replace("hari", "")) - 1;
 
       if (product.itinerary[dayIndex]) {
-        const day = product.itinerary[dayIndex]
+        const day = product.itinerary[dayIndex];
         return (
           <div className="p-6 bg-white rounded-md">
             <div className="mb-6">
@@ -154,16 +149,16 @@ export default function ProductPage() {
               </div>
             )}
           </div>
-        )
+        );
       }
     }
 
-    return <div className="p-6 bg-white rounded-md text-gray-700 text-sm md:text-base">Konten tidak tersedia.</div>
-  }
+    return <div className="p-6 bg-white rounded-md text-gray-700 text-sm md:text-base">Konten tidak tersedia.</div>;
+  };
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      <Header />
+      <Header language={language} setLanguage={handleLanguageChange} /> {/* Tambahkan props */}
       <main className="container mx-auto px-4 pt-20 md:pt-32 lg:pt-40 pb-12">
         {/* Product Content */}
         <div className="grid lg:grid-cols-2 gap-12">
@@ -301,6 +296,6 @@ export default function ProductPage() {
       </main>
       <Footer /> {/* Menambahkan Footer */}
     </div>
-  )
+  );
 }
 
