@@ -1,62 +1,68 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import CardPackage from "@/components/Cardpackage"
-import packages from "@/data/data.json"
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import CardPackage from "@/components/Cardpackage";
+import kategori from "@/data/kategori.json"; // Import kategori.json
+import { useRouter } from "next/navigation"; // Import useRouter untuk navigasi
 
 const HotPackagesSection: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [slidesToShow, setSlidesToShow] = useState(3)
-  const [totalSlides, setTotalSlides] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+  const [totalSlides, setTotalSlides] = useState(0);
+  const router = useRouter(); // Initialize useRouter
 
-  // Handle window resize for responsive slidesToShow
+  // Handle window resize untuk responsif slidesToShow
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
-        setSlidesToShow(1)
+        setSlidesToShow(1);
       } else if (window.innerWidth < 1024) {
-        setSlidesToShow(2)
+        setSlidesToShow(2);
       } else {
-        setSlidesToShow(3)
+        setSlidesToShow(3);
       }
-    }
+    };
 
     // Set initial value
-    handleResize()
+    handleResize();
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  // Recalculate total slides when slidesToShow changes
+  // Recalculate total slides ketika slidesToShow berubah
   useEffect(() => {
-    setTotalSlides(Math.ceil(packages.length / slidesToShow))
+    const total = Math.ceil(kategori.length / slidesToShow);
+    setTotalSlides(total);
 
-    // Reset current slide if it's out of bounds after resize
-    if (currentSlide >= Math.ceil(packages.length / slidesToShow)) {
-      setCurrentSlide(0)
+    // Reset current slide jika out of bounds setelah resize
+    if (currentSlide >= total) {
+      setCurrentSlide(0);
     }
-  }, [slidesToShow, packages.length, currentSlide])
+  }, [slidesToShow, kategori.length, currentSlide]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides)
-  }
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
-  }
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
-  // Calculate card aspect ratio based on 384x457
-  const aspectRatio = 457 / 384
+  // Handle card click untuk navigasi ke halaman all-package dengan kategori yang dipilih
+  const handleCardClick = (category: string) => {
+    router.push(`/all-package?category=${encodeURIComponent(category)}`);
+  };
 
   return (
     <section className="w-full bg-orange-400 py-8 md:py-16 px-4 md:px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center mb-10 md:mb-16">
-        <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4 mt-4 md:mt-6">Paket Wisata</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4 mt-4 md:mt-6">
+          Kategori Paket Wisata
+        </h2>
         <p className="text-white text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-4 md:mb-8">
-        Rasakan dunia seperti belum pernah sebelumnya dengan tur yang kami rancang dengan cermat. Biarkan kami membawa Anda dalam perjalanan yang tak terlupakan di mana setiap momen dipenuhi dengan keajaiban dan kegembiraan. Pilih paket perjalanan Anda di sini dan nikmati perjalanan Anda.
+          Pilih kategori perjalanan Anda dan nikmati pengalaman yang tak terlupakan.
         </p>
       </div>
 
@@ -75,26 +81,24 @@ const HotPackagesSection: React.FC = () => {
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{
-              transform:
-                slidesToShow === 1
-                  ? `translateX(-${currentSlide * 100}%)`
-                  : `translateX(-${currentSlide * (100 / slidesToShow) * slidesToShow}%)`,
+              transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)`,
             }}
           >
-            {packages.map((pkg) => (
+            {kategori.map((cat) => (
               <div
-                key={pkg.id}
-                className="flex-shrink-0 transition-all duration-500 ease-in-out px-2"
+                key={cat.id}
+                className="flex-shrink-0 transition-all duration-500 ease-in-out px-2 cursor-pointer"
                 style={{
-                  width: slidesToShow === 1 ? "100%" : `${100 / slidesToShow}%`,
+                  width: `${100 / slidesToShow}%`,
                 }}
+                onClick={() => handleCardClick(cat.category)} // Navigate to all-package with category
               >
                 <CardPackage
-                  destination={pkg.destination}
-                  days={pkg.days}
-                  nights={pkg.nights}
-                  image={pkg.image}
-                  aspectRatio={aspectRatio}
+                  destination={cat.category}
+                  image={cat.image}
+                  days={cat.days}
+                  nights={cat.nights}
+                  aspectRatio={457 / 384} // Aspect ratio for the card
                 />
               </div>
             ))}
@@ -125,8 +129,7 @@ const HotPackagesSection: React.FC = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HotPackagesSection
-
+export default HotPackagesSection;
