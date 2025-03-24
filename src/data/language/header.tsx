@@ -1,4 +1,4 @@
-export const headerLanguageData = {
+export const headerLanguageData: Record<"id" | "en" | "ms" | "zh", { home: string; package: string; contact: string; language: string }> = {
     id: {
       home: "Beranda",
       package: "Paket",

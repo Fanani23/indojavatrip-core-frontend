@@ -40,7 +40,7 @@ export const heroSectionData: Record<string, HeroSectionContent> = {
     },
   },
   zh: {
-    title: "欢迎来到",
+    title: "欢迎来到 ",
     subtitle: "Indojavatrip",
     description:
       "以全新的方式探索世界，体验我们精心策划的旅行。选择您的旅行套餐，开启您的奇妙冒险！",
