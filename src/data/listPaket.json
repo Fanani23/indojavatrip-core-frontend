@@ -1,156 +1,574 @@
 [
   {
     "id": 1,
-    "title": "Bromo Tengah Malam",
-    "rating": 5.0,
-    "duration": "1 Day",
+    "languages": {
+      "id": {
+        "destination": "Bromo Tengah Malam",
+        "days": 1,
+        "nights": 0
+      },
+      "en": {
+        "destination": "Midnight Bromo",
+        "days": 1,
+        "nights": 0
+      },
+      "ms": {
+        "destination": "Bromo Tengah Malam",
+        "days": 1,
+        "nights": 0
+      },
+      "zh": {
+        "destination": "午夜布罗莫",
+        "days": 1,
+        "nights": 0
+      }
+    },
     "image": "/Paket/Card1.jpg"
   },
   {
     "id": 2,
-    "title": "Gunung Bromo",
-    "rating": 5.0,
-    "duration": "2 Days / 1 Night",
+    "languages": {
+      "id": {
+        "destination": "Gunung Bromo",
+        "days": 2,
+        "nights": 1
+      },
+      "en": {
+        "destination": "Mount Bromo",
+        "days": 2,
+        "nights": 1
+      },
+      "ms": {
+        "destination": "Gunung Bromo",
+        "days": 2,
+        "nights": 1
+      },
+      "zh": {
+        "destination": "布罗莫火山",
+        "days": 2,
+        "nights": 1
+      }
+    },
     "image": "/Paket/Card2.jpg"
   },
   {
     "id": 3,
-    "title": "Bromo & Kawah Ijen",
-    "rating": 5.0,
-    "duration": "3 Days / 2 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo & Kawah Ijen",
+        "days": 3,
+        "nights": 2
+      },
+      "en": {
+        "destination": "Bromo & Ijen Crater",
+        "days": 3,
+        "nights": 2
+      },
+      "ms": {
+        "destination": "Bromo & Kawah Ijen",
+        "days": 3,
+        "nights": 2
+      },
+      "zh": {
+        "destination": "布罗莫和伊真火山口",
+        "days": 3,
+        "nights": 2
+      }
+    },
     "image": "/Paket/Card3.jpg"
   },
   {
     "id": 4,
-    "title": "Bromo & Tumpaksewu",
-    "rating": 5.0,
-    "duration": "3 Days / 2 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo & Tumpaksewu",
+        "days": 3,
+        "nights": 2
+      },
+      "en": {
+        "destination": "Bromo & Tumpaksewu",
+        "days": 3,
+        "nights": 2
+      },
+      "ms": {
+        "destination": "Bromo & Tumpaksewu",
+        "days": 3,
+        "nights": 2
+      },
+      "zh": {
+        "destination": "布罗莫和Tumpaksewu",
+        "days": 3,
+        "nights": 2
+      }
+    },
     "image": "/Paket/Card4.jpg"
   },
   {
     "id": 5,
-    "title": "Bromo & Malang",
-    "rating": 5.0,
-    "duration": "3 Days / 2 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo & Malang",
+        "days": 3,
+        "nights": 2
+      },
+      "en": {
+        "destination": "Bromo & Malang",
+        "days": 3,
+        "nights": 2
+      },
+      "ms": {
+        "destination": "Bromo & Malang",
+        "days": 3,
+        "nights": 2
+      },
+      "zh": {
+        "destination": "布罗莫和玛琅",
+        "days": 3,
+        "nights": 2
+      }
+    },
     "image": "/Paket/Card5.jpg"
   },
   {
     "id": 6,
-    "title": "Bromo & Surabaya",
-    "rating": 5.0,
-    "duration": "3 Days / 2 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo & Surabaya",
+        "days": 3,
+        "nights": 2
+      },
+      "en": {
+        "destination": "Bromo & Surabaya",
+        "days": 3,
+        "nights": 2
+      },
+      "ms": {
+        "destination": "Bromo & Surabaya",
+        "days": 3,
+        "nights": 2
+      },
+      "zh": {
+        "destination": "布罗莫和泗水",
+        "days": 3,
+        "nights": 2
+      }
+    },
     "image": "/Paket/Card6.jpg"
   },
   {
     "id": 7,
-    "title": "Bromo, Kawah Ijen & Tumpaksewu",
-    "rating": 5.0,
-    "duration": "4 Days / 3 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Kawah Ijen & Tumpaksewu",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "Bromo, Ijen Crater & Tumpaksewu",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Bromo, Kawah Ijen & Tumpaksewu",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "布罗莫、伊真火山口和Tumpaksewu",
+        "days": 4,
+        "nights": 3
+      }
+    },
     "image": "/Paket/Card7.jpg"
   },
   {
     "id": 8,
-    "title": "Bromo, Kawah Ijen & Surabaya",
-    "rating": 5.0,
-    "duration": "4 Days / 3 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Kawah Ijen & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "Bromo, Ijen Crater & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Bromo, Kawah Ijen & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "布罗莫、伊真火山口和泗水",
+        "days": 4,
+        "nights": 3
+      }
+    },
     "image": "/Paket/Card8.jpg"
   },
   {
     "id": 9,
-    "title": "Bromo, Tumpaksewu & Surabaya",
-    "rating": 5.0,
-    "duration": "4 Days / 3 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Tumpaksewu & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "Bromo, Tumpaksewu & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Bromo, Tumpaksewu & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "布罗莫、Tumpaksewu和泗水",
+        "days": 4,
+        "nights": 3
+      }
+    },
     "image": "/Paket/Card9.jpg"
   },
   {
     "id": 10,
-    "title": "Bromo, Tumpaksewu & Malang",
-    "rating": 5.0,
-    "duration": "4 Days / 3 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Tumpaksewu & Malang",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "Bromo, Tumpaksewu & Malang",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Bromo, Tumpaksewu & Malang",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "布罗莫、Tumpaksewu和玛琅",
+        "days": 4,
+        "nights": 3
+      }
+    },
     "image": "/Paket/Card10.jpg"
   },
   {
     "id": 11,
-    "title": "Bromo, Malang & Surabaya",
-    "rating": 5.0,
-    "duration": "4 Days / 3 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Malang & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "Bromo, Malang & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Bromo, Malang & Surabaya",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "布罗莫、玛琅和泗水",
+        "days": 4,
+        "nights": 3
+      }
+    },
     "image": "/Paket/Card11.jpg"
   },
   {
     "id": 12,
-    "title": "Bromo, Kawah Ijen & Malang",
-    "rating": 5.0,
-    "duration": "7 Days / 6 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Kawah Ijen & Malang",
+        "days": 7,
+        "nights": 6
+      },
+      "en": {
+        "destination": "Bromo, Ijen Crater & Malang",
+        "days": 7,
+        "nights": 6
+      },
+      "ms": {
+        "destination": "Bromo, Kawah Ijen & Malang",
+        "days": 7,
+        "nights": 6
+      },
+      "zh": {
+        "destination": "布罗莫、伊真火山口和玛琅",
+        "days": 7,
+        "nights": 6
+      }
+    },
     "image": "/Paket/Card12.jpg"
   },
   {
     "id": 13,
-    "title": "Bromo, Kawah Ijen, Tumpaksewu & Surabaya",
-    "rating": 5.0,
-    "duration": "5 Days / 4 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Kawah Ijen, Tumpaksewu & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "en": {
+        "destination": "Bromo, Ijen Crater, Tumpaksewu & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "ms": {
+        "destination": "Bromo, Kawah Ijen, Tumpaksewu & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "zh": {
+        "destination": "布罗莫、伊真火山口、Tumpaksewu和泗水",
+        "days": 5,
+        "nights": 4
+      }
+    },
     "image": "/Paket/Card13.jpg"
   },
   {
     "id": 14,
-    "title": "Bromo, Tumpaksewu, Malang & Surabaya",
-    "rating": 5.0,
-    "duration": "5 Days / 4 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Tumpaksewu, Malang & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "en": {
+        "destination": "Bromo, Tumpaksewu, Malang & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "ms": {
+        "destination": "Bromo, Tumpaksewu, Malang & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "zh": {
+        "destination": "布罗莫、Tumpaksewu、玛琅和泗水",
+        "days": 5,
+        "nights": 4
+      }
+    },
     "image": "/Paket/Card14.jpg"
   },
   {
     "id": 15,
-    "title": "Bromo, Kawah Ijen, Tumpaksewu & Malang",
-    "rating": 5.0,
-    "duration": "5 Days / 4 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Kawah Ijen, Tumpaksewu & Malang",
+        "days": 5,
+        "nights": 4
+      },
+      "en": {
+        "destination": "Bromo, Ijen Crater, Tumpaksewu & Malang",
+        "days": 5,
+        "nights": 4
+      },
+      "ms": {
+        "destination": "Bromo, Kawah Ijen, Tumpaksewu & Malang",
+        "days": 5,
+        "nights": 4
+      },
+      "zh": {
+        "destination": "布罗莫、伊真火山口、Tumpaksewu和玛琅",
+        "days": 5,
+        "nights": 4
+      }
+    },
     "image": "/Paket/Card15.jpg"
   },
   {
     "id": 16,
-    "title": "Bromo, Kawah Ijen, Malang & Surabaya",
-    "rating": 5.0,
-    "duration": "5 Days / 4 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Kawah Ijen, Malang & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "en": {
+        "destination": "Bromo, Ijen Crater, Malang & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "ms": {
+        "destination": "Bromo, Kawah Ijen, Malang & Surabaya",
+        "days": 5,
+        "nights": 4
+      },
+      "zh": {
+        "destination": "布罗莫、伊真火山口、玛琅和泗水",
+        "days": 5,
+        "nights": 4
+      }
+    },
     "image": "/Paket/Card16.jpg"
   },
   {
     "id": 17,
-    "title": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
-    "rating": 5.0,
-    "duration": "6 Days / 5 Nights",
+    "languages": {
+      "id": {
+        "destination": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+        "days": 6,
+        "nights": 5
+      },
+      "en": {
+        "destination": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+        "days": 6,
+        "nights": 5
+      },
+      "ms": {
+        "destination": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+        "days": 6,
+        "nights": 5
+      },
+      "zh": {
+        "destination": "布罗莫、伊真、Tumpaksewu、玛琅和泗水",
+        "days": 6,
+        "nights": 5
+      }
+    },
     "image": "/Paket/Card17.jpg"
   },
   {
     "id": 18,
-    "title": "Rinjani",
-    "rating": 5.0,
-    "duration": "4 Days / 3 Nights",
+    "languages": {
+      "id": {
+        "destination": "Rinjani",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "Mount Rinjani",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Gunung Rinjani",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "林贾尼火山",
+        "days": 4,
+        "nights": 3
+      }
+    },
     "image": "/Paket/Card0.jpg"
   },
   {
     "id": 19,
-    "title": "Rinjani",
-    "rating": 5.0,
-    "duration": "5 Days / 4 Nights",
+    "languages": {
+      "id": {
+        "destination": "Rinjani",
+        "days": 5,
+        "nights": 4
+      },
+      "en": {
+        "destination": "Mount Rinjani",
+        "days": 5,
+        "nights": 4
+      },
+      "ms": {
+        "destination": "Gunung Rinjani",
+        "days": 5,
+        "nights": 4
+      },
+      "zh": {
+        "destination": "林贾尼火山",
+        "days": 5,
+        "nights": 4
+      }
+    },
     "image": "/Paket/Card0.jpg"
   },
   {
     "id": 20,
-    "title": "Semeru",
-    "rating": 5.0,
-    "duration": "4 Days / 3 Nights",
+    "languages": {
+      "id": {
+        "destination": "Semeru",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "Mount Semeru",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Gunung Semeru",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "塞梅鲁火山",
+        "days": 4,
+        "nights": 3
+      }
+    },
     "image": "/Paket/Card0.jpg"
   },
   {
     "id": 21,
-    "title": "Semeru & Bromo",
-    "rating": 5.0,
-    "duration": "5 Days / 4 Nights",
+    "languages": {
+      "id": {
+        "destination": "Semeru & Bromo",
+        "days": 5,
+        "nights": 4
+      },
+      "en": {
+        "destination": "Semeru & Bromo",
+        "days": 5,
+        "nights": 4
+      },
+      "ms": {
+        "destination": "Semeru & Bromo",
+        "days": 5,
+        "nights": 4
+      },
+      "zh": {
+        "destination": "塞梅鲁和布罗莫",
+        "days": 5,
+        "nights": 4
+      }
+    },
     "image": "/Paket/Card0.jpg"
   },
   {
     "id": 22,
-    "title": "Semeru, Bromo & Kawah Ijen",
-    "rating": 5.0,
-    "duration": "6 Days / 5 Nights",
+    "languages": {
+      "id": {
+        "destination": "Semeru, Bromo & Kawah Ijen",
+        "days": 6,
+        "nights": 5
+      },
+      "en": {
+        "destination": "Semeru, Bromo & Ijen Crater",
+        "days": 6,
+        "nights": 5
+      },
+      "ms": {
+        "destination": "Semeru, Bromo & Kawah Ijen",
+        "days": 6,
+        "nights": 5
+      },
+      "zh": {
+        "destination": "塞梅鲁、布罗莫和伊真火山口",
+        "days": 6,
+        "nights": 5
+      }
+    },
     "image": "/Paket/Card0.jpg"
   }
 ]

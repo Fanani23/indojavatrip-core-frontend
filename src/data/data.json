@@ -1,65 +1,236 @@
 [
-    {
-      "id": 1,
-      "destination": "Jawa Timur",
-      "days": 2,
-      "nights": 1,
-      "image": "/Herosection/gunungtest.png"
+  {
+    "id": 1,
+    "languages": {
+      "id": {
+        "destination": "Jawa Timur",
+        "days": 2,
+        "nights": 1
+      },
+      "en": {
+        "destination": "East Java",
+        "days": 2,
+        "nights": 1
+      },
+      "ms": {
+        "destination": "Jawa Timur",
+        "days": 2,
+        "nights": 1
+      },
+      "zh": {
+        "destination": "东爪哇",
+        "days": 2,
+        "nights": 1
+      }
     },
-    {
-      "id": 2,
-      "destination": "Jawa Timur",
-      "days": 3,
-      "nights": 2,
-      "image": "/Herosection/gunungtest.png"
+    "image": "/Herosection/gunungtest.png"
+  },
+  {
+    "id": 2,
+    "languages": {
+      "id": {
+        "destination": "Jawa Timur",
+        "days": 3,
+        "nights": 2
+      },
+      "en": {
+        "destination": "East Java",
+        "days": 3,
+        "nights": 2
+      },
+      "ms": {
+        "destination": "Jawa Timur",
+        "days": 3,
+        "nights": 2
+      },
+      "zh": {
+        "destination": "东爪哇",
+        "days": 3,
+        "nights": 2
+      }
     },
-    {
-      "id": 3,
-      "destination": "Jawa Timur",
-      "days": 4,
-      "nights": 3,
-      "image": "/Herosection/gunungtest.png"
+    "image": "/Herosection/gunungtest.png"
+  },
+  {
+    "id": 3,
+    "languages": {
+      "id": {
+        "destination": "Jawa Timur",
+        "days": 4,
+        "nights": 3
+      },
+      "en": {
+        "destination": "East Java",
+        "days": 4,
+        "nights": 3
+      },
+      "ms": {
+        "destination": "Jawa Timur",
+        "days": 4,
+        "nights": 3
+      },
+      "zh": {
+        "destination": "东爪哇",
+        "days": 4,
+        "nights": 3
+      }
     },
-    {
-      "id": 4,
-      "destination": "Jawa Timur",
-      "days": 5,
-      "nights": 4,
-      "image": "/images/bali.jpg"
+    "image": "/Herosection/gunungtest.png"
+  },
+  {
+    "id": 4,
+    "languages": {
+      "id": {
+        "destination": "Jawa Timur",
+        "days": 5,
+        "nights": 4
+      },
+      "en": {
+        "destination": "East Java",
+        "days": 5,
+        "nights": 4
+      },
+      "ms": {
+        "destination": "Jawa Timur",
+        "days": 5,
+        "nights": 4
+      },
+      "zh": {
+        "destination": "东爪哇",
+        "days": 5,
+        "nights": 4
+      }
     },
-    {
-      "id": 5,
-      "destination": "Jawa Timur",
-      "days": 6,
-      "nights": 5,
-      "image": "/images/lombok.jpg"
+    "image": "/images/bali.jpg"
+  },
+  {
+    "id": 5,
+    "languages": {
+      "id": {
+        "destination": "Jawa Timur",
+        "days": 6,
+        "nights": 5
+      },
+      "en": {
+        "destination": "East Java",
+        "days": 6,
+        "nights": 5
+      },
+      "ms": {
+        "destination": "Jawa Timur",
+        "days": 6,
+        "nights": 5
+      },
+      "zh": {
+        "destination": "东爪哇",
+        "days": 6,
+        "nights": 5
+      }
     },
-    {
-      "id": 6,
-      "destination": "Semeru",
-      "days": 0,
-      "nights": 0,
-      "image": "/images/lombok.jpg"
+    "image": "/images/lombok.jpg"
+  },
+  {
+    "id": 6,
+    "languages": {
+      "id": {
+        "destination": "Semeru",
+        "days": 0,
+        "nights": 0
+      },
+      "en": {
+        "destination": "Semeru",
+        "days": 0,
+        "nights": 0
+      },
+      "ms": {
+        "destination": "Semeru",
+        "days": 0,
+        "nights": 0
+      },
+      "zh": {
+        "destination": "塞梅鲁",
+        "days": 0,
+        "nights": 0
+      }
     },
-    {
-      "id": 7,
-      "destination": "Jawa Tengah",
-      "days": 0,
-      "nights": 0,
-      "image": "/images/lombok.jpg"
+    "image": "/images/lombok.jpg"
+  },
+  {
+    "id": 7,
+    "languages": {
+      "id": {
+        "destination": "Jawa Tengah",
+        "days": 0,
+        "nights": 0
+      },
+      "en": {
+        "destination": "Central Java",
+        "days": 0,
+        "nights": 0
+      },
+      "ms": {
+        "destination": "Jawa Tengah",
+        "days": 0,
+        "nights": 0
+      },
+      "zh": {
+        "destination": "中爪哇",
+        "days": 0,
+        "nights": 0
+      }
     },
-    {
-      "id": 8,
-      "destination": "Lombok",
-      "days": 0,
-      "nights": 0,
-      "image": "/images/lombok.jpg"
+    "image": "/images/lombok.jpg"
+  },
+  {
+    "id": 8,
+    "languages": {
+      "id": {
+        "destination": "Lombok",
+        "days": 0,
+        "nights": 0
+      },
+      "en": {
+        "destination": "Lombok",
+        "days": 0,
+        "nights": 0
+      },
+      "ms": {
+        "destination": "Lombok",
+        "days": 0,
+        "nights": 0
+      },
+      "zh": {
+        "destination": "龙目岛",
+        "days": 0,
+        "nights": 0
+      }
     },
-    {
-      "id": 9,
-      "destination": "Jawa Timur",
-      "days": 0,
-      "nights": 0,
-      "image": "/images/lombok.jpg"
-    }
-  ]
+    "image": "/images/lombok.jpg"
+  },
+  {
+    "id": 9,
+    "languages": {
+      "id": {
+        "destination": "Jawa Timur",
+        "days": 0,
+        "nights": 0
+      },
+      "en": {
+        "destination": "East Java",
+        "days": 0,
+        "nights": 0
+      },
+      "ms": {
+        "destination": "Jawa Timur",
+        "days": 0,
+        "nights": 0
+      },
+      "zh": {
+        "destination": "东爪哇",
+        "days": 0,
+        "nights": 0
+      }
+    },
+    "image": "/images/lombok.jpg"
+  }
+]

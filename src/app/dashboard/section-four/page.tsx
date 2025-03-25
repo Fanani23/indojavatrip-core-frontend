@@ -1,27 +1,31 @@
 import React, { useMemo } from "react";
 import { useRouter } from "next/navigation";
 import CardList from "@/components/Cardlist";
-import packages from "@/data/listPaket.json";
+import { getKategoriByLanguage } from "@/data/language/data-kategori"; // Import fungsi untuk mendapatkan data kategori berdasarkan bahasa
+import sectionFourLanguageData from "@/data/language/section-four"; // Import teks multibahasa
 
-interface Package {
-  id: number;
-  title: string;
-  rating: number;
-  duration: string;
-  image: string;
+interface SectionFourProps {
+  language: "id" | "en" | "ms" | "zh"; // Props untuk bahasa
 }
 
-export default function SectionFour() {
+export default function SectionFour({ language }: SectionFourProps) {
   const router = useRouter();
 
-  const displayedPackages: Package[] = packages.slice(0, 8);
+  // Data kategori berdasarkan bahasa
+  const categories = getKategoriByLanguage(language);
+
+  // Ambil paket dari kategori pertama (atau kategori lainnya jika diperlukan)
+  const packages = categories.flatMap((category) => category.packages).slice(0, 8); // Ambil 8 paket pertama
+
+  // Ambil teks berdasarkan bahasa
+  const langData = sectionFourLanguageData[language];
 
   // Calculate the maximum title length to determine the min-height for cards
   const maxTitleLength = useMemo(() => {
-    return Math.max(...displayedPackages.map((pkg) => pkg.title.length));
-  }, [displayedPackages]);
+    return Math.max(...packages.map((pkg) => pkg.title.length));
+  }, [packages]);
 
-  const handleCardClick = (pkg: Package) => {
+  const handleCardClick = (pkg: any) => {
     router.push(
       `/product?title=${encodeURIComponent(pkg.title)}&rating=${pkg.rating}&duration=${pkg.duration}&image=${pkg.image}`
     );
@@ -36,15 +40,15 @@ export default function SectionFour() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col gap-4 mb-10 max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-bold tracking-tighter text-orange-500">
-            Paket Terpopuler
+            {langData.title}
           </h2>
           <p className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed text-gray-500 mb-8">
-            Temukan destinasi yang tak terlupakan di Jawa Timur, Indonesia. Percayakan pada keahlian dan kualitas layanan kami yang tak tertandingi. Inilah sebabnya mengapa pelancong cerdas memilih Indojavatrip.
+            {langData.description}
           </p>
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto mb-12">
-          {displayedPackages.map((pkg) => (
+          {packages.map((pkg) => (
             <div
               key={pkg.id}
               onClick={() => handleCardClick(pkg)}
@@ -69,7 +73,7 @@ export default function SectionFour() {
             onClick={handleLearnMoreClick} // Redirect to /all-package
             className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-1"
           >
-            Learn More
+            {langData.learnMore}
           </button>
         </div>
       </div>

@@ -5,7 +5,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CardList from "@/components/Cardlist";
-import kategori from "@/data/kategori.json";
+import { getKategoriByLanguage } from "@/data/language/data-kategori"; // Import fungsi untuk mendapatkan data kategori berdasarkan bahasa
+import allPackageLanguageData from "@/data/language/all-package"; // Import data bahasa
 
 // Definisi tipe untuk package
 interface Package {
@@ -27,34 +28,55 @@ export default function AllPackagesPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
-  // Mengambil kategori dari URL parameter atau default ke "All Products"
-  const categoryParam = searchParams.get("category");
-  const [selectedCategory, setSelectedCategory] = useState<string>(
-    categoryParam || "All Products"
-  );
 
-  // Ambil daftar kategori dari data kategori.json
-  const categories = (kategori as Category[]).map((cat) => cat.category);
-
-  // Effect untuk memperbarui selectedCategory ketika URL berubah
-  useEffect(() => {
-    if (categoryParam) {
-      // Pastikan kategori yang ada di URL valid
-      if (categories.includes(categoryParam) || categoryParam === "All Products") {
-        setSelectedCategory(categoryParam);
-      }
-    } else {
-      // Jika tidak ada categoryParam, pastikan selectedCategory adalah "All Products"
-      setSelectedCategory("All Products");
+  // Tambahkan state untuk bahasa, inisialisasi dari localStorage atau default ke "id"
+  const [language, setLanguage] = useState<"id" | "en" | "ms" | "zh">(() => {
+    if (typeof window !== "undefined") {
+      return (localStorage.getItem("selectedLanguage") as "id" | "en" | "ms" | "zh") || "id";
     }
-  }, [categoryParam, categories]);
+    return "id"; // Default ke bahasa Indonesia
+  });
+
+  // Ambil teks berdasarkan bahasa yang dipilih
+  const langData = allPackageLanguageData[language];
+
+  // State untuk data kategori dan kategori yang dipilih
+  const [categoriesData, setCategoriesData] = useState<Category[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+
+  // State untuk loading
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Ambil kategori dari URL parameter
+  const categoryParam = searchParams.get("category");
+
+  // Ambil data kategori berdasarkan bahasa
+  useEffect(() => {
+    setIsLoading(true); // Set loading saat data sedang diambil
+    const data = getKategoriByLanguage(language);
+    setCategoriesData(data);
+
+    // Set kategori yang dipilih berdasarkan URL parameter atau default ke "All Products"
+    setSelectedCategory(categoryParam || langData.allProducts);
+
+    setIsLoading(false); // Matikan loading setelah data selesai diambil
+  }, [language, categoryParam, langData.allProducts]);
+
+  // Effect untuk menyimpan bahasa ke localStorage saat bahasa berubah
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("selectedLanguage", language);
+    }
+  }, [language]);
+
+  // Ambil daftar kategori dari data kategori
+  const categories = categoriesData.map((cat) => cat.category);
 
   // Filter paket berdasarkan kategori yang dipilih
   const filteredPackages: Package[] =
-    selectedCategory === "All Products"
-      ? (kategori as Category[]).flatMap((cat) => cat.packages) // Semua paket
-      : (kategori as Category[]).find((cat) => cat.category === selectedCategory)?.packages || []; // Paket berdasarkan kategori
+    selectedCategory === langData.allProducts
+      ? categoriesData.flatMap((cat) => cat.packages) // Semua paket
+      : categoriesData.find((cat) => cat.category === selectedCategory)?.packages || []; // Paket berdasarkan kategori
 
   const handleCardClick = (pkg: Package) => {
     router.push(
@@ -64,20 +86,15 @@ export default function AllPackagesPage() {
 
   // Fungsi untuk menangani perubahan kategori
   const handleCategoryChange = (category: string) => {
-    // Jika kategori yang sama diklik, jangan lakukan apa-apa
-    if (category === selectedCategory) {
-      return;
-    }
-    
+    if (category === selectedCategory) return; // Jangan lakukan apa-apa jika kategori sama
+
     setSelectedCategory(category);
     setIsDropdownOpen(false);
-    
+
     // Update URL dengan kategori yang dipilih
-    if (category === "All Products") {
-      // Untuk All Products, hapus parameter dari URL
-      router.replace(window.location.pathname);
+    if (category === langData.allProducts) {
+      router.replace(window.location.pathname); // Hapus parameter kategori
     } else {
-      // Untuk kategori lain, tambahkan parameter
       router.replace(`${window.location.pathname}?category=${encodeURIComponent(category)}`);
     }
   };
@@ -85,17 +102,26 @@ export default function AllPackagesPage() {
   // Handler khusus untuk tombol All Products
   const handleAllProductsClick = (e: React.MouseEvent) => {
     e.preventDefault(); // Mencegah default behavior
-    
-    // Hanya lakukan navigasi jika kita belum berada di All Products
-    if (selectedCategory !== "All Products") {
-      setSelectedCategory("All Products");
+
+    if (selectedCategory !== langData.allProducts) {
+      setSelectedCategory(langData.allProducts);
       router.replace(window.location.pathname);
     }
   };
 
+  // Pastikan halaman tidak glitch dengan menampilkan loading state
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p className="text-gray-500">Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white min-h-screen flex flex-col">
-      <Header />
+      {/* Berikan properti language dan setLanguage ke Header */}
+      <Header language={language} setLanguage={setLanguage} />
       <main className="flex-grow pt-12 md:pt-16 lg:pt-20">
         <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 lg:py-20">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
@@ -110,12 +136,12 @@ export default function AllPackagesPage() {
               <button
                 onClick={handleAllProductsClick}
                 className={`border-2 ${
-                  selectedCategory === "All Products"
+                  selectedCategory === langData.allProducts
                     ? "border-orange-500 text-orange-500 bg-white"
                     : "border-gray-300 text-gray-500"
                 } rounded-full px-4 py-2 text-sm md:text-base font-medium hover:bg-orange-500 hover:text-white transition-colors`}
               >
-                All Products
+                {langData.allProducts}
               </button>
 
               {/* Dropdown Button */}
@@ -124,7 +150,7 @@ export default function AllPackagesPage() {
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className="bg-orange-500 text-white rounded-full px-4 py-2 text-sm md:text-base flex items-center gap-2 hover:bg-orange-600 transition-colors"
                 >
-                  Kategori
+                  {langData.category}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -182,7 +208,7 @@ export default function AllPackagesPage() {
               ))}
             </div>
           ) : (
-            <p className="text-center text-gray-500 mt-12">Data tidak ditemukan</p>
+            <p className="text-center text-gray-500 mt-12">{langData.noData}</p>
           )}
         </div>
       </main>

@@ -1,0 +1,226 @@
+[
+    {
+      "id": 1,
+      "category": "East Java 2 Days 1 Night",
+      "image": "/images/jawa-timur-2h1m.jpg",
+      "destination": "East Java",
+      "days": 2,
+      "nights": 1,
+      "packages": [
+        {
+          "id": 1,
+          "title": "Midnight Bromo Tour",
+          "rating": 5.0,
+          "duration": "1 Day",
+          "image": "/Paket/Card1.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Mount Bromo Adventure",
+          "rating": 5.0,
+          "duration": "2 Days 1 Night",
+          "image": "/Paket/Card2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "East Java 3 Days 2 Nights",
+      "image": "/images/jawa-timur-3h2m.jpg",
+      "destination": "East Java",
+      "days": 3,
+      "nights": 2,
+      "packages": [
+        {
+          "id": 3,
+          "title": "Bromo & Ijen Crater Expedition",
+          "rating": 5.0,
+          "duration": "3 Days 2 Nights",
+          "image": "/Paket/Card3.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Bromo & Tumpaksewu Waterfall",
+          "rating": 5.0,
+          "duration": "3 Days 2 Nights",
+          "image": "/Paket/Card4.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Bromo & Malang City Tour",
+          "rating": 5.0,
+          "duration": "3 Days 2 Nights",
+          "image": "/Paket/Card5.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Bromo & Surabaya City Experience",
+          "rating": 5.0,
+          "duration": "3 Days 2 Nights",
+          "image": "/Paket/Card6.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "East Java 4 Days 3 Nights",
+      "image": "/images/jawa-timur-4h3m.jpg",
+      "destination": "East Java",
+      "days": 4,
+      "nights": 3,
+      "packages": [
+        {
+          "id": 7,
+          "title": "Bromo, Ijen Crater & Tumpaksewu Waterfall",
+          "rating": 5.0,
+          "duration": "4 Days 3 Nights",
+          "image": "/Paket/Card7.jpg"
+        },
+        {
+          "id": 8,
+          "title": "Bromo, Ijen Crater & Surabaya",
+          "rating": 5.0,
+          "duration": "4 Days 3 Nights",
+          "image": "/Paket/Card8.jpg"
+        },
+        {
+          "id": 9,
+          "title": "Bromo, Tumpaksewu Waterfall & Surabaya",
+          "rating": 5.0,
+          "duration": "4 Days 3 Nights",
+          "image": "/Paket/Card9.jpg"
+        },
+        {
+          "id": 10,
+          "title": "Bromo, Tumpaksewu Waterfall & Malang",
+          "rating": 5.0,
+          "duration": "4 Days 3 Nights",
+          "image": "/Paket/Card10.jpg"
+        },
+        {
+          "id": 11,
+          "title": "Bromo, Malang & Surabaya Discovery",
+          "rating": 5.0,
+          "duration": "4 Days 3 Nights",
+          "image": "/Paket/Card11.jpg"
+        },
+        {
+          "id": 12,
+          "title": "Bromo, Ijen Crater & Malang Adventure",
+          "rating": 5.0,
+          "duration": "7 Days 6 Nights",
+          "image": "/Paket/Card12.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "East Java 5 Days 4 Nights",
+      "image": "/images/jawa-timur-5h4m.jpg",
+      "destination": "East Java",
+      "days": 5,
+      "nights": 4,
+      "packages": [
+        {
+          "id": 13,
+          "title": "Bromo, Ijen Crater, Tumpaksewu Waterfall & Surabaya",
+          "rating": 5.0,
+          "duration": "5 Days 4 Nights",
+          "image": "/Paket/Card13.jpg"
+        },
+        {
+          "id": 14,
+          "title": "Bromo, Tumpaksewu Waterfall, Malang & Surabaya",
+          "rating": 5.0,
+          "duration": "5 Days 4 Nights",
+          "image": "/Paket/Card14.jpg"
+        },
+        {
+          "id": 15,
+          "title": "Bromo, Ijen Crater, Tumpaksewu Waterfall & Malang",
+          "rating": 5.0,
+          "duration": "5 Days 4 Nights",
+          "image": "/Paket/Card15.jpg"
+        },
+        {
+          "id": 16,
+          "title": "Bromo, Ijen Crater, Malang & Surabaya",
+          "rating": 5.0,
+          "duration": "5 Days 4 Nights",
+          "image": "/Paket/Card16.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "East Java 6 Days 5 Nights",
+      "image": "/images/jawa-timur-6h5m.jpg",
+      "destination": "East Java",
+      "days": 6,
+      "nights": 5,
+      "packages": [
+        {
+          "id": 17,
+          "title": "Ultimate East Java: Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+          "rating": 5.0,
+          "duration": "6 Days 5 Nights",
+          "image": "/Paket/Card17.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Mount Semeru",
+      "image": "/images/semeru.jpg",
+      "destination": "Mount Semeru",
+      "days": 0,
+      "nights": 0,
+      "packages": [
+        {
+          "id": 20,
+          "title": "Mount Semeru Trekking",
+          "rating": 5.0,
+          "duration": "4 Days 3 Nights",
+          "image": "/Paket/Card0.jpg"
+        },
+        {
+          "id": 21,
+          "title": "Semeru & Bromo Combo",
+          "rating": 5.0,
+          "duration": "5 Days 4 Nights",
+          "image": "/Paket/Card0.jpg"
+        },
+        {
+          "id": 22,
+          "title": "Semeru, Bromo & Ijen Crater Expedition",
+          "rating": 5.0,
+          "duration": "6 Days 5 Nights",
+          "image": "/Paket/Card0.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Lombok Island",
+      "image": "/images/lombok.jpg",
+      "destination": "Lombok Island",
+      "days": 0,
+      "nights": 0,
+      "packages": [
+        {
+          "id": 18,
+          "title": "Mount Rinjani Climbing Package",
+          "rating": 5.0,
+          "duration": "4 Days 3 Nights",
+          "image": "/Paket/Card0.jpg"
+        },
+        {
+          "id": 19,
+          "title": "Premium Rinjani Trekking",
+          "rating": 5.0,
+          "duration": "5 Days 4 Nights",
+          "image": "/Paket/Card0.jpg"
+        }
+      ]
+    }
+  ]
