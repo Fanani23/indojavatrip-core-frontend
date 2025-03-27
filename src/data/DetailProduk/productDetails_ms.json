@@ -1,0 +1,1199 @@
+[
+  {
+    "title": "Bromo Tengah Malam",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 750.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card1.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "23.00 - 23.30 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "23.30 - 02.00 | Berangkat ke kawasan jeep Bromo",
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.20 | Menunggu di kedai kopi di titik matahari terbit di kawasan Bromo",
+          "04.20 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "09.00 - 11.30 | Kembali ke kereta dan sarapan",
+          "12.00 - 16.00 | Berangkat ke bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Air mineral"
+    ],
+    "excludes": [
+      "Sarapan, makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 1.850.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card6.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke bandar Surabaya",
+          "16.30 - 16.30 | Daftar masuk hotel",
+          "16.30 - 18.00 | Melawat bandar Surabaya, makan malam",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep Bromo",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo & Malang",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.100.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card5.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke hotel Malang",
+          "16.30 - 18.00 | Daftar masuk hotel",
+          "18.00 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.00 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.30 | Berangkat ke bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "Tiket masuk Bromo & jeep Bromo",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Gunung Bromo",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 1.200.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card2.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.00 - 12.30 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kedai kopi di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "09.00 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "Tiket masuk Bromo & jeep Bromo",
+      "Air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo & Kawah Ijen",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.050.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card3.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.00 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.30 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.30 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke hotel Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "12.00 - 17.00 | Daftar keluar hotel dan berangkat ke bandar Surabaya, makan tengah hari",
+          "18.30 - 18.30 | Selesai di bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo & Tumpaksewu",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.050.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card4.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "16.30 - 16.30 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 17.30 | Berangkat ke bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "Tiket masuk Bromo & jeep Bromo",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen & Tumpaksewu",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.650.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card7.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke bandar Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "12.00 - 17.00 | Daftar keluar hotel dan berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "17.30 - 20.00 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 17.30 | Berangkat ke bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "Tiket masuk Tumpaksewu & pemandu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.400.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card8.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke bandar Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "12.00 - 17.00 | Daftar keluar hotel dan berangkat ke hotel Surabaya, makan tengah hari",
+          "18.00 - 20.00 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Tumpaksewu & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.400.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card9.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "16.30 - 16.30 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 16.00 | Berangkat ke hotel Surabaya",
+          "18.00 - 20.00 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Tumpaksewu & pemandu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Tumpaksewu & Malang",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.750.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card10.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.00 | Berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "16.30 - 20.00 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 16.00 | Berangkat ke hotel Malang",
+          "16.30 - 18.00 | Daftar masuk hotel",
+          "18.00 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.30 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.30 | Berangkat ke bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Tumpaksewu & pemandu",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Malang & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.500.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card11.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 15.00 | Berangkat ke hotel Malang",
+          "15.30 - 15.30 | Daftar masuk hotel",
+          "18.00 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.30 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.30 | Berangkat ke hotel Surabaya",
+          "21.00 - 21.00 | Daftar masuk hotel Surabaya"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen & Malang",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.750.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card12.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.00 | Berangkat ke hotel di Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "12.00 - 17.00 | Daftar keluar hotel dan berangkat ke hotel Malang",
+          "17.30 - 18.30 | Daftar masuk hotel",
+          "18.30 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.30 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.39 | Berangkat ke bandar Surabaya",
+          "21.00 - 21.00 | Selesai"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen, Tumpaksewu & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 2.950.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card13.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.00 | Berangkat ke hotel Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "12.00 - 17.00 | Daftar keluar hotel dan berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "17.30 - 20.00 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 17.30 | Berangkat ke hotel Surabaya",
+          "18.00 - 20.00 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 5",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "Tiket masuk Tumpaksewu & pemandu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  
+  {
+    "title": "Bromo, Tumpaksewu, Malang & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 3.100.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card14.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 17.00 | Berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "17.30 - 20.00 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 16.00 | Berangkat ke hotel Malang",
+          "16.30 - 18.00 | Daftar masuk hotel",
+          "18.00 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.30 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.30 | Berangkat ke bandar Surabaya"
+        ]
+      },
+      {
+        "day": "Hari 5",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Tumpaksewu & pemandu",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen, Tumpaksewu & Malang",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 3.300.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card15.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke hotel di Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "12.00 - 17.00 | Daftar keluar hotel dan berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "17.30 - 20.00 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 16.00 | Berangkat ke hotel Malang",
+          "16.30 - 18.00 | Daftar masuk hotel",
+          "18.00 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 5",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.30 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.30 | Berangkat ke bandar Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "Tiket masuk Tumpaksewu & pemandu",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen, Malang & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 3.100.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card16.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke hotel di Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "10.00 - 12.00 | Daftar keluar hotel",
+          "12.30 - 16.00 | Berangkat ke hotel Malang, makan tengah hari",
+          "16.30 - 18.00 | Daftar masuk hotel",
+          "18.00 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.30 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.30 | Berangkat ke bandar Surabaya"
+        ]
+      },
+      {
+        "day": "Hari 5",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  },
+  {
+    "title": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+    "type": "Perjalanan Peribadi",
+    "price": "Rp. 3.600.000/PAX",
+    "customTrip": "Perjalanan Tersuai",
+    "contact": "Hubungi Terus",
+    "book": "Tempah",
+    "image": "/Paket/Card17.jpg",
+    "itinerary": [
+      {
+        "day": "Hari 1",
+        "details": [
+          "12.30 - 13.00 | Penjemputan mengikut permintaan (Hotel, Stesen, Lapangan Terbang)",
+          "12.30 - 16.30 | Makan tengah hari, berangkat ke kawasan hotel Bromo",
+          "16.30 - 16.30 | Daftar masuk hotel dan berehat, makan malam di kawasan Bromo"
+        ]
+      },
+      {
+        "day": "Hari 2",
+        "details": [
+          "02.30 - 03.30 | Penjemputan jeep untuk lawatan matahari terbit Bromo",
+          "03.30 - 04.10 | Menunggu di kafe di titik matahari terbit di kawasan Bromo",
+          "04.10 - 08.40 | Penanjakan 1 / Bukit Kingkong, Bukit Widodaren, Laut Pasir, Pasir Berbisik, Kawah Bromo (Boleh berjalan kaki atau menunggang kuda), Bukit Teletubbies",
+          "08.40 - 11.30 | Kembali ke hotel, sarapan, daftar keluar hotel",
+          "12.00 - 16.30 | Berangkat ke hotel di Bondowoso",
+          "16.30 - 16.30 | Daftar masuk hotel, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 3",
+        "details": [
+          "00.00 - 02.00 | Berangkat ke pos Paltuding Ijen (Sarapan dibawa)",
+          "02.00 - 03.30 | Mulakan trekking ke puncak Ijen (Sekitar 1 jam 30 minit)",
+          "04.00 - 04.30 | Api biru kawah Ijen (Sekitar 30 minit)",
+          "04.30 - 06.45 | Bersantai dan menikmati puncak Ijen (Sekitar 30 minit)",
+          "07.00 - 07.45 | Kembali ke kawasan parkir",
+          "08.00 - 10.00 | Kembali ke hotel",
+          "12.00 - 17.00 | Daftar keluar hotel dan berangkat ke pondok Tumpaksewu, makan tengah hari",
+          "17.30 - 20.00 | Daftar masuk pondok, makan malam, berehat"
+        ]
+      },
+      {
+        "day": "Hari 4",
+        "details": [
+          "06.00 - 06.30 | Panorama Kapas Biru",
+          "06.30 - 07.00 | Sarapan",
+          "07.00 - 09.00 | Panorama Tumpaksewu (Sekitar berjalan 200 meter), Air Terjun Bawah (Sekitar turun 20 minit), Wall Nirwana, Danau Biru, Gua Tetes",
+          "09.00 - 09.00 | Kembali ke pondok (Sekitar hiking 30 minit)",
+          "09.00 - 12.00 | Makan tengah hari dan daftar keluar",
+          "12.30 - 16.00 | Berangkat ke hotel Malang",
+          "16.30 - 18.00 | Daftar masuk hotel",
+          "18.00 - 21.00 | Membeli-belah di kawasan bandar Malang, makan malam, Dataran Batu",
+          "21.00 - 21.00 | Kembali ke hotel dan berehat"
+        ]
+      },
+      {
+        "day": "Hari 5",
+        "details": [
+          "07.00 - 08.00 | Sarapan dan daftar keluar hotel",
+          "09.00 - 10.00 | Kebun Epal",
+          "10.30 - 12.00 | Air Terjun Coban Rondo & Air Terjun Labirin",
+          "12.00 - 15.30 | Bukit Paralayang, Rumah Kayu, Taman Langit, makan tengah hari",
+          "15.30 - 17.30 | Muzium Pengangkutan",
+          "18.00 - 19.30 | Makan malam di Batu",
+          "19.30 - 21.30 | Berangkat ke bandar Surabaya"
+        ]
+      },
+      {
+        "day": "Hari 6",
+        "details": [
+          "Sarapan dan daftar keluar hotel",
+          "Berangkat ke lapangan terbang Surabaya"
+        ]
+      }
+    ],
+    "includes": [
+      "Pengangkutan, pemandu, petrol, tol, parkir",
+      "1 malam hotel di Bromo & sarapan",
+      "1 malam hotel di Ijen & sarapan",
+      "1 malam pondok di Tumpaksewu & sarapan",
+      "1 malam hotel di Malang & sarapan",
+      "1 malam hotel di Surabaya & sarapan",
+      "Tiket masuk Bromo & jeep 4x4 Bromo",
+      "Tiket masuk Kawah Ijen",
+      "Topeng untuk Ijen & pemandu Kawah Ijen",
+      "Tiket masuk Tumpaksewu & pemandu",
+      "Tiket masuk bandar Malang/Batu",
+      "WiFi mudah alih & air mineral"
+    ],
+    "excludes": [
+      "Makan tengah hari & makan malam",
+      "Kuda di Bromo",
+      "Paralayang",
+      "Bayaran Madakaripura"
+    ],
+    "notes": [
+      "Penerbangan pulang pada waktu malam atau menginap satu malam di Surabaya, kami boleh menyesuaikan jadual perjalanan untuk disesuaikan dengan jadual penerbangan anda. Anda akan menerima jadual perjalanan terperinci selepas anda menghantar jadual waktu penerbangan anda.",
+      "Air Terjun Madakaripura boleh diminta (bergantung kepada jadual penerbangan anda)."
+    ]
+  }
+]

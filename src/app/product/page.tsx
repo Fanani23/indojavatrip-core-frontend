@@ -1,39 +1,61 @@
-"use client";
+"use client"
 
-import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
-import productDetails from "@/data/productDetails.json";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer"; // Import Footer
-import CardList from "@/components/Cardlist";
-import packages from "@/data/listPaket.json";
+import { useSearchParams, useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import CardList from "@/components/Cardlist"
+import { getProductDetailsByLanguage } from "@/data/language/detailProduct"
+import { getKategoriByLanguage } from "@/data/language/data-kategori"
 
 export default function ProductPage() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const title = searchParams.get("title");
-  const [activeTab, setActiveTab] = useState("hari1");
-  const [language, setLanguage] = useState<string>("id"); // Default language: Indonesian
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const title = searchParams.get("title")
+  const [activeTab, setActiveTab] = useState("hari1")
+  const [language, setLanguage] = useState<string>("id") // Default language: Indonesian
+  const [productDetails, setProductDetails] = useState<any[]>([])
+  const [popularPackages, setPopularPackages] = useState<any[]>([])
 
   // Load language from localStorage on mount
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("selectedLanguage") || "id";
-    setLanguage(savedLanguage);
-  }, []);
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "id"
+    setLanguage(savedLanguage)
+  }, [])
+
+  // Update product details and packages when language changes
+  useEffect(() => {
+    // Get product details for the current language
+    const details = getProductDetailsByLanguage(language)
+    setProductDetails(details)
+
+    // Get category data for recommendations
+    const categories = getKategoriByLanguage(language)
+    // Flatten all packages from all categories
+    const allPackages = categories.flatMap((category) => category.packages || [])
+
+    // Filter packages to exclude current product and limit to 4
+    const currentProduct = details.find((item) => item.title === title)
+    const filteredPackages = currentProduct
+      ? allPackages.filter((pkg) => pkg.title !== currentProduct.title).slice(0, 4)
+      : allPackages.slice(0, 4)
+
+    setPopularPackages(filteredPackages)
+  }, [language, title])
 
   // Custom language setter that also saves to localStorage
   const handleLanguageChange = (newLanguage: string) => {
-    setLanguage(newLanguage);
-    localStorage.setItem("selectedLanguage", newLanguage);
-  };
+    setLanguage(newLanguage)
+    localStorage.setItem("selectedLanguage", newLanguage)
+  }
 
   // Find product details based on title
-  const product = productDetails.find((item) => item.title === title);
+  const product = productDetails.find((item) => item.title === title)
 
   if (!product) {
     return (
       <div className="min-h-screen bg-white font-sans">
-        <Header language={language} setLanguage={handleLanguageChange} /> {/* Pass props */}
+        <Header language={language} setLanguage={handleLanguageChange} />
         <div className="container mx-auto px-4 pt-32 md:pt-40 lg:pt-48 pb-20">
           <div className="max-w-lg mx-auto bg-gradient-to-b from-orange-50 to-white rounded-xl shadow-sm p-8 text-center border border-orange-100">
             <div className="mb-6 flex justify-center">
@@ -54,10 +76,27 @@ export default function ProductPage() {
                 </svg>
               </div>
             </div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">Segera Hadir!</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              {language === "id"
+                ? "Segera Hadir!"
+                : language === "en"
+                  ? "Coming Soon!"
+                  : language === "ms"
+                    ? "Akan Datang!"
+                    : language === "zh"
+                      ? "即将推出！"
+                      : "Segera Hadir!"}
+            </h2>
             <p className="text-gray-600 mb-6">
-              Paket wisata ini sedang dalam persiapan dan akan segera tersedia. Hubungi kami untuk informasi lebih
-              lanjut.
+              {language === "id"
+                ? "Paket wisata ini sedang dalam persiapan dan akan segera tersedia. Hubungi kami untuk informasi lebih lanjut."
+                : language === "en"
+                  ? "This travel package is in preparation and will be available soon. Contact us for more information."
+                  : language === "ms"
+                    ? "Pakej perjalanan ini sedang dalam persiapan dan akan tersedia tidak lama lagi. Hubungi kami untuk maklumat lanjut."
+                    : language === "zh"
+                      ? "此旅行套餐正在准备中，即将推出。请联系我们获取更多信息。"
+                      : "Paket wisata ini sedang dalam persiapan dan akan segera tersedia. Hubungi kami untuk informasi lebih lanjut."}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -70,27 +109,75 @@ export default function ProductPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                 </svg>
-                Hubungi via WhatsApp
+                {language === "id"
+                  ? "Hubungi via WhatsApp"
+                  : language === "en"
+                    ? "Contact via WhatsApp"
+                    : language === "ms"
+                      ? "Hubungi melalui WhatsApp"
+                      : language === "zh"
+                        ? "通过WhatsApp联系"
+                        : "Hubungi via WhatsApp"}
               </a>
 
               <button
                 onClick={() => router.push("/")}
                 className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors"
               >
-                Kembali ke Beranda
+                {language === "id"
+                  ? "Kembali ke Beranda"
+                  : language === "en"
+                    ? "Back to Home"
+                    : language === "ms"
+                      ? "Kembali ke Laman Utama"
+                      : language === "zh"
+                        ? "返回首页"
+                        : "Kembali ke Beranda"}
               </button>
             </div>
           </div>
         </div>
         <Footer />
       </div>
-    );
+    )
   }
 
-  // Get top 4 popular packages excluding the current product
-  const popularPackages = packages
-    .filter((pkg) => pkg.title !== product.title) // Exclude the current product
-    .slice(0, 4); // Limit to 4 cards
+  // Helper function to get tab labels based on language
+  const getTabLabel = (tabType: string) => {
+    if (tabType === "termasuk") {
+      return language === "id"
+        ? "Termasuk"
+        : language === "en"
+          ? "Included"
+          : language === "ms"
+            ? "Termasuk"
+            : language === "zh"
+              ? "包含"
+              : "Termasuk"
+    } else if (tabType === "tidakTermasuk") {
+      return language === "id"
+        ? "Tidak Termasuk"
+        : language === "en"
+          ? "Not Included"
+          : language === "ms"
+            ? "Tidak Termasuk"
+            : language === "zh"
+              ? "不包含"
+              : "Tidak Termasuk"
+    } else if (tabType.startsWith("hari")) {
+      const dayNumber = tabType.replace("hari", "")
+      return language === "id"
+        ? `Hari ${dayNumber}`
+        : language === "en"
+          ? `Day ${dayNumber}`
+          : language === "ms"
+            ? `Hari ${dayNumber}`
+            : language === "zh"
+              ? `第${dayNumber}天`
+              : `Hari ${dayNumber}`
+    }
+    return tabType
+  }
 
   // Helper function to render content based on active tab
   const renderTabContent = () => {
@@ -105,7 +192,7 @@ export default function ProductPage() {
             ))}
           </ul>
         </div>
-      );
+      )
     } else if (activeTab === "tidakTermasuk" && product.excludes) {
       return (
         <div className="p-6 bg-white rounded-md">
@@ -117,12 +204,12 @@ export default function ProductPage() {
             ))}
           </ul>
         </div>
-      );
+      )
     } else if (activeTab.startsWith("hari") && product.itinerary) {
-      const dayIndex = Number.parseInt(activeTab.replace("hari", "")) - 1;
+      const dayIndex = Number.parseInt(activeTab.replace("hari", "")) - 1
 
       if (product.itinerary[dayIndex]) {
-        const day = product.itinerary[dayIndex];
+        const day = product.itinerary[dayIndex]
         return (
           <div className="p-6 bg-white rounded-md">
             <div className="mb-6">
@@ -138,7 +225,17 @@ export default function ProductPage() {
 
             {product.notes && activeTab === "hari1" && (
               <div className="mt-8 border-t pt-6">
-                <h3 className="font-bold text-base md:text-xl mb-3 text-orange-500">Catatan:</h3>
+                <h3 className="font-bold text-base md:text-xl mb-3 text-orange-500">
+                  {language === "id"
+                    ? "Catatan:"
+                    : language === "en"
+                      ? "Notes:"
+                      : language === "ms"
+                        ? "Nota:"
+                        : language === "zh"
+                          ? "备注："
+                          : "Catatan:"}
+                </h3>
                 <ul className="list-none space-y-2">
                   {product.notes.map((note, index) => (
                     <li key={index} className="text-gray-700 text-sm md:text-base">
@@ -149,16 +246,28 @@ export default function ProductPage() {
               </div>
             )}
           </div>
-        );
+        )
       }
     }
 
-    return <div className="p-6 bg-white rounded-md text-gray-700 text-sm md:text-base">Konten tidak tersedia.</div>;
-  };
+    return (
+      <div className="p-6 bg-white rounded-md text-gray-700 text-sm md:text-base">
+        {language === "id"
+          ? "Konten tidak tersedia."
+          : language === "en"
+            ? "Content not available."
+            : language === "ms"
+              ? "Kandungan tidak tersedia."
+              : language === "zh"
+                ? "内容不可用。"
+                : "Konten tidak tersedia."}
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      <Header language={language} setLanguage={handleLanguageChange} /> {/* Tambahkan props */}
+      <Header language={language} setLanguage={handleLanguageChange} />
       <main className="container mx-auto px-4 pt-20 md:pt-32 lg:pt-40 pb-12">
         {/* Product Content */}
         <div className="grid lg:grid-cols-2 gap-12">
@@ -174,7 +283,17 @@ export default function ProductPage() {
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gray-200">
-                    <span className="text-gray-500 text-sm md:text-base">No image available</span>
+                    <span className="text-gray-500 text-sm md:text-base">
+                      {language === "id"
+                        ? "Gambar tidak tersedia"
+                        : language === "en"
+                          ? "No image available"
+                          : language === "ms"
+                            ? "Tiada gambar tersedia"
+                            : language === "zh"
+                              ? "没有可用的图片"
+                              : "Gambar tidak tersedia"}
+                    </span>
                   </div>
                 )}
               </div>
@@ -221,7 +340,7 @@ export default function ProductPage() {
                         }`}
                       onClick={() => setActiveTab(`hari${index + 1}`)}
                     >
-                      Hari {index + 1}
+                      {getTabLabel(`hari${index + 1}`)}
                     </button>
                   ))}
 
@@ -235,7 +354,7 @@ export default function ProductPage() {
                       }`}
                     onClick={() => setActiveTab("termasuk")}
                   >
-                    Termasuk
+                    {getTabLabel("termasuk")}
                   </button>
                 )}
 
@@ -249,7 +368,7 @@ export default function ProductPage() {
                       }`}
                     onClick={() => setActiveTab("tidakTermasuk")}
                   >
-                    Tidak Termasuk
+                    {getTabLabel("tidakTermasuk")}
                   </button>
                 )}
               </div>
@@ -261,10 +380,28 @@ export default function ProductPage() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:space-x-4">
               <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-3 md:py-4 text-base md:text-lg font-semibold rounded transition-colors">
-                {product.book || "Pesan"}
+                {product.book ||
+                  (language === "id"
+                    ? "Pesan"
+                    : language === "en"
+                      ? "Book Now"
+                      : language === "ms"
+                        ? "Tempah"
+                        : language === "zh"
+                          ? "立即预订"
+                          : "Pesan")}
               </button>
               <button className="px-4 md:px-6 py-3 md:py-4 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded text-base md:text-lg font-semibold transition-colors">
-                {product.contact || "Hubungi Langsung"}
+                {product.contact ||
+                  (language === "id"
+                    ? "Hubungi Langsung"
+                    : language === "en"
+                      ? "Contact Us"
+                      : language === "ms"
+                        ? "Hubungi Kami"
+                        : language === "zh"
+                          ? "联系我们"
+                          : "Hubungi Langsung")}
               </button>
             </div>
           </div>
@@ -272,13 +409,17 @@ export default function ProductPage() {
 
         {/* Recommendations Section */}
         <div className="mt-20 mb-12">
-          {" "}
-          {/* Menambahkan jarak atas dan bawah */}
           <div className="flex justify-start">
-            {" "}
-            {/* Membuat teks rata tengah tetapi di sisi kiri */}
             <h2 className="text-2xl md:text-4xl font-bold tracking-tighter text-orange-500 mb-12">
-              Rekomendasi Lainnya
+              {language === "id"
+                ? "Rekomendasi Lainnya"
+                : language === "en"
+                  ? "Other Recommendations"
+                  : language === "ms"
+                    ? "Cadangan Lain"
+                    : language === "zh"
+                      ? "其他推荐"
+                      : "Rekomendasi Lainnya"}
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -294,8 +435,8 @@ export default function ProductPage() {
           </div>
         </div>
       </main>
-      <Footer /> {/* Menambahkan Footer */}
+      <Footer />
     </div>
-  );
+  )
 }
 

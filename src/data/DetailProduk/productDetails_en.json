@@ -1,0 +1,1169 @@
+[
+  {
+    "title": "Midnight Bromo",
+    "type": "Private Trip",
+    "price": "Rp. 750,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card1.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "23:00 - 23:30 | Pickup as requested (Hotel, Station, Airport)",
+          "23:30 - 02:00 | Depart to the Bromo jeep area",
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:20 | Wait at a coffee shop at the sunrise point in the Bromo area",
+          "04:20 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "09:00 - 11:30 | Return to the car and have breakfast",
+          "12:00 - 16:00 | Depart to Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Mineral water"
+    ],
+    "excludes": [
+      "Breakfast, lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "We can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 1,850,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card6.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Surabaya city",
+          "16:30 - 16:30 | Check-in at the hotel",
+          "16:30 - 18:00 | Explore Surabaya city, dinner",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & Bromo jeep",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo & Malang",
+    "type": "Private Trip",
+    "price": "Rp. 2,100,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card5.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to the Malang hotel",
+          "16:30 - 18:00 | Check-in at the hotel",
+          "18:00 - 21:00 | Shopping in Malang city area, dinner, Batu Square",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:00 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:30 | Depart to Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "Bromo entrance ticket & Bromo jeep",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Paragliding",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Mount Bromo",
+    "type": "Private Trip",
+    "price": "Rp. 1,200,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card2.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:00 - 12:30 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a coffee shop at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "09:00 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "Bromo entrance ticket & Bromo jeep",
+      "Mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "We can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo & Kawah Ijen",
+    "type": "Private Trip",
+    "price": "Rp. 2,050,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card3.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:00 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:30 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:30 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to the Bondowoso hotel",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "12:00 - 17:00 | Check-out from the hotel and depart to Surabaya city, lunch",
+          "18:30 - 18:30 | Finish in Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo & Tumpaksewu",
+    "type": "Private Trip",
+    "price": "Rp. 2,050,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card4.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Tumpaksewu lodge, lunch",
+          "16:30 - 16:30 | Check-in at the lodge, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the lodge (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 17:30 | Depart to Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night lodge in Tumpaksewu & breakfast",
+      "Bromo entrance ticket & Bromo jeep",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen & Tumpaksewu",
+    "type": "Private Trip",
+    "price": "Rp. 2,650,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card7.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Bondowoso city",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "12:00 - 17:00 | Check-out from the hotel and depart to Tumpaksewu cottage, lunch",
+          "17:30 - 20:00 | Check-in at the cottage, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the cottage (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 17:30 | Depart to Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "1 night cottage in Tumpaksewu & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Tumpaksewu entrance ticket & guide",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 2,400,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card8.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Bondowoso city",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "12:00 - 17:00 | Check-out from the hotel and depart to Surabaya hotel, lunch",
+          "18:00 - 20:00 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Tumpaksewu & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 2,400,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card9.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Tumpaksewu cottage, lunch",
+          "16:30 - 16:30 | Check-in at the cottage, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the cottage (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 16:00 | Depart to Surabaya hotel",
+          "18:00 - 20:00 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night cottage in Tumpaksewu & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Tumpaksewu entrance ticket & guide",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Tumpaksewu & Malang",
+    "type": "Private Trip",
+    "price": "Rp. 2,750,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card10.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:00 | Depart to Tumpaksewu cottage, lunch",
+          "16:30 - 20:00 | Check-in at the cottage, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the cottage (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 16:00 | Depart to Malang hotel",
+          "16:30 - 18:00 | Check-in at the hotel",
+          "18:00 - 21:00 | Shopping in Malang city area, dinner, Batu Square",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:30 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:30 | Depart to Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night cottage in Tumpaksewu & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Tumpaksewu entrance ticket & guide",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Paragliding",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Malang & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 2,500,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card11.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 15:00 | Depart to the Malang hotel",
+          "15:30 - 15:30 | Check-in at the hotel",
+          "18:00 - 21:00 | Shopping in Malang city area, dinner, Batu Square"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:30 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:30 | Depart to the Surabaya hotel",
+          "21:00 - 21:00 | Check-in at the Surabaya hotel"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Paragliding",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen & Malang",
+    "type": "Private Trip",
+    "price": "Rp. 2,750,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card12.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:00 | Depart to the Bondowoso hotel",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "12:00 - 17:00 | Check-out from the hotel and depart to the Malang hotel",
+          "17:30 - 18:30 | Check-in at the hotel",
+          "18:30 - 21:00 | Shopping in Malang city area, dinner, Batu Square",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:30 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:39 | Depart to Surabaya city",
+          "21:00 - 21:00 | Finish"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Paragliding",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen, Tumpaksewu & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 2,950,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card13.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:00 | Depart to the Bondowoso hotel",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "12:00 - 17:00 | Check-out from the hotel and depart to Tumpaksewu cottage, lunch",
+          "17:30 - 20:00 | Check-in at the cottage, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the cottage (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 17:30 | Depart to Surabaya hotel",
+          "18:00 - 20:00 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 5",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "1 night cottage in Tumpaksewu & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Tumpaksewu entrance ticket & guide",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Tumpaksewu, Malang & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 3,100,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card14.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 17:00 | Depart to Tumpaksewu cottage, lunch",
+          "17:30 - 20:00 | Check-in at the cottage, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the cottage (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 16:00 | Depart to Malang hotel",
+          "16:30 - 18:00 | Check-in at the hotel",
+          "18:00 - 21:00 | Shopping in Malang city area, dinner, Batu Square",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:30 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:30 | Depart to Surabaya city"
+        ]
+      },
+      {
+        "day": "Day 5",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night cottage in Tumpaksewu & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Tumpaksewu entrance ticket & guide",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": ["Lunch & dinner", "Horse riding in Bromo", "Paragliding"],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen, Tumpaksewu & Malang",
+    "type": "Private Trip",
+    "price": "Rp. 3,300,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card15.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Bondowoso city",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "12:00 - 17:00 | Check-out from the hotel and depart to Tumpaksewu cottage, lunch",
+          "17:30 - 20:00 | Check-in at the cottage, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the cottage (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 16:00 | Depart to Malang hotel",
+          "16:30 - 18:00 | Check-in at the hotel",
+          "18:00 - 21:00 | Shopping in Malang city area, dinner, Batu Square",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 5",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:30 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:30 | Depart to Surabaya city"
+        ]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "1 night cottage in Tumpaksewu & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Tumpaksewu entrance ticket & guide",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Paragliding",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Kawah Ijen, Malang & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 3,100,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card16.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Bondowoso city",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "10:00 - 12:00 | Check-out from the hotel",
+          "12:30 - 16:00 | Depart to Malang hotel, lunch",
+          "16:30 - 18:00 | Check-in at the hotel",
+          "18:00 - 21:00 | Shopping in Malang city area, dinner, Batu Square",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:30 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:30 | Depart to Surabaya city"
+        ]
+      },
+      {
+        "day": "Day 5",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Paragliding",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  },
+  {
+    "title": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+    "type": "Private Trip",
+    "price": "Rp. 3,600,000/PAX",
+    "customTrip": "Custom Trip",
+    "contact": "Contact Directly",
+    "book": "Book",
+    "image": "/Paket/Card17.jpg",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "details": [
+          "12:30 - 13:00 | Pickup as requested (Hotel, Station, Airport)",
+          "12:30 - 16:30 | Lunch, depart to the Bromo hotel area",
+          "16:30 - 16:30 | Check-in at the hotel and rest, dinner in the Bromo area"
+        ]
+      },
+      {
+        "day": "Day 2",
+        "details": [
+          "02:30 - 03:30 | Pickup by jeep for the Bromo sunrise tour",
+          "03:30 - 04:10 | Wait at a cafe at the sunrise point in the Bromo area",
+          "04:10 - 08:40 | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea of Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+          "08:40 - 11:30 | Return to the hotel, breakfast, check-out",
+          "12:00 - 16:30 | Depart to Bondowoso city",
+          "16:30 - 16:30 | Check-in at the hotel, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 3",
+        "details": [
+          "00:00 - 02:00 | Depart to Paltuding Ijen Post (Breakfast to-go)",
+          "02:00 - 03:30 | Start trekking to the Ijen summit (Approximately 1 hour 30 minutes)",
+          "04:00 - 04:30 | Blue Fire of Ijen Crater (Approximately 30 minutes)",
+          "04:30 - 06:45 | Relax and enjoy the Ijen summit (Approximately 30 minutes)",
+          "07:00 - 07:45 | Return to the parking area",
+          "08:00 - 10:00 | Return to the hotel",
+          "12:00 - 17:00 | Check-out from the hotel and depart to Tumpaksewu cottage, lunch",
+          "17:30 - 20:00 | Check-in at the cottage, dinner, rest"
+        ]
+      },
+      {
+        "day": "Day 4",
+        "details": [
+          "06:00 - 06:30 | Kapas Biru Panorama",
+          "06:30 - 07:00 | Breakfast",
+          "07:00 - 09:00 | Tumpaksewu Panorama (Approximately 200 meters walking), Lower Waterfall (Approximately 20 minutes downhill walking), Nirwana Wall, Blue Lake, Tetes Cave",
+          "09:00 - 09:00 | Return to the cottage (Approximately 30 minutes hiking)",
+          "09:00 - 12:00 | Lunch and check-out",
+          "12:30 - 16:00 | Depart to Malang hotel",
+          "16:30 - 18:00 | Check-in at the hotel",
+          "18:00 - 21:00 | Shopping in Malang city area, dinner, Batu Square",
+          "21:00 - 21:00 | Return to the hotel and rest"
+        ]
+      },
+      {
+        "day": "Day 5",
+        "details": [
+          "07:00 - 08:00 | Breakfast and check-out",
+          "09:00 - 10:00 | Apple Orchard",
+          "10:30 - 12:00 | Coban Rondo Waterfall & Labyrinth Waterfall",
+          "12:00 - 15:30 | Paragliding Hill, Wooden House, Sky Garden, lunch",
+          "15:30 - 17:30 | Transportation Museum",
+          "18:00 - 19:30 | Dinner in Batu",
+          "19:30 - 21:30 | Depart to Surabaya city"
+        ]
+      },
+      {
+        "day": "Day 6",
+        "details": ["Breakfast and check-out", "Depart to Surabaya airport"]
+      }
+    ],
+    "includes": [
+      "Transportation, driver, fuel, toll, parking",
+      "1 night hotel in Bromo & breakfast",
+      "1 night hotel in Ijen & breakfast",
+      "1 night cottage in Tumpaksewu & breakfast",
+      "1 night hotel in Malang & breakfast",
+      "1 night hotel in Surabaya & breakfast",
+      "Bromo entrance ticket & 4x4 Bromo jeep",
+      "Ijen Crater entrance ticket",
+      "Mask for Ijen & Ijen Crater guide",
+      "Tumpaksewu entrance ticket & guide",
+      "Malang/Batu city entrance ticket",
+      "Portable WiFi & mineral water"
+    ],
+    "excludes": [
+      "Lunch & dinner",
+      "Horse riding in Bromo",
+      "Madakaripura fees"
+    ],
+    "notes": [
+      "Return flights in the evening or stay one night in Surabaya, we can adjust the itinerary to match your flight schedule. You will receive a detailed itinerary after you submit your flight schedule.",
+      "Madakaripura Waterfall can be requested (depending on your flight schedule)."
+    ]
+  }
+]
