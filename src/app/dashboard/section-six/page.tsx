@@ -196,7 +196,7 @@ const ImageGallery = () => {
               </div>
 
               {/* Second row */}
-              <div className="rounded-xl overflow-hidden relative shadow-md h-60 md:h-80 lg:h-[400px]">
+              <div className="rounded-xl overflow-hidden relative shadow-md h-60 md:h-80 lg:h-[400px] mt-4"> {/* Tambahkan mt-4 */}
                 <Image
                   src={carouselSets[currentIndex].sideImages[2].url || "/placeholder.svg"}
                   alt={carouselSets[currentIndex].sideImages[2].alt}
@@ -205,7 +205,7 @@ const ImageGallery = () => {
                   sizes="(max-width: 1024px) 50vw, 329px"
                 />
               </div>
-              <div className="rounded-xl overflow-hidden relative shadow-md h-60 md:h-80 lg:h-[400px]">
+              <div className="rounded-xl overflow-hidden relative shadow-md h-60 md:h-80 lg:h-[400px] mt-4"> {/* Tambahkan mt-4 */}
                 <Image
                   src={carouselSets[currentIndex].sideImages[3].url || "/placeholder.svg"}
                   alt={carouselSets[currentIndex].sideImages[3].alt}

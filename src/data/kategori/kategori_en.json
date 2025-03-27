@@ -47,14 +47,14 @@
         },
         {
           "id": 5,
-          "title": "Bromo & Malang City Tour",
+          "title": "Bromo & Malang",
           "rating": 5.0,
           "duration": "3 Days 2 Nights",
           "image": "/Paket/Card5.jpg"
         },
         {
           "id": 6,
-          "title": "Bromo & Surabaya City Experience",
+          "title": "Bromo & Surabaya",
           "rating": 5.0,
           "duration": "3 Days 2 Nights",
           "image": "/Paket/Card6.jpg"
@@ -99,14 +99,14 @@
         },
         {
           "id": 11,
-          "title": "Bromo, Malang & Surabaya Discovery",
+          "title": "Bromo, Malang & Surabaya",
           "rating": 5.0,
           "duration": "4 Days 3 Nights",
           "image": "/Paket/Card11.jpg"
         },
         {
           "id": 12,
-          "title": "Bromo, Ijen Crater & Malang Adventure",
+          "title": "Bromo, Ijen Crater & Malang",
           "rating": 5.0,
           "duration": "7 Days 6 Nights",
           "image": "/Paket/Card12.jpg"
@@ -161,7 +161,7 @@
       "packages": [
         {
           "id": 17,
-          "title": "Ultimate East Java: Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
+          "title": "Bromo, Ijen, Tumpaksewu, Malang & Surabaya",
           "rating": 5.0,
           "duration": "6 Days 5 Nights",
           "image": "/Paket/Card17.jpg"
