@@ -2,7 +2,7 @@
     {
       "id": 1,
       "category": "East Java 2 Days 1 Night",
-      "image": "/images/jawa-timur-2h1m.jpg",
+      "image": "/Kategori-Image/Card1.jpg",
       "destination": "East Java",
       "days": 2,
       "nights": 1,
@@ -26,7 +26,7 @@
     {
       "id": 2,
       "category": "East Java 3 Days 2 Nights",
-      "image": "/images/jawa-timur-3h2m.jpg",
+      "image": "/Kategori-Image/Card2.jpg",
       "destination": "East Java",
       "days": 3,
       "nights": 2,
@@ -64,7 +64,7 @@
     {
       "id": 3,
       "category": "East Java 4 Days 3 Nights",
-      "image": "/images/jawa-timur-4h3m.jpg",
+      "image": "/Kategori-Image/Card3.jpg",
       "destination": "East Java",
       "days": 4,
       "nights": 3,
@@ -116,7 +116,7 @@
     {
       "id": 4,
       "category": "East Java 5 Days 4 Nights",
-      "image": "/images/jawa-timur-5h4m.jpg",
+      "image": "/Kategori-Image/Card4.jpg",
       "destination": "East Java",
       "days": 5,
       "nights": 4,
@@ -154,7 +154,7 @@
     {
       "id": 5,
       "category": "East Java 6 Days 5 Nights",
-      "image": "/images/jawa-timur-6h5m.jpg",
+      "image": "/Kategori-Image/Card5.jpg",
       "destination": "East Java",
       "days": 6,
       "nights": 5,
@@ -171,7 +171,7 @@
     {
       "id": 6,
       "category": "Mount Semeru",
-      "image": "/images/semeru.jpg",
+      "image": "/Kategori-Image/Card6.jpg",
       "destination": "Mount Semeru",
       "days": 0,
       "nights": 0,
@@ -202,7 +202,7 @@
     {
       "id": 7,
       "category": "Lombok Island",
-      "image": "/images/lombok.jpg",
+      "image": "/Kategori-Image/Card6.jpg",
       "destination": "Lombok Island",
       "days": 0,
       "nights": 0,

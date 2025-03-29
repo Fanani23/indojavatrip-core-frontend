@@ -16,6 +16,10 @@ export default function ProductPage() {
   const [language, setLanguage] = useState<string>("id") // Default language: Indonesian
   const [productDetails, setProductDetails] = useState<any[]>([])
   const [popularPackages, setPopularPackages] = useState<any[]>([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [initialLoading, setInitialLoading] = useState(true) // Track initial loading state
+  const [dataInitialized, setDataInitialized] = useState(false)
+  const [loadingTimeout, setLoadingTimeout] = useState<NodeJS.Timeout | null>(null)
 
   // Load language from localStorage on mount
   useEffect(() => {
@@ -25,22 +29,54 @@ export default function ProductPage() {
 
   // Update product details and packages when language changes
   useEffect(() => {
-    // Get product details for the current language
-    const details = getProductDetailsByLanguage(language)
-    setProductDetails(details)
+    // Clear any existing timeout
+    if (loadingTimeout) {
+      clearTimeout(loadingTimeout)
+    }
 
-    // Get category data for recommendations
-    const categories = getKategoriByLanguage(language)
-    // Flatten all packages from all categories
-    const allPackages = categories.flatMap((category) => category.packages || [])
+    // Set a timeout to show loading state only if data takes too long
+    const timeout = setTimeout(() => {
+      setIsLoading(true)
+    }, 300) // Only show loading if data takes more than 300ms to load
 
-    // Filter packages to exclude current product and limit to 4
-    const currentProduct = details.find((item) => item.title === title)
-    const filteredPackages = currentProduct
-      ? allPackages.filter((pkg) => pkg.title !== currentProduct.title).slice(0, 4)
-      : allPackages.slice(0, 4)
+    setLoadingTimeout(timeout)
 
-    setPopularPackages(filteredPackages)
+    try {
+      // Get product details for the current language
+      const details = getProductDetailsByLanguage(language)
+      setProductDetails(details)
+
+      // Get category data for recommendations
+      const categories = getKategoriByLanguage(language)
+      // Flatten all packages from all categories
+      const allPackages = categories.flatMap((category) => category.packages || [])
+
+      // Filter packages to exclude current product and limit to 4
+      const currentProduct = details.find((item) => item.title === title)
+      const filteredPackages = currentProduct
+        ? allPackages.filter((pkg) => pkg.title !== currentProduct.title).slice(0, 4)
+        : allPackages.slice(0, 4)
+
+      setPopularPackages(filteredPackages)
+
+      // Clear the timeout and set loading to false since data is loaded
+      clearTimeout(timeout)
+      setIsLoading(false)
+      setInitialLoading(false)
+      setDataInitialized(true)
+    } catch (error) {
+      console.error("Error loading data:", error)
+      clearTimeout(timeout)
+      setIsLoading(false)
+      setInitialLoading(false)
+      setDataInitialized(true)
+    }
+
+    return () => {
+      if (loadingTimeout) {
+        clearTimeout(loadingTimeout)
+      }
+    }
   }, [language, title])
 
   // Custom language setter that also saves to localStorage
@@ -52,7 +88,43 @@ export default function ProductPage() {
   // Find product details based on title
   const product = productDetails.find((item) => item.title === title)
 
-  if (!product) {
+  // Render loading UI - used for both initial loading and explicit loading states
+  const renderLoadingUI = () => (
+    <div className="min-h-screen bg-white font-sans">
+      <Header language={language} setLanguage={handleLanguageChange} />
+      <div className="container mx-auto px-4 pt-32 md:pt-40 lg:pt-48 pb-20 flex justify-center">
+        <div className="max-w-lg w-full bg-white rounded-xl shadow-sm p-8 text-center border border-orange-100">
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="w-16 h-16 relative">
+              <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center">
+                <div className="w-16 h-16 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+              </div>
+            </div>
+            <h2 className="text-xl font-medium text-gray-700">
+              {language === "id"
+                ? "Memuat data..."
+                : language === "en"
+                  ? "Loading data..."
+                  : language === "ms"
+                    ? "Memuatkan data..."
+                    : language === "zh"
+                      ? "加载数据中..."
+                      : "Memuat data..."}
+            </h2>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  )
+
+  // Show loading state for both initial loading and explicit loading
+  if (isLoading || initialLoading) {
+    return renderLoadingUI()
+  }
+
+  // Only show "not found" after we've confirmed data is initialized and product is not found
+  if (!product && dataInitialized) {
     return (
       <div className="min-h-screen bg-white font-sans">
         <Header language={language} setLanguage={handleLanguageChange} />
@@ -265,6 +337,37 @@ export default function ProductPage() {
     )
   }
 
+  // Loading state for recommendations
+  const renderRecommendations = () => {
+    if (isLoading) {
+      return (
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="animate-pulse">
+              <div className="bg-gray-200 rounded-lg aspect-[3/4]"></div>
+              <div className="mt-2 bg-gray-200 h-4 rounded w-3/4"></div>
+              <div className="mt-1 bg-gray-200 h-3 rounded w-1/2"></div>
+            </div>
+          ))}
+        </div>
+      )
+    }
+
+    return (
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {popularPackages.map((pkg) => (
+          <div
+            key={pkg.id}
+            className="cursor-pointer"
+            onClick={() => router.push(`/product?title=${encodeURIComponent(pkg.title)}`)}
+          >
+            <CardList title={pkg.title} rating={pkg.rating} duration={pkg.duration} image={pkg.image} />
+          </div>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-white font-sans">
       <Header language={language} setLanguage={handleLanguageChange} />
@@ -422,17 +525,7 @@ export default function ProductPage() {
                       : "Rekomendasi Lainnya"}
             </h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {popularPackages.map((pkg) => (
-              <div
-                key={pkg.id}
-                className="cursor-pointer"
-                onClick={() => router.push(`/product?title=${encodeURIComponent(pkg.title)}`)}
-              >
-                <CardList title={pkg.title} rating={pkg.rating} duration={pkg.duration} image={pkg.image} />
-              </div>
-            ))}
-          </div>
+          {renderRecommendations()}
         </div>
       </main>
       <Footer />

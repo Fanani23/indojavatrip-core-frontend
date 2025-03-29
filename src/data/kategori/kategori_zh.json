@@ -1,226 +1,226 @@
 [
-    {
-      "id": 1,
-      "category": "东爪哇 2天1夜",
-      "image": "/images/jawa-timur-2h1m.jpg",
-      "destination": "东爪哇",
-      "days": 2,
-      "nights": 1,
-      "packages": [
-        {
-          "id": 1,
-          "title": "午夜布罗莫",
-          "rating": 5.0,
-          "duration": "1天",
-          "image": "/Paket/Card1.jpg"
-        },
-        {
-          "id": 2,
-          "title": "布罗莫火山",
-          "rating": 5.0,
-          "duration": "2天1夜",
-          "image": "/Paket/Card2.jpg"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "category": "东爪哇 3天2夜",
-      "image": "/images/jawa-timur-3h2m.jpg",
-      "destination": "东爪哇",
-      "days": 3,
-      "nights": 2,
-      "packages": [
-        {
-          "id": 3,
-          "title": "布罗莫和伊真火山口",
-          "rating": 5.0,
-          "duration": "3天2夜",
-          "image": "/Paket/Card3.jpg"
-        },
-        {
-          "id": 4,
-          "title": "布罗莫和Tumpaksewu瀑布",
-          "rating": 5.0,
-          "duration": "3天2夜",
-          "image": "/Paket/Card4.jpg"
-        },
-        {
-          "id": 5,
-          "title": "布罗莫和玛琅",
-          "rating": 5.0,
-          "duration": "3天2夜",
-          "image": "/Paket/Card5.jpg"
-        },
-        {
-          "id": 6,
-          "title": "布罗莫和泗水",
-          "rating": 5.0,
-          "duration": "3天2夜",
-          "image": "/Paket/Card6.jpg"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "category": "东爪哇 4天3夜",
-      "image": "/images/jawa-timur-4h3m.jpg",
-      "destination": "东爪哇",
-      "days": 4,
-      "nights": 3,
-      "packages": [
-        {
-          "id": 7,
-          "title": "布罗莫、伊真火山口和Tumpaksewu瀑布",
-          "rating": 5.0,
-          "duration": "4天3夜",
-          "image": "/Paket/Card7.jpg"
-        },
-        {
-          "id": 8,
-          "title": "布罗莫、伊真火山口和泗水",
-          "rating": 5.0,
-          "duration": "4天3夜",
-          "image": "/Paket/Card8.jpg"
-        },
-        {
-          "id": 9,
-          "title": "布罗莫、Tumpaksewu瀑布和泗水",
-          "rating": 5.0,
-          "duration": "4天3夜",
-          "image": "/Paket/Card9.jpg"
-        },
-        {
-          "id": 10,
-          "title": "布罗莫、Tumpaksewu瀑布和玛琅",
-          "rating": 5.0,
-          "duration": "4天3夜",
-          "image": "/Paket/Card10.jpg"
-        },
-        {
-          "id": 11,
-          "title": "布罗莫、玛琅和泗水",
-          "rating": 5.0,
-          "duration": "4天3夜",
-          "image": "/Paket/Card11.jpg"
-        },
-        {
-          "id": 12,
-          "title": "布罗莫、伊真火山口和玛琅",
-          "rating": 5.0,
-          "duration": "7天6夜",
-          "image": "/Paket/Card12.jpg"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "category": "东爪哇 5天4夜",
-      "image": "/images/jawa-timur-5h4m.jpg",
-      "destination": "东爪哇",
-      "days": 5,
-      "nights": 4,
-      "packages": [
-        {
-          "id": 13,
-          "title": "布罗莫、伊真火山口、Tumpaksewu瀑布和泗水",
-          "rating": 5.0,
-          "duration": "5天4夜",
-          "image": "/Paket/Card13.jpg"
-        },
-        {
-          "id": 14,
-          "title": "布罗莫、Tumpaksewu瀑布、玛琅和泗水",
-          "rating": 5.0,
-          "duration": "5天4夜",
-          "image": "/Paket/Card14.jpg"
-        },
-        {
-          "id": 15,
-          "title": "布罗莫、伊真火山口、Tumpaksewu瀑布和玛琅",
-          "rating": 5.0,
-          "duration": "5天4夜",
-          "image": "/Paket/Card15.jpg"
-        },
-        {
-          "id": 16,
-          "title": "布罗莫、伊真火山口、玛琅和泗水",
-          "rating": 5.0,
-          "duration": "5天4夜",
-          "image": "/Paket/Card16.jpg"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "category": "东爪哇 6天5夜",
-      "image": "/images/jawa-timur-6h5m.jpg",
-      "destination": "东爪哇",
-      "days": 6,
-      "nights": 5,
-      "packages": [
-        {
-          "id": 17,
-          "title": "布罗莫、伊真火山、Tumpaksewu瀑布、玛琅和泗水",
-          "rating": 5.0,
-          "duration": "6天5夜",
-          "image": "/Paket/Card17.jpg"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "category": "塞梅鲁火山",
-      "image": "/images/semeru.jpg",
-      "destination": "塞梅鲁火山",
-      "days": 0,
-      "nights": 0,
-      "packages": [
-        {
-          "id": 20,
-          "title": "塞梅鲁火山",
-          "rating": 5.0,
-          "duration": "4天3夜",
-          "image": "/Paket/Card0.jpg"
-        },
-        {
-          "id": 21,
-          "title": "塞梅鲁火山和布罗莫",
-          "rating": 5.0,
-          "duration": "5天4夜",
-          "image": "/Paket/Card0.jpg"
-        },
-        {
-          "id": 22,
-          "title": "塞梅鲁火山、布罗莫和伊真火山口",
-          "rating": 5.0,
-          "duration": "6天5夜",
-          "image": "/Paket/Card0.jpg"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "category": "龙目岛",
-      "image": "/images/lombok.jpg",
-      "destination": "龙目岛",
-      "days": 0,
-      "nights": 0,
-      "packages": [
-        {
-          "id": 18,
-          "title": "林贾尼火山",
-          "rating": 5.0,
-          "duration": "4天3夜",
-          "image": "/Paket/Card0.jpg"
-        },
-        {
-          "id": 19,
-          "title": "林贾尼火山",
-          "rating": 5.0,
-          "duration": "5天4夜",
-          "image": "/Paket/Card0.jpg"
-        }
-      ]
-    }
-  ]
+  {
+    "id": 1,
+    "category": "东爪哇 2天1夜",
+    "image": "/Kategori-Image/Card1.jpg",
+    "destination": "东爪哇",
+    "days": 2,
+    "nights": 1,
+    "packages": [
+      {
+        "id": 1,
+        "title": "午夜布罗莫",
+        "rating": 5.0,
+        "duration": "1天",
+        "image": "/Paket/Card1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "布罗莫山",
+        "rating": 5.0,
+        "duration": "2天1夜",
+        "image": "/Paket/Card2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "东爪哇 3天2夜",
+    "image": "/Kategori-Image/Card2.jpg",
+    "destination": "东爪哇",
+    "days": 3,
+    "nights": 2,
+    "packages": [
+      {
+        "id": 3,
+        "title": "布罗莫和宜珍火山",
+        "rating": 5.0,
+        "duration": "3天2夜",
+        "image": "/Paket/Card3.jpg"
+      },
+      {
+        "id": 4,
+        "title": "布罗莫和Tumpaksewu瀑布",
+        "rating": 5.0,
+        "duration": "3天2夜",
+        "image": "/Paket/Card4.jpg"
+      },
+      {
+        "id": 5,
+        "title": "布罗莫和玛琅",
+        "rating": 5.0,
+        "duration": "3天2夜",
+        "image": "/Paket/Card5.jpg"
+      },
+      {
+        "id": 6,
+        "title": "布罗莫和泗水",
+        "rating": 5.0,
+        "duration": "3天2夜",
+        "image": "/Paket/Card6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "东爪哇 4天3夜",
+    "image": "/Kategori-Image/Card3.jpg",
+    "destination": "东爪哇",
+    "days": 4,
+    "nights": 3,
+    "packages": [
+      {
+        "id": 7,
+        "title": "布罗莫、宜珍火山和Tumpaksewu瀑布",
+        "rating": 5.0,
+        "duration": "4天3夜",
+        "image": "/Paket/Card7.jpg"
+      },
+      {
+        "id": 8,
+        "title": "布罗莫、宜珍火山和泗水",
+        "rating": 5.0,
+        "duration": "4天3夜",
+        "image": "/Paket/Card8.jpg"
+      },
+      {
+        "id": 9,
+        "title": "布罗莫、Tumpaksewu瀑布和泗水",
+        "rating": 5.0,
+        "duration": "4天3夜",
+        "image": "/Paket/Card9.jpg"
+      },
+      {
+        "id": 10,
+        "title": "布罗莫、Tumpaksewu瀑布和玛琅",
+        "rating": 5.0,
+        "duration": "4天3夜",
+        "image": "/Paket/Card10.jpg"
+      },
+      {
+        "id": 11,
+        "title": "布罗莫、玛琅和泗水",
+        "rating": 5.0,
+        "duration": "4天3夜",
+        "image": "/Paket/Card11.jpg"
+      },
+      {
+        "id": 12,
+        "title": "布罗莫、宜珍火山和玛琅",
+        "rating": 5.0,
+        "duration": "7天6夜",
+        "image": "/Paket/Card12.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "东爪哇 5天4夜",
+    "image": "/Kategori-Image/Card4.jpg",
+    "destination": "东爪哇",
+    "days": 5,
+    "nights": 4,
+    "packages": [
+      {
+        "id": 13,
+        "title": "布罗莫、宜珍火山、Tumpaksewu瀑布和泗水",
+        "rating": 5.0,
+        "duration": "5天4夜",
+        "image": "/Paket/Card13.jpg"
+      },
+      {
+        "id": 14,
+        "title": "布罗莫、Tumpaksewu瀑布、玛琅和泗水",
+        "rating": 5.0,
+        "duration": "5天4夜",
+        "image": "/Paket/Card14.jpg"
+      },
+      {
+        "id": 15,
+        "title": "布罗莫、宜珍火山、Tumpaksewu瀑布和玛琅",
+        "rating": 5.0,
+        "duration": "5天4夜",
+        "image": "/Paket/Card15.jpg"
+      },
+      {
+        "id": 16,
+        "title": "布罗莫、宜珍火山、玛琅和泗水",
+        "rating": 5.0,
+        "duration": "5天4夜",
+        "image": "/Paket/Card16.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "东爪哇 6天5夜",
+    "image": "/Kategori-Image/Card5.jpg",
+    "destination": "东爪哇",
+    "days": 6,
+    "nights": 5,
+    "packages": [
+      {
+        "id": 17,
+        "title": "布罗莫、宜珍火山、Tumpaksewu瀑布、玛琅和泗水",
+        "rating": 5.0,
+        "duration": "6天5夜",
+        "image": "/Paket/Card17.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "塞梅鲁火山",
+    "image": "/Kategori-Image/Card6.jpg",
+    "destination": "塞梅鲁火山",
+    "days": 0,
+    "nights": 0,
+    "packages": [
+      {
+        "id": 20,
+        "title": "塞梅鲁火山",
+        "rating": 5.0,
+        "duration": "4天3夜",
+        "image": "/Paket/Card0.jpg"
+      },
+      {
+        "id": 21,
+        "title": "塞梅鲁火山和布罗莫",
+        "rating": 5.0,
+        "duration": "5天4夜",
+        "image": "/Paket/Card0.jpg"
+      },
+      {
+        "id": 22,
+        "title": "塞梅鲁火山、布罗莫和宜珍火山口",
+        "rating": 5.0,
+        "duration": "6天5夜",
+        "image": "/Paket/Card0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "龙目岛",
+    "image": "/Kategori-Image/Card7.jpg",
+    "destination": "龙目岛",
+    "days": 0,
+    "nights": 0,
+    "packages": [
+      {
+        "id": 18,
+        "title": "林贾尼火山",
+        "rating": 5.0,
+        "duration": "4天3夜",
+        "image": "/Paket/Card0.jpg"
+      },
+      {
+        "id": 19,
+        "title": "林贾尼火山",
+        "rating": 5.0,
+        "duration": "5天4夜",
+        "image": "/Paket/Card0.jpg"
+      }
+    ]
+  }
+]

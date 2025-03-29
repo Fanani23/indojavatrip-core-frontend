@@ -2,7 +2,7 @@
     {
       "id": 1,
       "category": "Jawa Timur 2 Hari 1 Malam",
-      "image": "/images/jawa-timur-2h1m.jpg",
+      "image": "/Kategori-Image/Card1.jpg",
       "destination": "Jawa Timur",
       "days": 2,
       "nights": 1,
@@ -26,7 +26,7 @@
     {
       "id": 2,
       "category": "Jawa Timur 3 Hari 2 Malam",
-      "image": "/images/jawa-timur-3h2m.jpg",
+      "image": "/Kategori-Image/Card2.jpg",
       "destination": "Jawa Timur",
       "days": 3,
       "nights": 2,
@@ -47,14 +47,14 @@
         },
         {
           "id": 5,
-          "title": "Bromo & Bandar Malang",
+          "title": "Bromo & Malang",
           "rating": 5.0,
           "duration": "3 Hari 2 Malam",
           "image": "/Paket/Card5.jpg"
         },
         {
           "id": 6,
-          "title": "Bromo & Bandar Surabaya",
+          "title": "Bromo & Surabaya",
           "rating": 5.0,
           "duration": "3 Hari 2 Malam",
           "image": "/Paket/Card6.jpg"
@@ -64,7 +64,7 @@
     {
       "id": 3,
       "category": "Jawa Timur 4 Hari 3 Malam",
-      "image": "/images/jawa-timur-4h3m.jpg",
+      "image": "/Kategori-Image/Card3.jpg",
       "destination": "Jawa Timur",
       "days": 4,
       "nights": 3,
@@ -78,35 +78,35 @@
         },
         {
           "id": 8,
-          "title": "Bromo, Kawah Ijen & Bandar Surabaya",
+          "title": "Bromo, Kawah Ijen & Surabaya",
           "rating": 5.0,
           "duration": "4 Hari 3 Malam",
           "image": "/Paket/Card8.jpg"
         },
         {
           "id": 9,
-          "title": "Bromo, Air Terjun Tumpaksewu & Bandar Surabaya",
+          "title": "Bromo, Air Terjun Tumpaksewu & Surabaya",
           "rating": 5.0,
           "duration": "4 Hari 3 Malam",
           "image": "/Paket/Card9.jpg"
         },
         {
           "id": 10,
-          "title": "Bromo, Air Terjun Tumpaksewu & Bandar Malang",
+          "title": "Bromo, Air Terjun Tumpaksewu & Malang",
           "rating": 5.0,
           "duration": "4 Hari 3 Malam",
           "image": "/Paket/Card10.jpg"
         },
         {
           "id": 11,
-          "title": "Bromo, Bandar Malang & Bandar Surabaya",
+          "title": "Bromo, Malang & Surabaya",
           "rating": 5.0,
           "duration": "4 Hari 3 Malam",
           "image": "/Paket/Card11.jpg"
         },
         {
           "id": 12,
-          "title": "Bromo, Kawah Ijen & Bandar Malang",
+          "title": "Bromo, Kawah Ijen & Malang",
           "rating": 5.0,
           "duration": "7 Hari 6 Malam",
           "image": "/Paket/Card12.jpg"
@@ -116,35 +116,35 @@
     {
       "id": 4,
       "category": "Jawa Timur 5 Hari 4 Malam",
-      "image": "/images/jawa-timur-5h4m.jpg",
+      "image": "/Kategori-Image/Card4.jpg",
       "destination": "Jawa Timur",
       "days": 5,
       "nights": 4,
       "packages": [
         {
           "id": 13,
-          "title": "Bromo, Kawah Ijen, Air Terjun Tumpaksewu & Bandar Surabaya",
+          "title": "Bromo, Kawah Ijen, Air Terjun Tumpaksewu & Surabaya",
           "rating": 5.0,
           "duration": "5 Hari 4 Malam",
           "image": "/Paket/Card13.jpg"
         },
         {
           "id": 14,
-          "title": "Bromo, Air Terjun Tumpaksewu, Bandar Malang & Bandar Surabaya",
+          "title": "Bromo, Air Terjun Tumpaksewu, Malang & Surabaya",
           "rating": 5.0,
           "duration": "5 Hari 4 Malam",
           "image": "/Paket/Card14.jpg"
         },
         {
           "id": 15,
-          "title": "Bromo, Kawah Ijen, Air Terjun Tumpaksewu & Bandar Malang",
+          "title": "Bromo, Kawah Ijen, Air Terjun Tumpaksewu & Malang",
           "rating": 5.0,
           "duration": "5 Hari 4 Malam",
           "image": "/Paket/Card15.jpg"
         },
         {
           "id": 16,
-          "title": "Bromo, Kawah Ijen, Bandar Malang & Bandar Surabaya",
+          "title": "Bromo, Kawah Ijen, Malang & Surabaya",
           "rating": 5.0,
           "duration": "5 Hari 4 Malam",
           "image": "/Paket/Card16.jpg"
@@ -154,14 +154,14 @@
     {
       "id": 5,
       "category": "Jawa Timur 6 Hari 5 Malam",
-      "image": "/images/jawa-timur-6h5m.jpg",
+      "image": "/Kategori-Image/Card5.jpg",
       "destination": "Jawa Timur",
       "days": 6,
       "nights": 5,
       "packages": [
         {
           "id": 17,
-          "title": "Bromo, Ijen, Air Terjun Tumpaksewu, Bandar Malang & Bandar Surabaya",
+          "title": "Bromo, Kawah Ijen, Air Terjun Tumpaksewu, Malang & Surabaya",
           "rating": 5.0,
           "duration": "6 Hari 5 Malam",
           "image": "/Paket/Card17.jpg"
@@ -171,7 +171,7 @@
     {
       "id": 6,
       "category": "Gunung Semeru",
-      "image": "/images/semeru.jpg",
+      "image": "/Kategori-Image/Card6.jpg",
       "destination": "Gunung Semeru",
       "days": 0,
       "nights": 0,
@@ -202,7 +202,7 @@
     {
       "id": 7,
       "category": "Pulau Lombok",
-      "image": "/images/lombok.jpg",
+      "image": "/Kategori-Image/Card7.jpg",
       "destination": "Pulau Lombok",
       "days": 0,
       "nights": 0,

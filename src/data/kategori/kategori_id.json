@@ -2,7 +2,7 @@
   {
     "id": 1,
     "category": "Jawa Timur 2 Hari / 1 Malam",
-    "image": "/images/jawa-timur-2h1m.jpg",
+    "image": "/Kategori-Image/Card1.jpg",
     "destination": "Jawa Timur",
     "days": 2,
     "nights": 1,
@@ -26,7 +26,7 @@
   {
     "id": 2,
     "category": "Jawa Timur 3 Hari / 2 Malam",
-    "image": "/images/jawa-timur-3h2m.jpg",
+    "image": "/Kategori-Image/Card2.jpg",
     "destination": "Jawa Timur",
     "days": 3,
     "nights": 2,
@@ -64,7 +64,7 @@
   {
     "id": 3,
     "category": "Jawa Timur 4 Hari / 3 Malam",
-    "image": "/images/jawa-timur-4h3m.jpg",
+    "image": "/Kategori-Image/Card3.jpg",
     "destination": "Jawa Timur",
     "days": 4,
     "nights": 3,
@@ -116,7 +116,7 @@
   {
     "id": 4,
     "category": "Jawa Timur 5 Hari / 4 Malam",
-    "image": "/images/jawa-timur-5h4m.jpg",
+    "image": "/Kategori-Image/Card4.jpg",
     "destination": "Jawa Timur",
     "days": 5,
     "nights": 4,
@@ -154,7 +154,7 @@
   {
     "id": 5,
     "category": "Jawa Timur 6 Hari / 5 Malam",
-    "image": "/images/jawa-timur-6h5m.jpg",
+    "image": "/Kategori-Image/Card5.jpg",
     "destination": "Jawa Timur",
     "days": 6,
     "nights": 5,
@@ -171,7 +171,7 @@
   {
     "id": 6,
     "category": "Semeru",
-    "image": "/images/semeru.jpg",
+    "image": "/Kategori-Image/Card6.jpg",
     "destination": "Semeru",
     "days": 0,
     "nights": 0,
@@ -202,7 +202,7 @@
   {
     "id": 7,
     "category": "Lombok",
-    "image": "/images/lombok.jpg",
+    "image": "/Kategori-Image/Card6.jpg",
     "destination": "Lombok",
     "days": 0,
     "nights": 0,
