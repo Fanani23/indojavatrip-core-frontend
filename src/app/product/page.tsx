@@ -114,7 +114,7 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer language={language} setLanguage={handleLanguageChange} />
     </div>
   )
 
@@ -209,7 +209,7 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer language={language} setLanguage={handleLanguageChange} />
       </div>
     )
   }
@@ -528,7 +528,7 @@ export default function ProductPage() {
           {renderRecommendations()}
         </div>
       </main>
-      <Footer />
+      <Footer language={language} setLanguage={handleLanguageChange} />
     </div>
   )
 }

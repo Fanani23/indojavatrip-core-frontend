@@ -1,113 +1,115 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CardList from "@/components/Cardlist";
-import { getKategoriByLanguage } from "@/data/language/data-kategori"; // Import fungsi untuk mendapatkan data kategori berdasarkan bahasa
-import allPackageLanguageData from "@/data/language/all-package"; // Import data bahasa
+import type React from "react"
+
+import { useState, useEffect } from "react"
+import { useRouter, useSearchParams } from "next/navigation"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import CardList from "@/components/Cardlist"
+import { getKategoriByLanguage } from "@/data/language/data-kategori" // Import fungsi untuk mendapatkan data kategori berdasarkan bahasa
+import allPackageLanguageData from "@/data/language/all-package" // Import data bahasa
 
 // Definisi tipe untuk package
 interface Package {
-  id: string | number;
-  title: string;
-  rating: number;
-  duration: string;
-  image: string;
-  [key: string]: any; // Untuk properti lain yang mungkin ada
+  id: string | number
+  title: string
+  rating: number
+  duration: string
+  image: string
+  [key: string]: any // Untuk properti lain yang mungkin ada
 }
 
 // Definisi tipe untuk kategori
 interface Category {
-  category: string;
-  packages: Package[];
+  category: string
+  packages: Package[]
 }
 
 export default function AllPackagesPage() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   // Tambahkan state untuk bahasa, inisialisasi dari localStorage atau default ke "id"
   const [language, setLanguage] = useState<"id" | "en" | "ms" | "zh">(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("selectedLanguage") as "id" | "en" | "ms" | "zh") || "id";
+      return (localStorage.getItem("selectedLanguage") as "id" | "en" | "ms" | "zh") || "id"
     }
-    return "id"; // Default ke bahasa Indonesia
-  });
+    return "id" // Default ke bahasa Indonesia
+  })
 
   // Ambil teks berdasarkan bahasa yang dipilih
-  const langData = allPackageLanguageData[language];
+  const langData = allPackageLanguageData[language]
 
   // State untuk data kategori dan kategori yang dipilih
-  const [categoriesData, setCategoriesData] = useState<Category[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [categoriesData, setCategoriesData] = useState<Category[]>([])
+  const [selectedCategory, setSelectedCategory] = useState<string>("")
 
   // State untuk loading
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true)
 
   // Ambil kategori dari URL parameter
-  const categoryParam = searchParams.get("category");
+  const categoryParam = searchParams.get("category")
 
   // Ambil data kategori berdasarkan bahasa
   useEffect(() => {
-    setIsLoading(true); // Set loading saat data sedang diambil
-    const data = getKategoriByLanguage(language);
-    setCategoriesData(data);
+    setIsLoading(true) // Set loading saat data sedang diambil
+    const data = getKategoriByLanguage(language)
+    setCategoriesData(data)
 
     // Set kategori yang dipilih berdasarkan URL parameter atau default ke "All Products"
-    setSelectedCategory(categoryParam || langData.allProducts);
+    setSelectedCategory(categoryParam || langData.allProducts)
 
-    setIsLoading(false); // Matikan loading setelah data selesai diambil
-  }, [language, categoryParam, langData.allProducts]);
+    setIsLoading(false) // Matikan loading setelah data selesai diambil
+  }, [language, categoryParam, langData.allProducts])
 
   // Effect untuk menyimpan bahasa ke localStorage saat bahasa berubah
   useEffect(() => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("selectedLanguage", language);
+      localStorage.setItem("selectedLanguage", language)
     }
-  }, [language]);
+  }, [language])
 
   // Ambil daftar kategori dari data kategori
-  const categories = categoriesData.map((cat) => cat.category);
+  const categories = categoriesData.map((cat) => cat.category)
 
   // Filter paket berdasarkan kategori yang dipilih
   const filteredPackages: Package[] =
     selectedCategory === langData.allProducts
       ? categoriesData.flatMap((cat) => cat.packages) // Semua paket
-      : categoriesData.find((cat) => cat.category === selectedCategory)?.packages || []; // Paket berdasarkan kategori
+      : categoriesData.find((cat) => cat.category === selectedCategory)?.packages || [] // Paket berdasarkan kategori
 
   const handleCardClick = (pkg: Package) => {
     router.push(
-      `/product?title=${encodeURIComponent(pkg.title)}&rating=${pkg.rating}&duration=${pkg.duration}&image=${pkg.image}`
-    );
-  };
+      `/product?title=${encodeURIComponent(pkg.title)}&rating=${pkg.rating}&duration=${pkg.duration}&image=${pkg.image}`,
+    )
+  }
 
   // Fungsi untuk menangani perubahan kategori
   const handleCategoryChange = (category: string) => {
-    if (category === selectedCategory) return; // Jangan lakukan apa-apa jika kategori sama
+    if (category === selectedCategory) return // Jangan lakukan apa-apa jika kategori sama
 
-    setSelectedCategory(category);
-    setIsDropdownOpen(false);
+    setSelectedCategory(category)
+    setIsDropdownOpen(false)
 
     // Update URL dengan kategori yang dipilih
     if (category === langData.allProducts) {
-      router.replace(window.location.pathname); // Hapus parameter kategori
+      router.replace(window.location.pathname) // Hapus parameter kategori
     } else {
-      router.replace(`${window.location.pathname}?category=${encodeURIComponent(category)}`);
+      router.replace(`${window.location.pathname}?category=${encodeURIComponent(category)}`)
     }
-  };
+  }
 
   // Handler khusus untuk tombol All Products
   const handleAllProductsClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Mencegah default behavior
+    e.preventDefault() // Mencegah default behavior
 
     if (selectedCategory !== langData.allProducts) {
-      setSelectedCategory(langData.allProducts);
-      router.replace(window.location.pathname);
+      setSelectedCategory(langData.allProducts)
+      router.replace(window.location.pathname)
     }
-  };
+  }
 
   // Pastikan halaman tidak glitch dengan menampilkan loading state
   if (isLoading) {
@@ -115,7 +117,7 @@ export default function AllPackagesPage() {
       <div className="flex items-center justify-center min-h-screen">
         <p className="text-gray-500">Loading...</p>
       </div>
-    );
+    )
   }
 
   return (
@@ -193,17 +195,8 @@ export default function AllPackagesPage() {
           {filteredPackages.length > 0 ? (
             <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-4 max-w-full mx-auto">
               {filteredPackages.map((pkg) => (
-                <div
-                  key={pkg.id}
-                  onClick={() => handleCardClick(pkg)}
-                  className="cursor-pointer"
-                >
-                  <CardList
-                    title={pkg.title}
-                    rating={pkg.rating}
-                    duration={pkg.duration}
-                    image={pkg.image}
-                  />
+                <div key={pkg.id} onClick={() => handleCardClick(pkg)} className="cursor-pointer">
+                  <CardList title={pkg.title} rating={pkg.rating} duration={pkg.duration} image={pkg.image} />
                 </div>
               ))}
             </div>
@@ -212,7 +205,8 @@ export default function AllPackagesPage() {
           )}
         </div>
       </main>
-      <Footer />
+      <Footer language={language} setLanguage={setLanguage} />
     </div>
-  );
+  )
 }
+

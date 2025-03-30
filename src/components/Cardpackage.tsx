@@ -1,13 +1,13 @@
-import type React from "react"
-import { ChevronRight } from "lucide-react"
+import type React from "react";
+import { ChevronRight } from "lucide-react";
 
 interface CardPackageProps {
-  destination: string
-  days?: number
-  nights?: number
-  image: string
-  aspectRatio: number
-  language?: string // Add language prop
+  destination: string;
+  days?: number;
+  nights?: number;
+  image: string;
+  aspectRatio: number;
+  language?: string; // Add language prop
 }
 
 const CardPackage: React.FC<CardPackageProps> = ({
@@ -44,13 +44,14 @@ const CardPackage: React.FC<CardPackageProps> = ({
       days: "天",
       nights: "晚",
     },
-  }
+  };
 
   // Get the correct translations based on language
-  const text = translations[language as keyof typeof translations] || translations.id
+  const text = translations[language as keyof typeof translations] || translations.id;
 
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg h-full group">
+    <div className="bg-white rounded-xl overflow-hidden shadow-lg h-full group relative">
+      {/* Wrapper for the image */}
       <div className="relative" style={{ paddingTop: `${aspectRatio * 100}%` }}>
         <img
           src={image || "/placeholder.svg"}
@@ -65,17 +66,20 @@ const CardPackage: React.FC<CardPackageProps> = ({
             </p>
           )}
         </div>
-        <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs px-2 py-1 rounded">{text.hotDeal}</div>
+        <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs px-2 py-1 rounded">
+          {text.hotDeal}
+        </div>
       </div>
-      <div className="p-4">
+
+      {/* White section for "Pilih Paket" */}
+      <div className="p-4 bg-white z-10 relative">
         <button className="flex items-center text-sm font-medium text-gray-800 hover:text-orange-500 transition-colors duration-200">
           {text.choosePackage}
           <ChevronRight className="h-4 w-4 ml-1" />
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CardPackage
-
+export default CardPackage;
