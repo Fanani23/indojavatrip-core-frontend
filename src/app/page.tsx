@@ -92,19 +92,18 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [currentImage, transitioning]);
 
-  // Scroll to Section Two
-// Scroll to Section Two with offset
-const scrollToSectionTwo = () => {
-  if (sectionTwoRef.current) {
-    const offset = -100; // Adjust this value to control how much higher the scroll stops
-    const sectionPosition = sectionTwoRef.current.getBoundingClientRect().top + window.scrollY + offset;
+  // Scroll to Section Two with offset
+  const scrollToSectionTwo = () => {
+    if (sectionTwoRef.current) {
+      const offset = -100; // Adjust this value to control how much higher the scroll stops
+      const sectionPosition = sectionTwoRef.current.getBoundingClientRect().top + window.scrollY + offset;
 
-    window.scrollTo({
-      top: sectionPosition,
-      behavior: "smooth", // Smooth scrolling
-    });
-  }
-};
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth", // Smooth scrolling
+      });
+    }
+  };
 
   // Render nothing until the app is ready
   if (!isReady) {
@@ -132,6 +131,15 @@ const scrollToSectionTwo = () => {
                 transitioning ? "z-10" : "z-20"
               }`}
             />
+
+            {/* Previous Image (for dissolve effect) */}
+            {transitioning && (
+              <img
+                src={images[prevImage] || "/placeholder.svg"}
+                alt={`Previous slide`}
+                className="absolute inset-0 w-full h-full object-cover scale-110 z-0"
+              />
+            )}
 
             {/* Content Overlay with Responsive Animation */}
             <motion.div
@@ -164,6 +172,28 @@ const scrollToSectionTwo = () => {
                 </div>
               </div>
             </motion.div>
+
+            {/* Navigation Buttons */}
+            <div className="absolute top-4 right-4 sm:bottom-6 sm:right-6 sm:top-auto z-40 flex gap-2 md:gap-4">
+              <button
+                onClick={goToPrevImage} // Go to previous image
+                className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 sm:p-2 md:p-3 transition-colors"
+                aria-label="Previous image"
+                disabled={transitioning}
+              >
+                <ArrowLeft size={16} className="sm:hidden" />
+                <ArrowLeft size={20} className="hidden sm:block" />
+              </button>
+              <button
+                onClick={goToNextImage} // Go to next image
+                className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full p-1.5 sm:p-2 md:p-3 transition-colors"
+                aria-label="Next image"
+                disabled={transitioning}
+              >
+                <ArrowRight size={16} className="sm:hidden" />
+                <ArrowRight size={20} className="hidden sm:block" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

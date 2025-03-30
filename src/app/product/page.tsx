@@ -482,7 +482,12 @@ export default function ProductPage() {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:space-x-4">
-              <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-3 md:py-4 text-base md:text-lg font-semibold rounded transition-colors">
+              <a
+                href="https://api.whatsapp.com/send/?phone=6281390070766&text=Halo%20saya%20ingin%20memesan%20paket%20wisata&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-3 md:py-4 text-base md:text-lg font-semibold rounded transition-colors text-center"
+              >
                 {product.book ||
                   (language === "id"
                     ? "Pesan"
@@ -493,8 +498,13 @@ export default function ProductPage() {
                         : language === "zh"
                           ? "立即预订"
                           : "Pesan")}
-              </button>
-              <button className="px-4 md:px-6 py-3 md:py-4 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded text-base md:text-lg font-semibold transition-colors">
+              </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=6281390070766&text=Halo%20saya%20ingin%20bertanya%20tentang%20paket%20wisata&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 md:px-6 py-3 md:py-4 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded text-base md:text-lg font-semibold transition-colors text-center"
+              >
                 {product.contact ||
                   (language === "id"
                     ? "Hubungi Langsung"
@@ -505,7 +515,7 @@ export default function ProductPage() {
                         : language === "zh"
                           ? "联系我们"
                           : "Hubungi Langsung")}
-              </button>
+              </a>
             </div>
           </div>
         </div>

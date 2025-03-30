@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Indojavatrip",
-  description: "Create by Adityawirz",
+  title: "IndoJavaTrip",
+  description: "Website perjalanan wisata terbaik",
+  icons: {
+    icon: "/favicon.ico", // Path ke favicon Anda
+  },
 };
 
 export default function RootLayout({
@@ -23,12 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="id">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

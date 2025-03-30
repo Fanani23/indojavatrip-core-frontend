@@ -1,8 +1,28 @@
 import Image from "next/image";
 import { sectionTwoData, SectionTwoContent } from "@/data/language/section-two";
+import { useEffect, useRef } from "react";
 
-export default function SectionTwo({ language }: { language: string }) {
+export default function SectionTwo({ language, scrollToRef }: { language: string, scrollToRef?: React.RefObject<HTMLElement> }) {
   const data: SectionTwoContent = sectionTwoData[language] || sectionTwoData["id"]; // Fallback to Indonesian if language not found
+  const defaultRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    // Use provided ref or default to the next section
+    const targetRef = scrollToRef || defaultRef;
+    
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      // If no ref is available, scroll down by a fixed amount
+      window.scrollBy({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <div className="bg-white py-12 pt-24 px-4 md:px-8 lg:px-12">
@@ -74,11 +94,17 @@ export default function SectionTwo({ language }: { language: string }) {
               </div>
             </div>
           </div>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-md transition-colors w-full sm:w-auto">
+          <button 
+            className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-md transition-colors w-full sm:w-auto"
+            onClick={handleScroll}
+          >
             {data.button}
           </button>
         </div>
       </div>
+      
+      {/* This div will be used as a fallback reference point if no scrollToRef is provided */}
+      <div ref={defaultRef} className="h-0"></div>
     </div>
   );
 }

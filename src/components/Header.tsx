@@ -5,10 +5,10 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { headerLanguageData } from "@/data/language/header";
 import { AnimatePresence, motion } from "framer-motion";
-import { getKategoriByLanguage } from "@/data/language/data-kategori"; // Import fungsi untuk mendapatkan kategori berdasarkan bahasa
+import { getKategoriByLanguage } from "@/data/language/data-kategori";
 
 interface HeaderProps {
-  language: "id" | "en" | "ms" | "zh"; // Restrict language to valid keys
+  language: "id" | "en" | "ms" | "zh";
   setLanguage: (newLanguage: "id" | "en" | "ms" | "zh") => void;
 }
 
@@ -18,16 +18,27 @@ export default function Header({ language, setLanguage }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobilePackageOpen, setIsMobilePackageOpen] = useState(false);
   const [isMobileLanguageOpen, setIsMobileLanguageOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const packageRef = useRef<HTMLDivElement>(null);
   const languageRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const langData = headerLanguageData[language] || headerLanguageData["id"]; // Fallback to Indonesian if language not found
-
-  // Ambil data kategori berdasarkan bahasa
+  const langData = headerLanguageData[language] || headerLanguageData["id"];
   const kategori = getKategoriByLanguage(language);
 
-  // Close dropdowns when clicking outside
+  // Check if mobile on mount and resize
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (packageRef.current && !packageRef.current.contains(event.target as Node)) {
@@ -44,65 +55,116 @@ export default function Header({ language, setLanguage }: HeaderProps) {
     };
   }, []);
 
-  // Handle navigation to all-package with selected category
+  useEffect(() => {
+    if (isMobile) {
+      // Di mobile, header selalu visible
+      setIsVisible(true);
+      return;
+    }
+
+    const controlHeader = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY;
+        
+        // Always show header when at top of page
+        if (currentScrollY <= 0) {
+          setIsVisible(true);
+          setLastScrollY(currentScrollY);
+          return;
+        }
+
+        // Hide header when scrolling down
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false);
+        } 
+        // Show header when scrolling up
+        else if (currentScrollY < lastScrollY) {
+          setIsVisible(true);
+        }
+
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener('scroll', controlHeader);
+    return () => window.removeEventListener('scroll', controlHeader);
+  }, [lastScrollY, isMobile]);
+
   const handleCategoryClick = (category: string) => {
     router.push(`/all-package?category=${encodeURIComponent(category)}`);
-    setIsPackageOpen(false); // Close the dropdown after navigation
-    setIsMobilePackageOpen(false); // Close mobile dropdown
-    setIsMobileMenuOpen(false); // Close mobile menu after navigation
+    setIsPackageOpen(false);
+    setIsMobilePackageOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <motion.header
       className="bg-white shadow-md fixed top-0 left-0 w-full z-50"
       initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      animate={{ 
+        y: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0
+      }}
+      transition={{ 
+        duration: isMobile ? 0 : 0.3, // No animation on mobile
+        ease: "easeInOut"
+      }}
     >
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img
+            <motion.img
               src="/logo.svg"
               alt="Logo"
               className="h-10 w-10 md:h-16 md:w-16"
               onClick={() => router.push("/")}
               style={{ cursor: "pointer" }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:text-blue-500 focus:outline-none"
               aria-expanded={isMobileMenuOpen}
               aria-label="Toggle menu"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            </motion.button>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="/" className="text-gray-700 hover:text-orange-500 transition-colors">
+            <motion.a 
+              href="/" 
+              className="text-gray-700 hover:text-orange-500 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               {langData.home}
-            </a>
+            </motion.a>
 
             {/* Package Dropdown */}
             <div className="relative" ref={packageRef}>
-              <button
+              <motion.button
                 onClick={() => {
                   setIsPackageOpen(!isPackageOpen);
                   setIsLanguageOpen(false);
                 }}
                 className="flex items-center text-gray-700 hover:text-orange-500 transition-colors"
                 aria-expanded={isPackageOpen}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {langData.package}
                 <ChevronDown size={16} className={`ml-1 transition-transform ${isPackageOpen ? "rotate-180" : ""}`} />
-              </button>
+              </motion.button>
               <AnimatePresence>
                 {isPackageOpen && (
                   <motion.ul
@@ -119,12 +181,14 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.05 * cat.id }}
                       >
-                        <button
+                        <motion.button
                           onClick={() => handleCategoryClick(cat.category)}
                           className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
+                          whileHover={{ x: 5 }}
+                          whileTap={{ scale: 0.98 }}
                         >
                           {cat.category}
-                        </button>
+                        </motion.button>
                       </motion.li>
                     ))}
                   </motion.ul>
@@ -132,23 +196,30 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               </AnimatePresence>
             </div>
 
-            <a href="/contact" className="text-gray-700 hover:text-orange-500 transition-colors">
+            <motion.a 
+              href="/contact" 
+              className="text-gray-700 hover:text-orange-500 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               {langData.contact}
-            </a>
+            </motion.a>
 
             {/* Language Dropdown */}
             <div className="relative" ref={languageRef}>
-              <button
+              <motion.button
                 onClick={() => {
                   setIsLanguageOpen(!isLanguageOpen);
                   setIsPackageOpen(false);
                 }}
                 className="flex items-center text-gray-700 hover:text-orange-500 transition-colors"
                 aria-expanded={isLanguageOpen}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {langData.language}
                 <ChevronDown size={16} className={`ml-1 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`} />
-              </button>
+              </motion.button>
               <AnimatePresence>
                 {isLanguageOpen && (
                   <motion.ul
@@ -159,36 +230,44 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                     className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-1 z-10"
                   >
                     <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.05 }}>
-                      <button
+                      <motion.button
                         onClick={() => setLanguage("id")}
                         className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
+                        whileHover={{ x: 5 }}
+                        whileTap={{ scale: 0.98 }}
                       >
                         Indonesia
-                      </button>
+                      </motion.button>
                     </motion.li>
                     <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
-                      <button
+                      <motion.button
                         onClick={() => setLanguage("en")}
                         className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
+                        whileHover={{ x: 5 }}
+                        whileTap={{ scale: 0.98 }}
                       >
                         English
-                      </button>
+                      </motion.button>
                     </motion.li>
                     <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}>
-                      <button
+                      <motion.button
                         onClick={() => setLanguage("ms")}
                         className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
+                        whileHover={{ x: 5 }}
+                        whileTap={{ scale: 0.98 }}
                       >
                         Malaysia
-                      </button>
+                      </motion.button>
                     </motion.li>
                     <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
-                      <button
+                      <motion.button
                         onClick={() => setLanguage("zh")}
                         className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500 transition-colors"
+                        whileHover={{ x: 5 }}
+                        whileTap={{ scale: 0.98 }}
                       >
                         Chinese
-                      </button>
+                      </motion.button>
                     </motion.li>
                   </motion.ul>
                 )}
@@ -208,7 +287,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4"
             >
               <nav className="flex flex-col space-y-4">
-                <a
+                <motion.a
                   href="/"
                   className="text-gray-700 hover:text-orange-500 transition-colors py-2 border-b border-gray-100"
                   onClick={(e) => {
@@ -216,26 +295,30 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                     router.push("/");
                     setIsMobileMenuOpen(false);
                   }}
+                  whileHover={{ x: 5 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   {langData.home}
-                </a>
+                </motion.a>
 
                 {/* Mobile Package Dropdown */}
                 <div className="border-b border-gray-100 pb-2">
-                  <button
+                  <motion.button
                     onClick={() => {
                       setIsMobilePackageOpen(!isMobilePackageOpen);
                       setIsMobileLanguageOpen(false);
                     }}
                     className="flex items-center justify-between w-full text-gray-700 hover:text-orange-500 transition-colors py-2"
                     aria-expanded={isMobilePackageOpen}
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     <span>{langData.package}</span>
                     <ChevronDown
                       size={16}
                       className={`transition-transform duration-300 ${isMobilePackageOpen ? "rotate-180" : ""}`}
                     />
-                  </button>
+                  </motion.button>
                   <AnimatePresence>
                     {isMobilePackageOpen && (
                       <motion.ul
@@ -253,12 +336,14 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.05 * index }}
                           >
-                            <button
+                            <motion.button
                               onClick={() => handleCategoryClick(cat.category)}
                               className="w-full text-left text-gray-700 hover:text-orange-500 transition-colors"
+                              whileHover={{ x: 5 }}
+                              whileTap={{ scale: 0.98 }}
                             >
                               {cat.category}
-                            </button>
+                            </motion.button>
                           </motion.li>
                         ))}
                       </motion.ul>
@@ -266,7 +351,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                   </AnimatePresence>
                 </div>
 
-                <a
+                <motion.a
                   href="/contact"
                   className="text-gray-700 hover:text-orange-500 transition-colors py-2 border-b border-gray-100"
                   onClick={(e) => {
@@ -274,26 +359,30 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                     router.push("/contact");
                     setIsMobileMenuOpen(false);
                   }}
+                  whileHover={{ x: 5 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   {langData.contact}
-                </a>
+                </motion.a>
 
                 {/* Mobile Language Dropdown */}
                 <div>
-                  <button
+                  <motion.button
                     onClick={() => {
                       setIsMobileLanguageOpen(!isMobileLanguageOpen);
                       setIsMobilePackageOpen(false);
                     }}
                     className="flex items-center justify-between w-full text-gray-700 hover:text-orange-500 transition-colors py-2"
                     aria-expanded={isMobileLanguageOpen}
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     <span>{langData.language}</span>
                     <ChevronDown
                       size={16}
                       className={`transition-transform duration-300 ${isMobileLanguageOpen ? "rotate-180" : ""}`}
                     />
-                  </button>
+                  </motion.button>
                   <AnimatePresence>
                     {isMobileLanguageOpen && (
                       <motion.ul
@@ -309,16 +398,18 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.05 }}
                         >
-                          <button
+                          <motion.button
                             onClick={() => {
                               setLanguage("id");
                               setIsMobileLanguageOpen(false);
                               setIsMobileMenuOpen(false);
                             }}
                             className="w-full text-left text-gray-700 hover:text-orange-500 transition-colors"
+                            whileHover={{ x: 5 }}
+                            whileTap={{ scale: 0.98 }}
                           >
                             Indonesia
-                          </button>
+                          </motion.button>
                         </motion.li>
                         <motion.li
                           className="py-2"
@@ -326,16 +417,18 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.1 }}
                         >
-                          <button
+                          <motion.button
                             onClick={() => {
                               setLanguage("en");
                               setIsMobileLanguageOpen(false);
                               setIsMobileMenuOpen(false);
                             }}
                             className="w-full text-left text-gray-700 hover:text-orange-500 transition-colors"
+                            whileHover={{ x: 5 }}
+                            whileTap={{ scale: 0.98 }}
                           >
                             English
-                          </button>
+                          </motion.button>
                         </motion.li>
                         <motion.li
                           className="py-2"
@@ -343,16 +436,18 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.15 }}
                         >
-                          <button
+                          <motion.button
                             onClick={() => {
                               setLanguage("ms");
                               setIsMobileLanguageOpen(false);
                               setIsMobileMenuOpen(false);
                             }}
                             className="w-full text-left text-gray-700 hover:text-orange-500 transition-colors"
+                            whileHover={{ x: 5 }}
+                            whileTap={{ scale: 0.98 }}
                           >
                             Malaysia
-                          </button>
+                          </motion.button>
                         </motion.li>
                         <motion.li
                           className="py-2"
@@ -360,16 +455,18 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.2 }}
                         >
-                          <button
+                          <motion.button
                             onClick={() => {
                               setLanguage("zh");
                               setIsMobileLanguageOpen(false);
                               setIsMobileMenuOpen(false);
                             }}
                             className="w-full text-left text-gray-700 hover:text-orange-500 transition-colors"
+                            whileHover={{ x: 5 }}
+                            whileTap={{ scale: 0.98 }}
                           >
                             Chinese
-                          </button>
+                          </motion.button>
                         </motion.li>
                       </motion.ul>
                     )}

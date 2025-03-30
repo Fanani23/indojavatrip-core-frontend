@@ -342,9 +342,14 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ language = "id" }) => {
 
         {/* "Show more" button */}
         <div className="mt-12 sm:mt-14 md:mt-16 flex justify-center">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+          <a
+            href="https://www.instagram.com/indojavatrip/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-1 text-center"
+          >
             {text.showMore}
-          </button>
+          </a>
         </div>
       </div>
     </section>
