@@ -106,7 +106,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
         opacity: isVisible ? 1 : 0
       }}
       transition={{ 
-        duration: isMobile ? 0 : 0.3, // No animation on mobile
+        duration: isMobile ? 0 : 0.3,
         ease: "easeInOut"
       }}
     >
