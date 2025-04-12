@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "IndoJavaTrip",
   description: "Website perjalanan wisata terbaik",
   icons: {
-    icon: "/favicon.ico", // Path ke favicon Anda
+    icon: "/favicon.png",
   },
 };
 
