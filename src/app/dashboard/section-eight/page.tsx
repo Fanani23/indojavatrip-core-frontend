@@ -1,3 +1,5 @@
+
+"use client";
 import { sectionEightData, SectionEightContent } from "@/data/language/section-eight";
 
 const ContactPerson: React.FC<{ language: keyof typeof sectionEightData }> = ({ language }) => {

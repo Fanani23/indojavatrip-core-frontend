@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { sectionTwoData, SectionTwoContent } from "@/data/language/section-two";
 import { useEffect, useRef } from "react";

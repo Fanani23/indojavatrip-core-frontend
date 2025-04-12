@@ -1,133 +1,409 @@
 "use client"
 
 import { useSearchParams, useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import CardList from "@/components/Cardlist"
 import { getProductDetailsByLanguage } from "@/data/language/detailProduct"
 import { getKategoriByLanguage } from "@/data/language/data-kategori"
 
+// Define a type for supported languages
+type SupportedLanguage = "id" | "en" | "ms" | "zh"
+
+// Define interfaces for our data structures
+interface ProductDetail {
+  title: string
+  type: string
+  price: string
+  customTrip: string
+  image?: string
+  includes?: string[]
+  excludes?: string[]
+  itinerary?: ItineraryDay[]
+  notes?: string[]
+  book?: string
+  contact?: string
+  rating?: number
+}
+
+interface ItineraryDay {
+  day: string
+  details: string[]
+}
+
+interface Package {
+  id: string | number
+  title: string
+  rating: number
+  duration: string
+  image: string
+}
+
+// Define props for Header and Footer components
+interface HeaderProps {
+  language: SupportedLanguage
+  setLanguage: (newLanguage: SupportedLanguage) => void
+}
+
+interface FooterProps {
+  language: SupportedLanguage
+}
+
 export default function ProductPage() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const title = searchParams.get("title")
   const [activeTab, setActiveTab] = useState("hari1")
-  const [language, setLanguage] = useState<string>("id") // Default language: Indonesian
-  const [productDetails, setProductDetails] = useState<any[]>([])
-  const [popularPackages, setPopularPackages] = useState<any[]>([])
+  const [language, setLanguage] = useState<SupportedLanguage>("id")
+  const [productDetails, setProductDetails] = useState<ProductDetail[]>([])
+  const [popularPackages, setPopularPackages] = useState<Package[]>([])
   const [isLoading, setIsLoading] = useState(false)
-  const [initialLoading, setInitialLoading] = useState(true) // Track initial loading state
+  const [initialLoading, setInitialLoading] = useState(true)
   const [dataInitialized, setDataInitialized] = useState(false)
-  const [loadingTimeout, setLoadingTimeout] = useState<NodeJS.Timeout | null>(null)
 
-  // Load language from localStorage on mount
+  // Use useRef instead of state for the timeout to avoid re-renders
+  const loadingTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Memoize the product to avoid recalculating on every render
+  const product = useMemo(() => productDetails.find((item) => item.title === title), [productDetails, title])
+
+  // Load language from localStorage on mount - only runs once
   useEffect(() => {
     const savedLanguage = localStorage.getItem("selectedLanguage") || "id"
-    setLanguage(savedLanguage)
+    // Validate that the saved language is one of the supported languages
+    if (savedLanguage === "id" || savedLanguage === "en" || savedLanguage === "ms" || savedLanguage === "zh") {
+      setLanguage(savedLanguage as SupportedLanguage)
+    } else {
+      // Default to "id" if saved language is not supported
+      setLanguage("id")
+    }
+  }, [])
+
+  // Memoize the language change handler to prevent recreation on each render
+  const handleLanguageChange = useCallback((newLanguage: string) => {
+    // Validate that the new language is one of the supported languages
+    if (newLanguage === "id" || newLanguage === "en" || newLanguage === "ms" || newLanguage === "zh") {
+      setLanguage(newLanguage as SupportedLanguage)
+      localStorage.setItem("selectedLanguage", newLanguage)
+    } else {
+      // Default to "id" if new language is not supported
+      setLanguage("id")
+      localStorage.setItem("selectedLanguage", "id")
+    }
   }, [])
 
   // Update product details and packages when language changes
   useEffect(() => {
     // Clear any existing timeout
-    if (loadingTimeout) {
-      clearTimeout(loadingTimeout)
+    if (loadingTimeoutRef.current) {
+      clearTimeout(loadingTimeoutRef.current)
+      loadingTimeoutRef.current = null
     }
 
-    // Set a timeout to show loading state only if data takes too long
-    const timeout = setTimeout(() => {
+    // Immediate data fetching without delay for better performance
+    const fetchData = () => {
       setIsLoading(true)
-    }, 300) // Only show loading if data takes more than 300ms to load
 
-    setLoadingTimeout(timeout)
+      try {
+        // Get product details for the current language - use direct assignment for speed
+        const details = getProductDetailsByLanguage(language)
+        const categories = getKategoriByLanguage(language)
 
-    try {
-      // Get product details for the current language
-      const details = getProductDetailsByLanguage(language)
-      setProductDetails(details)
+        // Optimize by doing all calculations in one go
+        const allPackages = categories.flatMap((category) => category.packages || [])
+        const currentProduct = details.find((item) => item.title === title)
+        const filteredPackages = currentProduct
+          ? allPackages.filter((pkg) => pkg.title !== currentProduct.title).slice(0, 4)
+          : allPackages.slice(0, 4)
 
-      // Get category data for recommendations
-      const categories = getKategoriByLanguage(language)
-      // Flatten all packages from all categories
-      const allPackages = categories.flatMap((category) => category.packages || [])
-
-      // Filter packages to exclude current product and limit to 4
-      const currentProduct = details.find((item) => item.title === title)
-      const filteredPackages = currentProduct
-        ? allPackages.filter((pkg) => pkg.title !== currentProduct.title).slice(0, 4)
-        : allPackages.slice(0, 4)
-
-      setPopularPackages(filteredPackages)
-
-      // Clear the timeout and set loading to false since data is loaded
-      clearTimeout(timeout)
-      setIsLoading(false)
-      setInitialLoading(false)
-      setDataInitialized(true)
-    } catch (error) {
-      console.error("Error loading data:", error)
-      clearTimeout(timeout)
-      setIsLoading(false)
-      setInitialLoading(false)
-      setDataInitialized(true)
+        // Batch state updates to reduce renders
+        setProductDetails(details)
+        setPopularPackages(filteredPackages)
+        setIsLoading(false)
+        setInitialLoading(false)
+        setDataInitialized(true)
+      } catch (error) {
+        console.error("Error loading data:", error)
+        setIsLoading(false)
+        setInitialLoading(false)
+        setDataInitialized(true)
+      }
     }
+
+    // Use requestAnimationFrame for smoother UI updates
+    requestAnimationFrame(() => {
+      fetchData()
+    })
 
     return () => {
-      if (loadingTimeout) {
-        clearTimeout(loadingTimeout)
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current)
+        loadingTimeoutRef.current = null
       }
     }
   }, [language, title])
 
-  // Custom language setter that also saves to localStorage
-  const handleLanguageChange = (newLanguage: string) => {
-    setLanguage(newLanguage)
-    localStorage.setItem("selectedLanguage", newLanguage)
-  }
-
-  // Find product details based on title
-  const product = productDetails.find((item) => item.title === title)
-
-  // Render loading UI - used for both initial loading and explicit loading states
-  const renderLoadingUI = () => (
-    <div className="min-h-screen bg-white font-sans">
-      <Header language={language} setLanguage={handleLanguageChange} />
-      <div className="container mx-auto px-4 pt-32 md:pt-40 lg:pt-48 pb-20 flex justify-center">
-        <div className="max-w-lg w-full bg-white rounded-xl shadow-sm p-8 text-center border border-orange-100">
-          <div className="flex flex-col items-center justify-center space-y-4">
-            <div className="w-16 h-16 relative">
-              <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center">
-                <div className="w-16 h-16 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
-              </div>
-            </div>
-            <h2 className="text-xl font-medium text-gray-700">
-              {language === "id"
-                ? "Memuat data..."
-                : language === "en"
-                  ? "Loading data..."
-                  : language === "ms"
-                    ? "Memuatkan data..."
-                    : language === "zh"
-                      ? "加载数据中..."
-                      : "Memuat data..."}
-            </h2>
-          </div>
-        </div>
-      </div>
-      <Footer language={language} setLanguage={handleLanguageChange} />
-    </div>
+  // Memoize tab label getter to avoid recalculation
+  const getTabLabel = useCallback(
+    (tabType: string) => {
+      if (tabType === "termasuk") {
+        return language === "id"
+          ? "Termasuk"
+          : language === "en"
+            ? "Included"
+            : language === "ms"
+              ? "Termasuk"
+              : language === "zh"
+                ? "包含"
+                : "Termasuk"
+      } else if (tabType === "tidakTermasuk") {
+        return language === "id"
+          ? "Tidak Termasuk"
+          : language === "en"
+            ? "Not Included"
+            : language === "ms"
+              ? "Tidak Termasuk"
+              : language === "zh"
+                ? "不包含"
+                : "Tidak Termasuk"
+      } else if (tabType.startsWith("hari")) {
+        const dayNumber = tabType.replace("hari", "")
+        return language === "id"
+          ? `Hari ${dayNumber}`
+          : language === "en"
+            ? `Day ${dayNumber}`
+            : language === "ms"
+              ? `Hari ${dayNumber}`
+              : language === "zh"
+                ? `第${dayNumber}天`
+                : `Hari ${dayNumber}`
+      }
+      return tabType
+    },
+    [language],
   )
 
-  // Show loading state for both initial loading and explicit loading
+  // Memoize loading UI to prevent recreation on each render
+  const renderLoadingUI = useCallback(
+    () => (
+      <div className="min-h-screen bg-white font-sans">
+        <Header language={language} setLanguage={handleLanguageChange as (newLanguage: SupportedLanguage) => void} />
+        <div className="container mx-auto px-4 pt-32 md:pt-40 lg:pt-48 pb-20 flex justify-center">
+          <div className="max-w-lg w-full bg-white rounded-xl shadow-sm p-8 text-center border border-orange-100">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <div className="w-16 h-16 relative">
+                <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center">
+                  <div className="w-16 h-16 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+                </div>
+              </div>
+              <h2 className="text-xl font-medium text-gray-700">
+                {language === "id"
+                  ? "Memuat data..."
+                  : language === "en"
+                    ? "Loading data..."
+                    : language === "ms"
+                      ? "Memuatkan data..."
+                      : language === "zh"
+                        ? "加载数据中..."
+                        : "Memuat data..."}
+              </h2>
+            </div>
+          </div>
+        </div>
+        <Footer language={language} />
+      </div>
+    ),
+    [language, handleLanguageChange],
+  )
+
+  // Memoize tab content to prevent recreation on each render
+  const renderTabContent = useMemo(() => {
+    if (!product) return null
+
+    if (activeTab === "termasuk" && product.includes && product.includes.length > 0) {
+      return (
+        <div className="p-6 bg-white rounded-md">
+          <ul className="list-disc ml-6 space-y-2">
+            {product.includes.map((item: string, index: number) => (
+              <li key={index} className="text-gray-700 text-sm md:text-base">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    } else if (activeTab === "tidakTermasuk" && product.excludes && product.excludes.length > 0) {
+      return (
+        <div className="p-6 bg-white rounded-md">
+          <ul className="list-disc ml-6 space-y-2">
+            {product.excludes.map((item: string, index: number) => (
+              <li key={index} className="text-gray-700 text-sm md:text-base">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    } else if (activeTab.startsWith("hari") && product.itinerary && product.itinerary.length > 0) {
+      const dayIndex = Number.parseInt(activeTab.replace("hari", "")) - 1
+
+      if (dayIndex >= 0 && dayIndex < product.itinerary.length) {
+        const day = product.itinerary[dayIndex]
+        return (
+          <div className="p-6 bg-white rounded-md">
+            <div className="mb-6">
+              <h3 className="font-bold text-lg md:text-2xl mb-4 text-orange-500">{day.day}</h3>
+              <ul className="list-disc ml-6 space-y-2">
+                {day.details.map((detail: string, idx: number) => (
+                  <li key={idx} className="text-gray-700 text-sm md:text-base">
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {product.notes && product.notes.length > 0 && activeTab === "hari1" && (
+              <div className="mt-8 border-t pt-6">
+                <h3 className="font-bold text-base md:text-xl mb-3 text-orange-500">
+                  {language === "id"
+                    ? "Catatan:"
+                    : language === "en"
+                      ? "Notes:"
+                      : language === "ms"
+                        ? "Nota:"
+                        : language === "zh"
+                          ? "备注："
+                          : "Catatan:"}
+                </h3>
+                <ul className="list-none space-y-2">
+                  {product.notes.map((note: string, index: number) => (
+                    <li key={index} className="text-gray-700 text-sm md:text-base">
+                      - {note}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )
+      }
+    }
+
+    return (
+      <div className="p-6 bg-white rounded-md text-gray-700 text-sm md:text-base">
+        {language === "id"
+          ? "Konten tidak tersedia."
+          : language === "en"
+            ? "Content not available."
+            : language === "ms"
+              ? "Kandungan tidak tersedia."
+              : language === "zh"
+                ? "内容不可用。"
+                : "Konten tidak tersedia."}
+      </div>
+    )
+  }, [product, activeTab, language])
+
+  // Memoize recommendations to prevent recreation on each render
+  const renderRecommendations = useMemo(() => {
+    if (isLoading) {
+      return (
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="animate-pulse">
+              <div className="bg-gray-200 rounded-lg aspect-[3/4]"></div>
+              <div className="mt-2 bg-gray-200 h-4 rounded w-3/4"></div>
+              <div className="mt-1 bg-gray-200 h-3 rounded w-1/2"></div>
+            </div>
+          ))}
+        </div>
+      )
+    }
+
+    return (
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {popularPackages.map((pkg) => (
+          <div
+            key={pkg.id}
+            className="cursor-pointer"
+            onClick={() => router.push(`/product?title=${encodeURIComponent(pkg.title)}`)}
+          >
+            <CardList title={pkg.title} rating={pkg.rating} duration={pkg.duration} image={pkg.image} />
+          </div>
+        ))}
+      </div>
+    )
+  }, [isLoading, popularPackages, router])
+
+  // Memoize tab buttons to prevent recreation on each render - MOVED UP before conditional returns
+  const tabButtons = useMemo(() => {
+    if (!product) return null
+
+    // Add proper null checks and length checks
+    const hasItinerary = product.itinerary && product.itinerary.length > 0
+    const hasIncludes = product.includes && product.includes.length > 0
+    const hasExcludes = product.excludes && product.excludes.length > 0
+
+    return (
+      <div className="flex flex-wrap gap-2 md:gap-3">
+        {/* Dynamically create day tabs based on itinerary length */}
+        {hasItinerary &&
+          product.itinerary?.map((day, index) => (
+            <button
+              key={`hari${index + 1}`}
+              className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center justify-center border-2 text-xs md:text-sm font-medium transition-all
+                ${
+                  activeTab === `hari${index + 1}`
+                    ? "border-orange-500 bg-orange-500 text-white"
+                    : "border-gray-200 hover:border-orange-300 text-gray-700"
+                }`}
+              onClick={() => setActiveTab(`hari${index + 1}`)}
+            >
+              {getTabLabel(`hari${index + 1}`)}
+            </button>
+          ))}
+
+        {hasIncludes && (
+          <button
+            className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center justify-center border-2 text-xs md:text-sm font-medium transition-all
+              ${
+                activeTab === "termasuk"
+                  ? "border-orange-500 bg-orange-500 text-white"
+                  : "border-gray-200 hover:border-orange-300 text-gray-700"
+              }`}
+            onClick={() => setActiveTab("termasuk")}
+          >
+            {getTabLabel("termasuk")}
+          </button>
+        )}
+
+        {hasExcludes && (
+          <button
+            className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center justify-center border-2 text-xs md:text-sm font-medium transition-all
+              ${
+                activeTab === "tidakTermasuk"
+                  ? "border-orange-500 bg-orange-500 text-white"
+                  : "border-gray-200 hover:border-orange-300 text-gray-700"
+              }`}
+            onClick={() => setActiveTab("tidakTermasuk")}
+          >
+            {getTabLabel("tidakTermasuk")}
+          </button>
+        )}
+      </div>
+    )
+  }, [product, activeTab, getTabLabel])
+
+  // Now we can use conditional returns after all hooks have been called
   if (isLoading || initialLoading) {
     return renderLoadingUI()
   }
 
-  // Only show "not found" after we've confirmed data is initialized and product is not found
   if (!product && dataInitialized) {
     return (
       <div className="min-h-screen bg-white font-sans">
-        <Header language={language} setLanguage={handleLanguageChange} />
+        <Header language={language} setLanguage={handleLanguageChange as (newLanguage: SupportedLanguage) => void} />
         <div className="container mx-auto px-4 pt-32 md:pt-40 lg:pt-48 pb-20">
           <div className="max-w-lg mx-auto bg-gradient-to-b from-orange-50 to-white rounded-xl shadow-sm p-8 text-center border border-orange-100">
             <div className="mb-6 flex justify-center">
@@ -209,168 +485,16 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-        <Footer language={language} setLanguage={handleLanguageChange} />
+        <Footer language={language} />
       </div>
     )
   }
 
-  // Helper function to get tab labels based on language
-  const getTabLabel = (tabType: string) => {
-    if (tabType === "termasuk") {
-      return language === "id"
-        ? "Termasuk"
-        : language === "en"
-          ? "Included"
-          : language === "ms"
-            ? "Termasuk"
-            : language === "zh"
-              ? "包含"
-              : "Termasuk"
-    } else if (tabType === "tidakTermasuk") {
-      return language === "id"
-        ? "Tidak Termasuk"
-        : language === "en"
-          ? "Not Included"
-          : language === "ms"
-            ? "Tidak Termasuk"
-            : language === "zh"
-              ? "不包含"
-              : "Tidak Termasuk"
-    } else if (tabType.startsWith("hari")) {
-      const dayNumber = tabType.replace("hari", "")
-      return language === "id"
-        ? `Hari ${dayNumber}`
-        : language === "en"
-          ? `Day ${dayNumber}`
-          : language === "ms"
-            ? `Hari ${dayNumber}`
-            : language === "zh"
-              ? `第${dayNumber}天`
-              : `Hari ${dayNumber}`
-    }
-    return tabType
-  }
-
-  // Helper function to render content based on active tab
-  const renderTabContent = () => {
-    if (activeTab === "termasuk" && product.includes) {
-      return (
-        <div className="p-6 bg-white rounded-md">
-          <ul className="list-disc ml-6 space-y-2">
-            {product.includes.map((item, index) => (
-              <li key={index} className="text-gray-700 text-sm md:text-base">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )
-    } else if (activeTab === "tidakTermasuk" && product.excludes) {
-      return (
-        <div className="p-6 bg-white rounded-md">
-          <ul className="list-disc ml-6 space-y-2">
-            {product.excludes.map((item, index) => (
-              <li key={index} className="text-gray-700 text-sm md:text-base">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )
-    } else if (activeTab.startsWith("hari") && product.itinerary) {
-      const dayIndex = Number.parseInt(activeTab.replace("hari", "")) - 1
-
-      if (product.itinerary[dayIndex]) {
-        const day = product.itinerary[dayIndex]
-        return (
-          <div className="p-6 bg-white rounded-md">
-            <div className="mb-6">
-              <h3 className="font-bold text-lg md:text-2xl mb-4 text-orange-500">{day.day}</h3>
-              <ul className="list-disc ml-6 space-y-2">
-                {day.details.map((detail, idx) => (
-                  <li key={idx} className="text-gray-700 text-sm md:text-base">
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {product.notes && activeTab === "hari1" && (
-              <div className="mt-8 border-t pt-6">
-                <h3 className="font-bold text-base md:text-xl mb-3 text-orange-500">
-                  {language === "id"
-                    ? "Catatan:"
-                    : language === "en"
-                      ? "Notes:"
-                      : language === "ms"
-                        ? "Nota:"
-                        : language === "zh"
-                          ? "备注："
-                          : "Catatan:"}
-                </h3>
-                <ul className="list-none space-y-2">
-                  {product.notes.map((note, index) => (
-                    <li key={index} className="text-gray-700 text-sm md:text-base">
-                      - {note}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        )
-      }
-    }
-
-    return (
-      <div className="p-6 bg-white rounded-md text-gray-700 text-sm md:text-base">
-        {language === "id"
-          ? "Konten tidak tersedia."
-          : language === "en"
-            ? "Content not available."
-            : language === "ms"
-              ? "Kandungan tidak tersedia."
-              : language === "zh"
-                ? "内容不可用。"
-                : "Konten tidak tersedia."}
-      </div>
-    )
-  }
-
-  // Loading state for recommendations
-  const renderRecommendations = () => {
-    if (isLoading) {
-      return (
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="animate-pulse">
-              <div className="bg-gray-200 rounded-lg aspect-[3/4]"></div>
-              <div className="mt-2 bg-gray-200 h-4 rounded w-3/4"></div>
-              <div className="mt-1 bg-gray-200 h-3 rounded w-1/2"></div>
-            </div>
-          ))}
-        </div>
-      )
-    }
-
-    return (
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {popularPackages.map((pkg) => (
-          <div
-            key={pkg.id}
-            className="cursor-pointer"
-            onClick={() => router.push(`/product?title=${encodeURIComponent(pkg.title)}`)}
-          >
-            <CardList title={pkg.title} rating={pkg.rating} duration={pkg.duration} image={pkg.image} />
-          </div>
-        ))}
-      </div>
-    )
-  }
+  if (!product) return renderLoadingUI()
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      <Header language={language} setLanguage={handleLanguageChange} />
+      <Header language={language} setLanguage={handleLanguageChange as (newLanguage: SupportedLanguage) => void} />
       <main className="container mx-auto px-4 pt-20 md:pt-32 lg:pt-40 pb-12">
         {/* Product Content */}
         <div className="grid lg:grid-cols-2 gap-12">
@@ -383,6 +507,7 @@ export default function ProductPage() {
                     src={product.image || "/placeholder.svg"}
                     alt={product.title}
                     className="w-full h-full object-cover"
+                    loading="eager" // Prioritize image loading
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gray-200">
@@ -429,55 +554,9 @@ export default function ProductPage() {
 
             {/* Tabs */}
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-2 md:gap-3">
-                {/* Dynamically create day tabs based on itinerary length */}
-                {product.itinerary &&
-                  product.itinerary.map((day, index) => (
-                    <button
-                      key={`hari${index + 1}`}
-                      className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center justify-center border-2 text-xs md:text-sm font-medium transition-all
-                        ${
-                          activeTab === `hari${index + 1}`
-                            ? "border-orange-500 bg-orange-500 text-white"
-                            : "border-gray-200 hover:border-orange-300 text-gray-700"
-                        }`}
-                      onClick={() => setActiveTab(`hari${index + 1}`)}
-                    >
-                      {getTabLabel(`hari${index + 1}`)}
-                    </button>
-                  ))}
-
-                {product.includes && (
-                  <button
-                    className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center justify-center border-2 text-xs md:text-sm font-medium transition-all
-                      ${
-                        activeTab === "termasuk"
-                          ? "border-orange-500 bg-orange-500 text-white"
-                          : "border-gray-200 hover:border-orange-300 text-gray-700"
-                      }`}
-                    onClick={() => setActiveTab("termasuk")}
-                  >
-                    {getTabLabel("termasuk")}
-                  </button>
-                )}
-
-                {product.excludes && (
-                  <button
-                    className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center justify-center border-2 text-xs md:text-sm font-medium transition-all
-                      ${
-                        activeTab === "tidakTermasuk"
-                          ? "border-orange-500 bg-orange-500 text-white"
-                          : "border-gray-200 hover:border-orange-300 text-gray-700"
-                      }`}
-                    onClick={() => setActiveTab("tidakTermasuk")}
-                  >
-                    {getTabLabel("tidakTermasuk")}
-                  </button>
-                )}
-              </div>
-
+              {tabButtons}
               {/* Tab Content */}
-              <div className="mt-4">{renderTabContent()}</div>
+              <div className="mt-4">{renderTabContent}</div>
             </div>
 
             {/* Action Buttons */}
@@ -535,11 +614,10 @@ export default function ProductPage() {
                       : "Rekomendasi Lainnya"}
             </h2>
           </div>
-          {renderRecommendations()}
+          {renderRecommendations}
         </div>
       </main>
-      <Footer language={language} setLanguage={handleLanguageChange} />
+      <Footer language={language} />
     </div>
   )
 }
-
