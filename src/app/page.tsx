@@ -1,116 +1,118 @@
-"use client";
-import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SectionTwo from "./dashboard/section-two/page";
-import HotPackagesSection from "./dashboard/section-three/page";
-import SectionFour from "./dashboard/section-four/page";
-import FiturUnggulan from "./dashboard/section-five/page";
-import SectionSix from "./dashboard/section-six/page";
-import TestimonialSection from "./dashboard/section-seven/page";
-import ContactPerson from "./dashboard/section-eight/page";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { heroSectionData, HeroSectionContent } from "@/data/language/heroSectionData";
+"use client"
+import { useState, useEffect, useRef } from "react"
+import { motion } from "framer-motion" // Import Framer Motion
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import SectionTwo from "./dashboard/section-two/page"
+import HotPackagesSection from "./dashboard/section-three/page"
+import SectionFour from "./dashboard/section-four/page"
+import FiturUnggulan from "./dashboard/section-five/page"
+import SectionSix from "./dashboard/section-six/page"
+import TestimonialSection from "./dashboard/section-seven/page"
+import ContactPerson from "./dashboard/section-eight/page"
+import { ArrowLeft, ArrowRight } from "lucide-react"
+import { heroSectionData, type HeroSectionContent } from "@/data/language/heroSectionData"
+
+// Define language type directly in this file
+type SupportedLanguage = "id" | "en" | "ms" | "zh"
 
 export default function Home() {
-  const [language, setLanguage] = useState<string>("id"); // Default language: Indonesian
-  const [isReady, setIsReady] = useState(false); // Track if the app is ready to render
-  const [currentImage, setCurrentImage] = useState(0);
-  const [prevImage, setPrevImage] = useState(0);
-  const [transitioning, setTransitioning] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // Track if the screen is mobile
+  const [language, setLanguage] = useState<SupportedLanguage>("id") // Default language: Indonesian
+  const [isReady, setIsReady] = useState(false) // Track if the app is ready to render
+  const [currentImage, setCurrentImage] = useState(0)
+  const [prevImage, setPrevImage] = useState(0)
+  const [transitioning, setTransitioning] = useState(false)
+  const [isMobile, setIsMobile] = useState(false) // Track if the screen is mobile
 
-  const sectionTwoRef = useRef<HTMLDivElement>(null); // Reference to Section Two
+  const sectionTwoRef = useRef<HTMLDivElement>(null) // Reference to Section Two
 
-  const images = [
-    "/Herosection/gunung.svg",
-    "/Herosection/Pantai_dashboard.svg",
-  ];
+  const images = ["/Herosection/gunung.svg", "/Herosection/Pantai_dashboard.svg"]
 
   // Detect screen size for responsive animation
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Set to true if screen width is <= 768px
-    };
+      setIsMobile(window.innerWidth <= 768) // Set to true if screen width is <= 768px
+    }
 
-    handleResize(); // Check on initial load
-    window.addEventListener("resize", handleResize); // Add resize listener
+    handleResize() // Check on initial load
+    window.addEventListener("resize", handleResize) // Add resize listener
 
-    return () => window.removeEventListener("resize", handleResize); // Cleanup listener
-  }, []);
+    return () => window.removeEventListener("resize", handleResize) // Cleanup listener
+  }, [])
 
   // Load language from localStorage on mount
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("selectedLanguage") || "id";
-    setLanguage(savedLanguage);
-    setIsReady(true); // Mark the app as ready to render
-  }, []);
+    const savedLanguage = localStorage.getItem("selectedLanguage")
+    // Validate that the saved language is one of the supported languages
+    const validLanguage = (savedLanguage || "id") as SupportedLanguage
+    setLanguage(["id", "en", "ms", "zh"].includes(savedLanguage || "") ? validLanguage : "id")
+    setIsReady(true)
+  }, [])
 
   // Custom language setter that also saves to localStorage
-  const handleLanguageChange = (newLanguage: string) => {
-    setLanguage(newLanguage);
-    localStorage.setItem("selectedLanguage", newLanguage);
-  };
+  const handleLanguageChange = (newLanguage: SupportedLanguage) => {
+    setLanguage(newLanguage)
+    localStorage.setItem("selectedLanguage", newLanguage)
+  }
 
   const goToNextImage = () => {
-    if (transitioning) return;
+    if (transitioning) return
 
-    const currentIdx = currentImage;
-    setPrevImage(currentIdx);
-    setTransitioning(true);
+    const currentIdx = currentImage
+    setPrevImage(currentIdx)
+    setTransitioning(true)
 
-    const nextIndex = (currentImage + 1) % images.length;
-    setCurrentImage(nextIndex);
+    const nextIndex = (currentImage + 1) % images.length
+    setCurrentImage(nextIndex)
 
     setTimeout(() => {
-      setTransitioning(false);
-    }, 600);
-  };
+      setTransitioning(false)
+    }, 600)
+  }
 
   const goToPrevImage = () => {
-    if (transitioning) return;
+    if (transitioning) return
 
-    const currentIdx = currentImage;
-    setPrevImage(currentIdx);
-    setTransitioning(true);
+    const currentIdx = currentImage
+    setPrevImage(currentIdx)
+    setTransitioning(true)
 
-    const prevIndex = currentImage === 0 ? images.length - 1 : currentImage - 1;
-    setCurrentImage(prevIndex);
+    const prevIndex = currentImage === 0 ? images.length - 1 : currentImage - 1
+    setCurrentImage(prevIndex)
 
     setTimeout(() => {
-      setTransitioning(false);
-    }, 600);
-  };
+      setTransitioning(false)
+    }, 600)
+  }
 
   // Auto transition every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      goToNextImage();
-    }, 5000);
+      goToNextImage()
+    }, 5000)
 
-    return () => clearInterval(interval);
-  }, [currentImage, transitioning]);
+    return () => clearInterval(interval)
+  }, [currentImage, transitioning])
 
   // Scroll to Section Two with offset
   const scrollToSectionTwo = () => {
     if (sectionTwoRef.current) {
-      const offset = -100; // Adjust this value to control how much higher the scroll stops
-      const sectionPosition = sectionTwoRef.current.getBoundingClientRect().top + window.scrollY + offset;
+      const offset = -100 // Adjust this value to control how much higher the scroll stops
+      const sectionPosition = sectionTwoRef.current.getBoundingClientRect().top + window.scrollY + offset
 
       window.scrollTo({
         top: sectionPosition,
         behavior: "smooth", // Smooth scrolling
-      });
+      })
     }
-  };
+  }
 
   // Render nothing until the app is ready
   if (!isReady) {
-    return null; // Prevent rendering until language is loaded
+    return null // Prevent rendering until language is loaded
   }
 
-  const heroData: HeroSectionContent = heroSectionData[language] || heroSectionData["id"];
+  const heroData: HeroSectionContent = heroSectionData[language] || heroSectionData["id"]
 
   return (
     <div className="min-h-screen bg-white">
@@ -152,9 +154,7 @@ export default function Home() {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 sm:mb-4 leading-tight">
                   {heroData.title}
                   <br className="hidden xs:block" />
-                  <span className="text-orange-300 md:text-white">
-                    {heroData.subtitle}
-                  </span>
+                  <span className="text-orange-300 md:text-white">{heroData.subtitle}</span>
                 </h1>
                 <p className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg mb-3 sm:mb-6 max-w-md mx-auto md:mx-0">
                   {heroData.description}
@@ -212,5 +212,5 @@ export default function Home() {
       <ContactPerson language={language} />
       <Footer language={language} />
     </div>
-  );
+  )
 }

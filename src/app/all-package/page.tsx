@@ -10,6 +10,9 @@ import CardList from "@/components/Cardlist"
 import { getKategoriByLanguage } from "@/data/language/data-kategori" // Import fungsi untuk mendapatkan data kategori berdasarkan bahasa
 import allPackageLanguageData from "@/data/language/all-package" // Import data bahasa
 
+// Define the supported language type
+type SupportedLanguage = "id" | "en" | "ms" | "zh"
+
 // Definisi tipe untuk package
 interface Package {
   id: string | number
@@ -26,15 +29,22 @@ interface Category {
   packages: Package[]
 }
 
+// Define the props interface for Header and Footer components
+interface LanguageProps {
+  language: SupportedLanguage
+  setLanguage: (newLanguage: SupportedLanguage) => void
+}
+
 export default function AllPackagesPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   // Tambahkan state untuk bahasa, inisialisasi dari localStorage atau default ke "id"
-  const [language, setLanguage] = useState<"id" | "en" | "ms" | "zh">(() => {
+  const [language, setLanguage] = useState<SupportedLanguage>(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("selectedLanguage") as "id" | "en" | "ms" | "zh") || "id"
+      const savedLanguage = localStorage.getItem("selectedLanguage") as SupportedLanguage
+      return ["id", "en", "ms", "zh"].includes(savedLanguage) ? savedLanguage : "id"
     }
     return "id" // Default ke bahasa Indonesia
   })
@@ -111,6 +121,17 @@ export default function AllPackagesPage() {
     }
   }
 
+  // Function to handle language change that matches the expected type in Header and Footer
+  const handleLanguageChange = (newLanguage: SupportedLanguage) => {
+    setLanguage(newLanguage)
+  }
+
+  // Create language props object for Header and Footer
+  const languageProps: LanguageProps = {
+    language,
+    setLanguage: handleLanguageChange
+  }
+
   // Pastikan halaman tidak glitch dengan menampilkan loading state
   if (isLoading) {
     return (
@@ -122,8 +143,8 @@ export default function AllPackagesPage() {
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
-      {/* Berikan properti language dan setLanguage ke Header */}
-      <Header language={language} setLanguage={setLanguage} />
+      {/* Spread the language props to Header */}
+      <Header {...languageProps} />
       <main className="flex-grow pt-12 md:pt-16 lg:pt-20">
         <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 lg:py-20">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
@@ -205,8 +226,8 @@ export default function AllPackagesPage() {
           )}
         </div>
       </main>
-      <Footer language={language} setLanguage={setLanguage} />
+      {/* Spread the language props to Footer */}
+      <Footer {...languageProps} />
     </div>
   )
 }
-
