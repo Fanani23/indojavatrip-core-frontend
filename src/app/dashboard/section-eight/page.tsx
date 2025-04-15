@@ -1,9 +1,13 @@
+"use client"
 
-"use client";
-import { sectionEightData, SectionEightContent } from "@/data/language/section-eight";
+import type React from "react"
 
+import { useEffect, useState } from "react"
+import { sectionEightData, type SectionEightContent } from "@/data/language/section-eight"
+
+// Separate the ContactPerson component from the page component
 const ContactPerson: React.FC<{ language: keyof typeof sectionEightData }> = ({ language }) => {
-  const data: SectionEightContent = sectionEightData[language] || sectionEightData["id"]; // Fallback to Indonesian if language not found
+  const data: SectionEightContent = sectionEightData[language] || sectionEightData["id"] // Fallback to Indonesian if language not found
 
   return (
     <div className="container mx-auto py-16 px-4 mt-12">
@@ -12,13 +16,9 @@ const ContactPerson: React.FC<{ language: keyof typeof sectionEightData }> = ({ 
         <div className="space-y-8">
           <div className="space-y-4">
             {/* Judul Responsif */}
-            <h1 className="text-2xl md:text-4xl font-bold text-amber-500">
-              {data.title}
-            </h1>
+            <h1 className="text-2xl md:text-4xl font-bold text-amber-500">{data.title}</h1>
             {/* Deskripsi Responsif */}
-            <p className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed text-black">
-              {data.description}
-            </p>
+            <p className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed text-black">{data.description}</p>
           </div>
 
           <div className="grid grid-cols-3 gap-4">
@@ -28,7 +28,7 @@ const ContactPerson: React.FC<{ language: keyof typeof sectionEightData }> = ({ 
                 facebook: "https://www.facebook.com/indojavatrip/",
                 instagram: "https://www.instagram.com/indojavatrip/",
                 tiktok: "https://www.tiktok.com/@indojavatrip",
-              };
+              }
 
               return (
                 <a
@@ -77,15 +77,11 @@ const ContactPerson: React.FC<{ language: keyof typeof sectionEightData }> = ({ 
                     )}
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-sm font-medium text-black">
-                      {platform.charAt(0).toUpperCase() + platform.slice(1)}
-                    </span>
-                    <span className="text-xs text-gray-600">
-                      @indojavatrip
-                    </span>
+                    <span className="text-sm font-medium text-black">{data.socialMedia[platform]}</span>
+                    <span className="text-xs text-gray-600">{data.socialMedia.handle}</span>
                   </div>
                 </a>
-              );
+              )
             })}
           </div>
         </div>
@@ -93,9 +89,7 @@ const ContactPerson: React.FC<{ language: keyof typeof sectionEightData }> = ({ 
         {/* Right Column */}
         <div className="border border-amber-200 rounded-lg p-6 mt-8">
           <div className="space-y-6">
-            <h2 className="text-lg font-semibold text-black">
-              {data.contactForm.kontak}
-            </h2>
+            <h2 className="text-lg font-semibold text-black">{data.contactForm.kontak}</h2>
 
             <div className="space-y-2">
               <label htmlFor="name" className="block text-sm text-black">
@@ -146,7 +140,22 @@ const ContactPerson: React.FC<{ language: keyof typeof sectionEightData }> = ({ 
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactPerson;
+// This is the actual page component that Next.js will use
+export default function SectionEightPage() {
+  const [language, setLanguage] = useState<keyof typeof sectionEightData>("id")
+
+  // You can determine the language from localStorage, cookies, or other sources
+  useEffect(() => {
+    // Example: Get language from localStorage
+    const savedLanguage = localStorage.getItem("preferredLanguage") as keyof typeof sectionEightData
+    if (savedLanguage && sectionEightData[savedLanguage]) {
+      setLanguage(savedLanguage)
+    }
+    // You could also get it from URL params or other sources
+  }, [])
+
+  return <ContactPerson language={language} />
+}

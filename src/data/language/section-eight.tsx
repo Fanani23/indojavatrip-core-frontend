@@ -1,26 +1,26 @@
 export interface ContactForm {
-  kontak: string;
-  name: string;
-  email: string;
-  description: string;
-  placeholderName: string;
-  placeholderEmail: string;
-  placeholderDescription: string;
-  submitButton: string;
+  kontak: string
+  name: string
+  email: string
+  description: string
+  placeholderName: string
+  placeholderEmail: string
+  placeholderDescription: string
+  submitButton: string
 }
 
 export interface SocialMedia {
-  facebook: string;
-  instagram: string;
-  tiktok: string;
-  handle: string;
+  facebook: string
+  instagram: string
+  tiktok: string
+  handle: string
 }
 
 export interface SectionEightContent {
-  title: string;
-  description: string;
-  contactForm: ContactForm;
-  socialMedia: SocialMedia;
+  title: string
+  description: string
+  contactForm: ContactForm
+  socialMedia: SocialMedia
 }
 
 export const sectionEightData: Record<string, SectionEightContent> = {
@@ -89,8 +89,7 @@ export const sectionEightData: Record<string, SectionEightContent> = {
   },
   zh: {
     title: "联系我们",
-    description:
-      "在我们的 Indojavatrip 社交媒体频道上发现令人兴奋的见解和有吸引力的优惠，等待您探索。",
+    description: "在我们的 Indojavatrip 社交媒体频道上发现令人兴奋的见解和有吸引力的优惠，等待您探索。",
     contactForm: {
       kontak: "联系我们",
       name: "姓名",
@@ -108,4 +107,4 @@ export const sectionEightData: Record<string, SectionEightContent> = {
       handle: "@indojavatrip",
     },
   },
-};
+}
