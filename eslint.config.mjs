@@ -19,7 +19,8 @@ const eslintConfig = [
       "@typescript-eslint/no-unused-vars": "off", // Matikan error unused var
       "@next/next/no-html-link-for-pages": "off", // Boleh pakai <a>
       "react-hooks/exhaustive-deps": "warn",       // Biar jadi warning aja
-      "@next/next/no-img-element": "warn",         // Kasih warning, gak error
+      "@next/next/no-img-element": "warn", 
+      "@typescript-eslint/no-explicit-any": "off",        // Kasih warning, gak error
     },
   },
 ];
