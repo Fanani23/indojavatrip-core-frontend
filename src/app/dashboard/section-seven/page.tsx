@@ -19,7 +19,7 @@ function cn(...classes: (string | boolean | undefined)[]) {
 
 // Improved hook to handle both mobile and tablet views
 function useResponsiveView(mobileBreakpoint = 480, tabletBreakpoint = 1024) {
-  const [viewType, setViewType] = useState<'desktop' | 'tablet' | 'mobile'>('desktop')
+  const [viewType, setViewType] = useState<"desktop" | "tablet" | "mobile">("desktop")
 
   useEffect(() => {
     // Check if window is defined (browser environment)
@@ -27,11 +27,11 @@ function useResponsiveView(mobileBreakpoint = 480, tabletBreakpoint = 1024) {
       const checkViewType = () => {
         const width = window.innerWidth
         if (width < mobileBreakpoint) {
-          setViewType('mobile')
+          setViewType("mobile")
         } else if (width < tabletBreakpoint) {
-          setViewType('tablet')
+          setViewType("tablet")
         } else {
-          setViewType('desktop')
+          setViewType("desktop")
         }
       }
 
@@ -53,7 +53,7 @@ function useResponsiveView(mobileBreakpoint = 480, tabletBreakpoint = 1024) {
 
 const TestimonialSection = () => {
   const viewType = useResponsiveView()
-  const isSliderView = viewType === 'mobile' || viewType === 'tablet'
+  const isSliderView = viewType === "mobile" || viewType === "tablet"
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
@@ -172,7 +172,7 @@ const TestimonialSection = () => {
         </h2>
 
         {/* Desktop view - only for large screens */}
-        {viewType === 'desktop' && (
+        {viewType === "desktop" && (
           <>
             <div className="grid grid-cols-3 gap-6">
               {/* First row with 3 testimonials */}
@@ -279,6 +279,47 @@ const TestimonialSection = () => {
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
+            </div>
+            {/* Navigation buttons */}
+            <div className="flex justify-between absolute top-1/2 left-0 right-0 -translate-y-1/2 px-2">
+              <button
+                onClick={goToPrevSlide}
+                className="bg-white/80 rounded-full p-2 text-orange-500 hover:bg-white"
+                aria-label="Previous slide"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                onClick={goToNextSlide}
+                className="bg-white/80 rounded-full p-2 text-orange-500 hover:bg-white"
+                aria-label="Next slide"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
             </div>
           </div>
         )}

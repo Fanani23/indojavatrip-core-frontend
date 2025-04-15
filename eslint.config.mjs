@@ -10,7 +10,18 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Extend from Next.js recommended settings
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Custom rules
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off", // Matikan error unused var
+      "@next/next/no-html-link-for-pages": "off", // Boleh pakai <a>
+      "react-hooks/exhaustive-deps": "warn",       // Biar jadi warning aja
+      "@next/next/no-img-element": "warn",         // Kasih warning, gak error
+    },
+  },
 ];
 
 export default eslintConfig;

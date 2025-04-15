@@ -2,12 +2,22 @@
 
 import { useMemo } from "react"
 import { useRouter } from "next/navigation"
-import CardList from "@/components/Cardlist";
+import CardList from "@/components/Cardlist"
 import { getKategoriByLanguage } from "@/data/language/data-kategori"
 import sectionFourLanguageData from "@/data/language/section-four"
 
 interface SectionFourProps {
   language: "id" | "en" | "ms" | "zh"
+}
+
+// Define a proper type for the package object
+interface Package {
+  id: string | number
+  title: string
+  rating: number
+  duration: string
+  image: string
+  // Add other properties that might be used elsewhere
 }
 
 export default function SectionFour({ language }: SectionFourProps) {
@@ -29,7 +39,7 @@ export default function SectionFour({ language }: SectionFourProps) {
     return 48 // Tinggi untuk 2 baris teks dengan line-height normal
   }, [])
 
-  const handleCardClick = (pkg: any) => {
+  const handleCardClick = (pkg: Package) => {
     router.push(
       `/product?title=${encodeURIComponent(pkg.title)}&rating=${pkg.rating}&duration=${pkg.duration}&image=${pkg.image}`,
     )
@@ -51,7 +61,7 @@ export default function SectionFour({ language }: SectionFourProps) {
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto mb-12">
           {packages.map((pkg) => (
-            <div key={pkg.id} onClick={() => handleCardClick(pkg)} className="cursor-pointer h-full">
+            <div key={pkg.id} onClick={() => handleCardClick(pkg as Package)} className="cursor-pointer h-full">
               <CardList
                 title={pkg.title}
                 rating={pkg.rating}
@@ -76,4 +86,3 @@ export default function SectionFour({ language }: SectionFourProps) {
     </section>
   )
 }
-

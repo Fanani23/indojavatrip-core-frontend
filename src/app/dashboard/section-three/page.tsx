@@ -2,10 +2,18 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import CardPackage from "@/components/Cardpackage"
 import { getKategoriByLanguage } from "@/data/language/data-kategori"
 import { useRouter } from "next/navigation"
+
+// Define a proper interface for the Kategori type
+interface Kategori {
+  id: string | number
+  category: string
+  image: string
+  // Add any other properties that exist in your kategori data
+}
 
 // Update the component to accept language as a prop
 interface HotPackagesSectionProps {
@@ -16,7 +24,7 @@ const HotPackagesSection: React.FC<HotPackagesSectionProps> = ({ language }) => 
   const [currentSlide, setCurrentSlide] = useState(0)
   const [slidesToShow, setSlidesToShow] = useState(3)
   const [totalSlides, setTotalSlides] = useState(0)
-  const [kategori, setKategori] = useState<any[]>([])
+  const [kategori, setKategori] = useState<Kategori[]>([]) // Use the proper type instead of any[]
   const router = useRouter()
 
   // Handle window resize untuk responsif slidesToShow
@@ -83,8 +91,8 @@ const HotPackagesSection: React.FC<HotPackagesSectionProps> = ({ language }) => 
     zh: {
       title: "旅游套餐类别",
       description: "选择您的旅行类别，享受难忘的体验。",
-    }
-  };
+    },
+  }
 
   // Use the correct language text with fallback to Indonesian
   const text = sectionText[language as keyof typeof sectionText] || sectionText.id
